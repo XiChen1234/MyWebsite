@@ -18,6 +18,7 @@ header {
     position: fixed;
     top: 0;
     border-bottom: 1px solid #bbb;
+    z-index: 1000;
 }
 header .head {
     margin: 0 10%;
@@ -51,77 +52,72 @@ header .list .item .iconfont {
     margin: 0 auto;  
     margin-top: 100px;
 }
-.container .item {
+.container .page {
     width: 100%;
-    padding-top: 30px;
+    padding: 30px 0;
     border-bottom: 1px solid;
-}
-.container .home {
     display: flex;
     justify-content: center;
+    align-items: center;
+    
 }
-.container .home .text {
-    padding: 20px;
-    width: 550px;
+
+
+.about {
+    flex-direction: column;
 }
-.container .home .text .title {
-    font-size: 60px;
-}
-.container .home .text .subtitle {
-    vertical-align: middle;
-    color: #444;
-    font-size: 30px;
-}
-.container .home .text .iconfont {
-    font-size: 30px;
-}
-.container .home .text .content {
-    font-size: 25px;
-    color: #999;
-}
-.container .home .text .button {
-    width: 180px;
-    height: 60px;
-    display:flex;
-    justify-content: center;
-    line-height: 60px;
-    vertical-align: middle;
-    color: #fff;
-    background-color: orange;
-    margin: 80px 0 0 80px;
-    border-radius: 20px;
-}
-.container .home .image {
-    padding: 20px;
+.about .title { 
+    width: 50%;
     text-align: center;
 }
-.container .home .image img {
-    border-radius: 50%;
-    width: 300px;
+.about .title .main {
+    font-size: 50px;
 }
-.container .home .image .scroll {
-    margin-top: 30px;
-    font-size: 25px;
-    display:flex;
-    justify-content: center;
-}
-.container .home .image .scroll .iconfont {
+.about .title .sub {
     font-size: 30px;
-    color: orange;
-    margin: 0 10px;
+    color: #999;
 }
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(12px);
-    }
-    60% {
-      transform: translateY(5px);
-    }
-  }
-  
-  .scroll .icon-mouse {
-    animation: bounce 1s infinite;
-  }
+.about .block {
+    display: flex;
+    justify-content: space-evenly;
+}
+.about .block img {
+    width: 280px;
+    border-radius: 10%; 
+}
+.about .block .content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about .block .content .text {
+    padding: 20px;
+}
+.about .block .content .ability {
+    display: flex;
+    justify-content: space-between;
+}
+.about .block .content .ability .item {
+    width: 30%;
+    text-align: center;
+}
+.about .block .content .ability .item .num {
+    font-size: 30px;
+    font-weight: bold;
+    color: #666;
+}
+.about .block .content .ability .item .text {
+    padding: 5px;
+}
+.about .block .content .button {
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: orange;
+    color: #fff;
+}
+.about .block .content .button .iconfont {
+    font-size: 30px;
+    vertical-align: middle;
+}
