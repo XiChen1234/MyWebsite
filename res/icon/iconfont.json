@@ -1,0 +1,107 @@
+{
+  "id": "4276039",
+  "name": "MyWebsite",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "9058089",
+      "name": "backend",
+      "font_class": "backend",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "9058107",
+      "name": "desktop",
+      "font_class": "desktop",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "9058114",
+      "name": "frontend",
+      "font_class": "frontend",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "9058131",
+      "name": "language",
+      "font_class": "language",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "9058134",
+      "name": "server",
+      "font_class": "server",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "1368581",
+      "name": "download",
+      "font_class": "download",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "672036",
+      "name": "下拉",
+      "font_class": "xiala",
+      "unicode": "e6b9",
+      "unicode_decimal": 59065
+    },
+    {
+      "icon_id": "10168392",
+      "name": "mouse",
+      "font_class": "mouse",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "4767060",
+      "name": "unordered list",
+      "font_class": "list",
+      "unicode": "e7f4",
+      "unicode_decimal": 59380
+    },
+    {
+      "icon_id": "5226621",
+      "name": "send",
+      "font_class": "send",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "4488840",
+      "name": "学历水平",
+      "font_class": "edu",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "36209395",
+      "name": "translate",
+      "font_class": "translate",
+      "unicode": "e888",
+      "unicode_decimal": 59528
+    },
+    {
+      "icon_id": "8474311",
+      "name": "moon",
+      "font_class": "moon",
+      "unicode": "e6c3",
+      "unicode_decimal": 59075
+    },
+    {
+      "icon_id": "8474377",
+      "name": "sun",
+      "font_class": "sun",
+      "unicode": "e6da",
+      "unicode_decimal": 59098
+    }
+  ]
+}

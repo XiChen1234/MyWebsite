@@ -1,0 +1,57 @@
+.skills .block {
+    max-width: 800px;
+}
+.skills .block .skill-item {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+}
+.skills .block .skill-item .iconfont {
+    font-size: 40px;
+    color: orange;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.skills .block .skill-item .header {
+    display: flex;
+    justify-content: space-between;
+}
+.skills .block .skill-item .header .text {
+    
+}
+.skills .block .skill-item .header .text .name {
+    font-size: 30px;
+}
+.skills .block .skill-item .header .text .content {
+    color: #888;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.skills .block .skill-item .list {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+.skills .block .skill-item .list .item {
+    margin: 10px 0;
+}
+.skills .block .skill-item .list .item .text {
+    display: flex;
+    justify-content: space-between;
+}
+.skills .block .skill-item .list .item .line {
+    margin-top: 20px;
+    width: 100%;
+    height: 5px;
+    background-color: antiquewhite;
+    position: relative;
+}
+.skills .block .skill-item .list .item .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color: orange;
+    width: 50%; /* 这里可以设置进度百分比 */
+}

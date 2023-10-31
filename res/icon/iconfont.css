@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4276039 */
-  src: url('//at.alicdn.com/t/c/font_4276039_soqbzbvgvtp.woff2?t=1698656838204') format('woff2'),
-       url('//at.alicdn.com/t/c/font_4276039_soqbzbvgvtp.woff?t=1698656838204') format('woff'),
-       url('//at.alicdn.com/t/c/font_4276039_soqbzbvgvtp.ttf?t=1698656838204') format('truetype');
+  src: url('iconfont.woff2?t=1698770525001') format('woff2'),
+       url('iconfont.woff?t=1698770525001') format('woff'),
+       url('iconfont.ttf?t=1698770525001') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,26 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-backend:before {
+  content: "\e601";
+}
+
+.icon-desktop:before {
+  content: "\e606";
+}
+
+.icon-frontend:before {
+  content: "\e608";
+}
+
+.icon-language:before {
+  content: "\e609";
+}
+
+.icon-server:before {
+  content: "\e60a";
 }
 
 .icon-download:before {
@@ -48,3 +68,4 @@
 .icon-sun:before {
   content: "\e6da";
 }
+

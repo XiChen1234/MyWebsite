@@ -1,3 +1,4 @@
+/* css reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,66 +10,99 @@ body {
     background: #f6f6f6;
 }
 
+/* haeder */
 header {
     background-color: #fff;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     position: fixed;
     top: 0;
-    border-bottom: 1px solid #bbb;
     z-index: 1000;
 }
-header .head {
-    margin: 0 10%;
-    padding: 20px 0;
+header .name {
+    font-size: 40px;
+    font-weight: bold;
+    margin:20px 0
 }
-header .name h1:hover {
+header .name:hover {
     color: orange;
 }
 header .list {
-    height: 100%;
-    width: 50%;
+    width: 60%;
     display: flex;
-    align-items: center;
     justify-content: space-around;
+    margin:20px 0
 }
 header .list .item {
     padding: 10px;
+    border-radius: 10px;
 }
 header .list .item:hover {
-    background-color: #f5f5f5;
-    border-radius: 10%;
     color: orange;
+    background-color: #f6f6f6;
 }
 header .list .item .iconfont {
     font-size: 25px;
 }
+.test {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+.test2 {
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+}
 
+/* container */
 .container {
     background-color: #fff;
     width: 85%;
-    margin: 0 auto;  
+    margin: 0 auto;
     margin-top: 100px;
 }
-.container .page {
+
+/* page init */
+.page {
     width: 100%;
     padding: 30px 0;
     border-bottom: 1px solid;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 80px 0;
 }
-/* title */
-.page:not(.home) .title { 
-    width: 50%;
+.page:not(.home) {
+    flex-direction: column;
+}
+.page .title {
     text-align: center;
 }
-.page:not(.home) .title .main {
+.page .title .main {
     font-size: 50px;
 }
-.page:not(.home) .title .sub {
+.page .title .sub {
     font-size: 30px;
     color: #999;
+}
+.page .block {
+    width: 100%;
+}
+
+
+
+
+
+/* footer */
+
+
+
+/* test */
+.test{
+    width: 200px;
+    height: 200px;
+    background-color: red;
 }

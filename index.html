@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xi Chen's Personal Website</title>
-    <link rel="stylesheet" href="./res/css/icon.css">
-    <link rel="stylesheet" href="./res/css/style.css">
-    <link rel="stylesheet" href="./res/css/pages.css">
     <link rel="shortcut icon" href="./res/img/orange.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./res/icon/iconfont.css">
+    <link rel="stylesheet" href="./res/css/style.css">
+    <link rel="stylesheet" href="./res/css/home.css">
+    <link rel="stylesheet" href="./res/css/about.css">
+    <link rel="stylesheet" href="./res/css/skills.css">
 </head>
 
 <body>
     <!-- HEADER -->
     <header>
-        <div class="head name">
-            <h1>Xi_Chen</h1>
-        </div>
-        <div class="head list">
+        <div class="name">Xi_Chen</div>
+        <div class="list">
             <div class="item">Home</div>
             <div class="item">About</div>
             <div class="item">Skills</div>
@@ -36,22 +36,24 @@
 
     <!-- CONTAINER -->
     <div class="container">
+        <!-- home -->
         <div class="page home">
-            <div class="text">
-                <div class="title">Welcome to</div>
-                <div class="title">Xi_Chen's Website</div>
-                <div class="subtitle"><i class="iconfont icon-edu"></i> Software Engineering</div>
-                <div class="content"><i class="iconfont icon-list"></i> A Student Graduated from Central South University
+            <div class="home-text">
+                <div class="home-title">Welcome to</div>
+                <div class="home-title">Xi_Chen's Website</div>
+                <div class="home-subtitle"><i class="iconfont icon-edu"></i>&nbsp;Software Engineering</div>
+                <div class="home-content"><i class="iconfont icon-list"></i>&nbsp;I'm a Student Graduated from Central
+                    South University.
                 </div>
-                <div class="button"><i class="iconfont icon-send"></i> Contact Me</div>
+                <div class="home-button"><i class="iconfont icon-send"></i>&nbsp;Contact Me</div>
             </div>
-            <div class="image">
+            <div class="home-image">
                 <img src="./res/img/header.jpg" alt="">
                 <div class="scroll"><i class="iconfont icon-mouse"></i>Scroll Down <i class="iconfont icon-xiala"></i>
                 </div>
             </div>
         </div>
-
+        <!-- about -->
         <div class="page about">
             <div class="title">
                 <div class="main">About Me</div>
@@ -62,7 +64,7 @@
                 <div class="content">
                     <div class="basic">
                         <div class="item">
-                            <div class="key">age:</div>
+                            <div class="key">Age:</div>
                             <div class="value">20</div>
                         </div>
                         <div class="item">
@@ -78,35 +80,23 @@
                             <div class="value">SE</div>
                         </div>
                     </div>
-                    <div class="text">
+                    <div class="intro">
                         I am a software engineer proficient in various programming languages and
                         technologies. I have completed numerous individual and team projects, demonstrating strong
                         development skills and ability to collaborate effectively in a team.
                     </div>
                     <div class="ability">
                         <div class="item">
-                            <div class="num">
-                                00+
-                            </div>
-                            <div class="text">
-                                Years of Experience
-                            </div>
+                            <div class="num">00+</div>
+                            <div class="text">Competition Experience</div>
                         </div>
                         <div class="item">
-                            <div class="num">
-                                00+
-                            </div>
-                            <div class="text">
-                                Completed Projects
-                            </div>
+                            <div class="num">00+</div>
+                            <div class="text">Competition Experience</div>
                         </div>
                         <div class="item">
-                            <div class="num">
-                                00+
-                            </div>
-                            <div class="text">
-                                Competition Experience
-                            </div>
+                            <div class="num">00+</div>
+                            <div class="text">Competition Experience</div>
                         </div>
                     </div>
                     <div class="button">
@@ -115,34 +105,257 @@
                 </div>
             </div>
         </div>
-
+        <!-- skills -->
         <div class="page skills">
             <div class="title">
                 <div class="main">Skills</div>
                 <div class="sub">My technical level</div>
             </div>
-            <div class="content">
-                <div class="category">
-                    <div class="cat-header">
-
+            <div class="block">
+                <div class="skill-item">
+                    <i class="iconfont icon-language"></i>
+                    <div class="header">
+                        <div class="text">
+                            <div class="name">Language</div>
+                            <div class="content">Java and C are my main languages of use.</div>
+                        </div>
+                        <i class="iconfont icon-xiala"></i>
                     </div>
+                    <div></div>
                     <div class="list">
                         <div class="item">
-
+                            <div class="text">
+                                <p class="name">C/C++</p>
+                                <p class="percent">80%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">Java</p>
+                                <p class="percent">90%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">Python</p>
+                                <p class="percent">60%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">PHP</p>
+                                <p class="percent">40%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">Node.js</p>
+                                <p class="percent">40%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <i class="iconfont icon-frontend"></i>
+                    <div class="header">
+                        <div class="text">
+                            <div class="name">Frontend Development</div>
+                            <div class="content">Master basic frontend design skills and popular frontend frameworks.</div>
+                        </div>
+                        <i class="iconfont icon-xiala"></i>
+                    </div>
+                    <div></div>
+                    <div class="list">
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">HTML</p>
+                                <p class="percent">90%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">CSS</p>
+                                <p class="percent">75%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">JavaScript</p>
+                                <p class="percent">80%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">Vue.js</p>
+                                <p class="percent">60%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">React</p>
+                                <p class="percent">40%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <i class="iconfont icon-backend"></i>
+                    <div class="header">
+                        <div class="text">
+                            <div class="name">Backend Development</div>
+                            <div class="content">Proficient in backend business processing.</div>
+                        </div>
+                        <i class="iconfont icon-xiala"></i>
+                    </div>
+                    <div></div>
+                    <div class="list">
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">Spring Boot</p>
+                                <p class="percent">90%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">MyBatis & Plus</p>
+                                <p class="percent">80%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">Django</p>
+                                <p class="percent">60%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">Flask</p>
+                                <p class="percent">80%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">ASP.NET</p>
+                                <p class="percent">40%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">Express</p>
+                                <p class="percent">20%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <i class="iconfont icon-desktop"></i>
+                    <div class="header">
+                        <div class="text">
+                            <div class="name">Desktop Application</div>
+                            <div class="content">Familiar with the design logic of desktop applications.</div>
+                        </div>
+                        <i class="iconfont icon-xiala"></i>
+                    </div>
+                    <div></div>
+                    <div class="list">
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">Qt</p>
+                                <p class="percent">90%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">PyQt</p>
+                                <p class="percent">50%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">JavaFX</p>
+                                <p class="percent">70%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <i class="iconfont icon-server"></i>
+                    <div class="header">
+                        <div class="text">
+                            <div class="name">Server Administration</div>
+                            <div class="content">Proficient in operation and maintenance knowledge and able to deploy physical projects smoothly.</div>
+                        </div>
+                        <i class="iconfont icon-xiala"></i>
+                    </div>
+                    <div></div>
+                    <div class="list">
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">Linux</p>
+                                <p class="percent">90%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">Shell</p>
+                                <p class="percent">80%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">Network</p>
+                                <p class="percent">80%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">Docker</p>
+                                <p class="percent">80%</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <p class="name">Git</p>
+                                <p class="percent">90%</p>
+                            </div>
+                            <div class="line"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="page"></div>
-        <div class="page"></div>
-        <div class="page"></div>
-        <div class="page"></div>
-        <div class="page"></div>
+        <div class="page">1</div>
+        <div class="page">1</div>
+        <div class="page">1</div>
+        <div class="page">1</div>
+        <div class="page">1</div>
     </div>
 
     <!-- FOOTER -->
     <footer></footer>
+</body>
 
 </html>
-</body>

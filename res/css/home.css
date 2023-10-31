@@ -1,0 +1,72 @@
+/* home */
+.home {
+    flex-direction: row;
+}
+.home .iconfont {
+    font-size: 25px;
+}
+.home .home-text {
+    max-width: 550px;
+}
+.home .home-text .home-title {
+    font-size: 60px;
+}
+.home .home-text .home-subtitle {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: #444;
+    margin: 20px 0;
+}
+.home .home-text .home-content {
+    font-size: 25px;
+    color: #999;
+}
+.home .home-text .home-button {
+    width: 45%;
+    height: 60px;
+    background-color: orange;
+    margin: 0 15%;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 25px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.home .home-image {
+    text-align: center;
+}
+.home .home-image img {
+    border-radius: 50%/35% 35% 65% 65%;
+    width: 300px;
+}
+.home .home-image .scroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    font-size: 25px;
+}
+.home .home-image .scroll .iconfont {
+    color: orange;
+    font-weight: bold;
+    margin: 0 20px;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(12px);
+    }
+    60% {
+      transform: translateY(5px);
+    }
+  }
+  
+.scroll .icon-mouse {
+    animation: bounce 1s infinite;
+}
