@@ -13,6 +13,7 @@
     vertical-align: middle;
     color: #444;
     font-size: 30px;
+    padding: 20px 0;
 }
 .home .text .iconfont {
     font-size: 30px;
@@ -69,35 +70,43 @@
 }
 
 
-
 /* about */
 .about {
     flex-direction: column;
-}
-.about .title { 
-    width: 50%;
-    text-align: center;
-}
-.about .title .main {
-    font-size: 50px;
-}
-.about .title .sub {
-    font-size: 30px;
-    color: #999;
 }
 .about .block {
     display: flex;
     justify-content: space-evenly;
 }
 .about .block img {
-    width: 280px;
+    width: 300px;
     border-radius: 10%; 
 }
 .about .block .content {
+    margin-top: 20px;
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.about .block .content .basic {
+    padding: 0 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.about .block .content .basic .item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.about .block .content .basic .item .key{
+    width: 100px;
+}
+.about .block .content .basic .item .value {
+    color: orange;
+
 }
 .about .block .content .text {
     padding: 20px;
@@ -113,13 +122,13 @@
 .about .block .content .ability .item .num {
     font-size: 30px;
     font-weight: bold;
-    color: #666;
+    color: orange;
 }
 .about .block .content .ability .item .text {
     padding: 5px;
 }
 .about .block .content .button {
-    margin-top: 50px;
+    margin-top: 40px;
     padding: 20px;
     border-radius: 15px;
     background-color: orange;
@@ -129,3 +138,6 @@
     font-size: 30px;
     vertical-align: middle;
 }
+
+
+/* skills */

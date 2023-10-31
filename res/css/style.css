@@ -59,5 +59,16 @@ header .list .item .iconfont {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+}
+/* title */
+.page:not(.home) .title { 
+    width: 50%;
+    text-align: center;
+}
+.page:not(.home) .title .main {
+    font-size: 50px;
+}
+.page:not(.home) .title .sub {
+    font-size: 30px;
+    color: #999;
 }
