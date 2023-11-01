@@ -19,9 +19,6 @@
     display: flex;
     justify-content: space-between;
 }
-.skills .block .skill-item .header .text {
-    
-}
 .skills .block .skill-item .header .text .name {
     font-size: 30px;
 }
