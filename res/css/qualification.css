@@ -1,0 +1,70 @@
+.qualification .block {
+    max-width: 800px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.qualification .block .button-list {
+    margin: 50px 0;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+.qualification .block .button-list .button {
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.qualification .block .button-list .button:hover {
+    color: orange;
+    background-color: #f6f6f6;
+}
+.qualification .block .button-list .selected {
+    color: orange;
+}
+.qualification .block .button-list .button .iconfont {
+    font-size: 30px;
+}
+.qualification .block .journey {
+    margin: 20px;
+}
+.qualification .block .journey .detail {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-gap: 1rem;
+}
+.qualification .block .journey .detail .item {
+    width: 234px;
+}
+.qualification .block .journey .detail .item .name {
+    font-size: 25px;
+}
+.qualification .block .journey .detail .item .content {
+    color: #888;
+}
+.qualification .block .journey .detail .item .time,.iconfont {
+    font-size: 18px;
+    vertical-align: middle;
+    margin-top: 15px;
+    color: #888;
+}
+.qualification .block .journey .detail .split {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.qualification .block .journey .detail .split .line {
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: orange;
+}
+.qualification .block .journey .detail .split .rounder {
+    width: 13px;
+    height: 13px;
+    background-color: orange;
+    position: absolute;
+    border-radius: 50%;
+}

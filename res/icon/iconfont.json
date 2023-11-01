@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1917150",
+      "name": "日历",
+      "font_class": "calendar",
+      "unicode": "e809",
+      "unicode_decimal": 59401
+    },
+    {
+      "icon_id": "17965089",
+      "name": "achievements",
+      "font_class": "achievements",
+      "unicode": "e690",
+      "unicode_decimal": 59024
+    },
+    {
+      "icon_id": "19457220",
+      "name": "profession",
+      "font_class": "profession",
+      "unicode": "e6ae",
+      "unicode_decimal": 59054
+    },
+    {
+      "icon_id": "31963110",
+      "name": "education",
+      "font_class": "education",
+      "unicode": "e739",
+      "unicode_decimal": 59193
+    },
+    {
       "icon_id": "9058089",
       "name": "backend",
       "font_class": "backend",
