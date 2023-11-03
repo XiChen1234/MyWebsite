@@ -11,6 +11,13 @@
     justify-content: space-between;
     display: flex;
 }
+
+:root {
+    --orange: orange;
+    --white: #fff;
+    --gary: #f6f6f6;
+}
+
 .qualification .block .button-list .button {
     font-size: 30px;
     padding: 10px;
@@ -20,11 +27,18 @@
     color: orange;
     background-color: #f6f6f6;
 }
+.qualification .block .button-list .button:hover .iconfont {
+    color: orange;
+}
 .qualification .block .button-list .selected {
     color: orange;
 }
 .qualification .block .button-list .button .iconfont {
+    color: #000;
     font-size: 30px;
+}
+.qualification .block .button-list .selected .iconfont {
+    color: orange;
 }
 .qualification .block .journey {
     margin: 20px;

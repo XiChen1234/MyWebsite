@@ -59,5 +59,7 @@
     font-size: 25px;
 }
 .about .block .content .button .iconfont {
+    font-weight: bold;
+    color: #fff;
     font-size: 25px;
 }

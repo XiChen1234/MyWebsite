@@ -3,38 +3,43 @@
     flex-direction: row;
 }
 .home .iconfont {
-    font-size: 25px;
+    font-size: 30px;
+    line-height: 100%;
 }
 .home .home-text {
-    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 450px;
 }
 .home .home-text .home-title {
-    font-size: 60px;
+    font-size: 55px;
 }
 .home .home-text .home-subtitle {
-    display: flex;
-    align-items: center;
-    font-size: 30px;
     color: #444;
+    font-size: 30px;
     margin: 20px 0;
+}
+.home .home-text .home-subtitle .iconfont {
+    font-weight: bold;
 }
 .home .home-text .home-content {
     font-size: 25px;
     color: #999;
+    vertical-align: middle;
 }
 .home .home-text .home-button {
-    width: 45%;
-    height: 60px;
-    background-color: orange;
-    margin: 0 15%;
-    margin-top: 100px;
-    display: flex;
-    align-items: center;
+    margin: 80px auto 0 auto;
+    width: 200px;
+    height: 50px;
     border-radius: 20px;
-    font-size: 25px;
     color: #fff;
-    display: flex;
-    justify-content: center;
+    background-color: orange;
+    text-align: center;
+    line-height: 50px;
+}
+.home .home-text .home-button .iconfont {
+    color: #fff;
 }
 .home .home-image {
     text-align: center;
@@ -54,6 +59,8 @@
     color: orange;
     font-weight: bold;
     margin: 0 20px;
+    display: flex;
+    justify-content: center;
 }
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
