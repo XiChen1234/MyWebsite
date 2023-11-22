@@ -1,0 +1,75 @@
+nav {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    margin: 0 50px;
+}
+.bottom-nav {
+    display: none;
+}
+
+.navbar .logo {
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar .logo:hover {
+    color: orange;
+    font-weight: bold;
+}
+
+.navbar .list {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar .list .item {
+    font-size: 20px;
+    cursor: pointer;
+}
+.navbar .list .item.active {
+    color: orange;
+}
+
+.navbar .list .item:hover {
+    color: orange;
+    font-weight: bold;
+}
+
+.navbar .list .item .iconfont {
+    font-size: 23px;
+}
+.navbar .list .item .icon-more {
+    display: none;
+}
+
+@media screen and (max-width:850px) {
+    nav {
+        bottom: 0;
+    }
+    .navbar .list {
+        justify-content: flex-end;
+        letter-spacing: 15px;
+    }
+    .list li:nth-child(1),
+    .list li:nth-child(2), 
+    .list li:nth-child(3), 
+    .list li:nth-child(4), 
+    .list li:nth-child(5)  {
+        display: none;
+    }
+
+    .navbar .list .item .icon-more {
+        display: block;
+    }
+}
