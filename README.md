@@ -1,37 +1,9 @@
 # MyWebsite
 
 #### 介绍
-我的个人主页开发仓库
+为了暑假和秋招以及未来的职业生涯发展，我想做一个个人网站项目来展示自己，将简历中塞不下的内容挪到这里。同时，后续这个网站也可以成为我各类线上项目的入口，在职业应聘的时候更有竞争力。
 
-#### 软件架构
-软件架构说明
+项目整体使用静态html页面进行构建，一方面我想强化完善一下我的前端基础的能力，将知识尽可能多的补全一下；另一方面这个网站的架构也比较简单，html足以实现需求；如果最后真的需要添加动态内容组件，那么可以使用jsp或者vue（目前企业用jsp的很少），很简单的编写后端及其交互。
 
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### 链接
+参考：[YouTube](https://www.youtube.com/c/Bedimcode)
