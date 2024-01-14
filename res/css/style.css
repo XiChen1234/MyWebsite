@@ -136,9 +136,9 @@ header .image div .iconfont {
     font-weight: bold;
 }
 header .image div .icon-mouse {
-    animation: test 1s infinite;
+    animation: bounce 1s infinite;
 }
-@keyframes test {
+@keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
     }
