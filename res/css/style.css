@@ -30,6 +30,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     position: fixed ;
+    z-index: 1;
 }
 nav h1 {
     width: 30%;
@@ -63,7 +64,8 @@ nav li:hover {
 .container {
     width: 90%;
     background-color: #fff;
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
+    border-bottom: #aaa solid 3px;
 }
 
 /* Header */
@@ -149,6 +151,91 @@ header .image div .icon-mouse {
         transform: translateY(5px);
     }
 }
+
+/* section */
+section.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section.container h1 {
+    font-size: 50px;
+    font-weight: lighter;
+}
+section.container h2 {
+    font-size: 30px;
+    color: #aaa;
+    font-weight: lighter;
+}
+
+/* about */
+.about .content {
+    display: flex;
+    justify-content: center;
+}
+.about .content .image img{
+    width: 250px;
+    margin: 40px 10px;
+    border-radius: 10px;
+}
+.about .content .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 20px;
+    width: 45%;
+}
+.about .content .text .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr 2fr;
+}
+.about .content .text .info p {
+    line-height: 1.5;
+    color: orange;
+}
+.about .content .text .introduction {
+    font-size: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin: 20px 10px;
+}
+.about .content .text .list {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.about .content .text .list .item {
+    width: 100px;
+    height: 80px;
+    background-color: #eee;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.about .content .text .list .item h3 {
+    font-size:25px;
+    color: orange;
+}
+.about .content .text .list .item p {
+    font-weight: lighter;
+}
+.about .content .text .button {
+    font-size: 20px;
+    margin-top: 30px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    background-color: orange;
+    color: #fff;
+    line-height: 1.5;
+}
+.about .content .text .button .iconfont {
+    font-size: 20px;
+}
+
 
 main div {
     width: 500px;
