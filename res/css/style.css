@@ -253,7 +253,7 @@ section.container h2 {
     color: orange;
     margin: 10px;
 }
-.skill .content .skill-content .icon-language {
+.skill .content .skill-content .skill-head div .iconfont {
     position: relative;
     top: 40px;
     left: -50px;
