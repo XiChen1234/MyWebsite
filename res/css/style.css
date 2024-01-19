@@ -1,3 +1,14 @@
+/* color */
+:root {
+    --orange-color: #FFA500;
+    --light-orange-color: #FFE4B5;
+    --a-hover: #f6f6f6;
+    --main-text: #000;
+    --sub-text: #aaa;
+    --global-background: #eee;
+    --main-bottom: #fff;
+}
+
 /* css reset */
 * {
     margin: 0;
@@ -15,7 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #eee;
+    background-color: var(--global-background);
 }
 img {
     width: 300px;
@@ -23,7 +34,7 @@ img {
 
 /* navbar */
 nav {
-    background-color: #fff;
+    background-color: var(--main-bottom);
     width: 100%;
     height: 80px;
     display: flex;
@@ -42,7 +53,7 @@ nav h1 {
     font-weight: 1000;
 }
 nav h1:hover {
-    color: orange;
+    color: var(--orange-color);
 }
 nav ul {
     display: flex;
@@ -58,16 +69,17 @@ nav li .iconfont {
     font-size: 25px;
 }
 nav li:hover {
-    color: orange;
-    background-color: #f6f6f6;
+    color: var(--orange-color);
+    background-color: var(--a-hover);
     border-radius: 10px;
 }
 
 /* container part */
 .container {
     width: 90%;
-    background-color: #fff;
+    background-color: var(--main-bottom);
     min-height: calc(100vh - 100px);
+    outline: 1px solid;
 }
 
 /* Header */
@@ -88,7 +100,7 @@ header .text h1 {
 }
 header .text h2 {
     font-size: 35px;
-    color: #aaa;
+    color: var(--sub-text);
     font-weight: lighter;
     margin: 10px 0;
 }
@@ -106,13 +118,13 @@ header .text h3 .iconfont {
     font-weight: bold;
 }
 header .text div {
-    color: #fff;
+    color: var(--main-bottom);
     font-size: 30px;
     width: 250px;
     height: 40px;
     line-height: 40px;
     border-radius: 20px;
-    background-color: orange;
+    background-color: var(--orange-color);
     text-align: center;
     margin-top: 60px;
 }
@@ -136,7 +148,7 @@ header .image div {
 header .image div .iconfont {
     margin: 0 20px;
     font-size: 25px;
-    color: orange;
+    color: var(--orange-color);
     font-weight: bold;
 }
 header .image div .icon-mouse {
@@ -170,7 +182,7 @@ section.container h1 {
 }
 section.container h2 {
     font-size: 30px;
-    color: #aaa;
+    color: var(--sub-text);
     font-weight: lighter;
 }
 
@@ -197,7 +209,7 @@ section.container h2 {
 }
 .about .content .text .info p {
     line-height: 1.5;
-    color: orange;
+    color: var(--orange-color);
 }
 .about .content .text .introduction {
     font-size: 20px;
@@ -213,7 +225,7 @@ section.container h2 {
 .about .content .text .list .item {
     width: 100px;
     height: 80px;
-    background-color: #eee;
+    background-color: var(--global-background);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -223,7 +235,7 @@ section.container h2 {
 }
 .about .content .text .list .item h3 {
     font-size:25px;
-    color: orange;
+    color: var(--orange-color);
 }
 .about .content .text .list .item p {
     font-weight: lighter;
@@ -233,8 +245,8 @@ section.container h2 {
     margin-top: 30px;
     padding: 15px 30px;
     border-radius: 20px;
-    background-color: orange;
-    color: #fff;
+    background-color: var(--orange-color);
+    color: var(--main-bottom);
     line-height: 1.5;
 }
 .about .content .text .button .iconfont {
@@ -253,7 +265,7 @@ section.container h2 {
 .skill .content .skill-content .skill-head .iconfont {
     font-size: 30px;
     font-weight: bold;
-    color: orange;
+    color: var(--orange-color);
     margin: 10px;
 }
 .skill .content .skill-content .skill-head div .iconfont {
@@ -268,7 +280,7 @@ section.container h2 {
 .skill .content .skill-content .skill-head div h4 {
     font-size: 20px;
     font-weight: lighter;
-    color: #aaa;
+    color: var(--sub-text);
     white-space:nowrap; 
 }
 .skill .content .skill-content .skill-head .icon-right {
@@ -283,7 +295,7 @@ section.container h2 {
 }
 .skill .content .skill-content .skill-list .item .line {
     margin: 10px 0;
-    background-color: antiquewhite;
+    background-color: var(--light-orange-color);
     width: 100%;
     height: 5px;
     position: relative;
@@ -291,7 +303,7 @@ section.container h2 {
 .skill .content .skill-content .skill-list .item .line::before {
     content: '';
     height: 100%;
-    background-color: orange;
+    background-color: var(--orange-color);
     position: absolute; 
     width: 50%; /* 这里可以设置进度百分比 */
 }
@@ -306,6 +318,98 @@ section.container h2 {
 .skill .skill-content.open .skill-head .icon-right {
     transform: rotate(90deg);
 }
+
+/* qualification */
+.qualification .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.qualification .content .tab {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.qualification .content .tab h3 {
+    text-align: center;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: lighter;
+}
+.qualification .content .tab h3:hover {
+    color: var(--orange-color);
+    background-color: var(--global-background);
+}
+.qualification .content .tab h3 .iconfont {
+    font-size: 25px;
+    font-weight: bold;
+}
+.qualification .content .timeline {
+    width: 700px;
+    display: grid;
+    grid-template-columns: 6fr 1fr 6fr;
+    grid-column-gap: 20px;
+}
+.qualification .content .timeline.hidden {
+    display: none;
+}
+.qualification .content .timeline .item {
+    height: 150px;
+}
+.qualification .content .timeline .detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.qualification .content .timeline .detail.left {
+    text-align: right;
+    align-items: flex-end;
+}
+.qualification .content .timeline .detail.right {
+    text-align: left;
+    align-items: flex-start;
+}
+.qualification .content .timeline .detail h3 {
+    font-size: 25px;
+    font-weight: lighter;
+}
+.qualification .content .timeline .detail h4 {
+    font-size: 15px;
+    color: var(--sub-text);
+    margin: 10px 0;
+}
+.qualification .content .timeline .detail p {
+    font-size: 23px;
+    color: var(--sub-text);
+}
+.qualification .content .timeline .detail img {
+    width: 200px;
+}
+.qualification .content .timeline .split {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.qualification .content .timeline .split .line {
+    display: block;
+    margin: 0 auto;
+    width: 2px;
+    height: 100%;
+    background-color: orange;
+}
+.qualification .content .timeline .split .round {
+    width: 13px;
+    height: 13px;
+    background-color: var(--orange-color);
+    position: absolute;
+    border-radius: 50%;
+}
+
 
 main div {
     width: 500px;

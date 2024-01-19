@@ -1,99 +1,142 @@
 @font-face {
-    font-family: "iconfont"; /* Project id 4276039 */
-    src: url('//at.alicdn.com/t/c/font_4276039_h6230qzg4vh.woff2?t=1700675567896') format('woff2'),
-         url('//at.alicdn.com/t/c/font_4276039_h6230qzg4vh.woff?t=1700675567896') format('woff'),
-         url('//at.alicdn.com/t/c/font_4276039_h6230qzg4vh.ttf?t=1700675567896') format('truetype');
-  }
-  
-  .iconfont {
-    font-family: "iconfont" !important;
-    font-size: 16px;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  .icon-more:before {
-    content: "\e6cb";
-  }
-  
-  .icon-right:before {
-    content: "\e65f";
-  }
-  
-  .icon-left:before {
-    content: "\e660";
-  }
-  
-  .icon-calendar:before {
-    content: "\e809";
-  }
-  
-  .icon-achievements:before {
-    content: "\e690";
-  }
-  
-  .icon-profession:before {
-    content: "\e6ae";
-  }
-  
-  .icon-education:before {
-    content: "\e739";
-  }
-  
-  .icon-backend:before {
-    content: "\e601";
-  }
-  
-  .icon-desktop:before {
-    content: "\e606";
-  }
-  
-  .icon-frontend:before {
-    content: "\e608";
-  }
-  
-  .icon-language:before {
-    content: "\e609";
-  }
-  
-  .icon-server:before {
-    content: "\e60a";
-  }
-  
-  .icon-download:before {
-    content: "\e607";
-  }
-  
-  .icon-xiala:before {
-    content: "\e6b9";
-  }
-  
-  .icon-mouse:before {
-    content: "\e635";
-  }
-  
-  .icon-list:before {
-    content: "\e7f4";
-  }
-  
-  .icon-send:before {
-    content: "\e643";
-  }
-  
-  .icon-edu:before {
-    content: "\e62a";
-  }
-  
-  .icon-translate:before {
-    content: "\e888";
-  }
-  
-  .icon-moon:before {
-    content: "\e6c3";
-  }
-  
-  .icon-sun:before {
-    content: "\e6da";
-  }
-  
+  font-family: "iconfont"; /* Project id 4276039 */
+  src: url('//at.alicdn.com/t/c/font_4276039_mzdnxw7wazd.woff2?t=1705653841968') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4276039_mzdnxw7wazd.woff?t=1705653841968') format('woff'),
+       url('//at.alicdn.com/t/c/font_4276039_mzdnxw7wazd.ttf?t=1705653841968') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-spring:before {
+  content: "\ed0b";
+}
+
+.icon-mongodb:before {
+  content: "\e65b";
+}
+
+.icon-element-ui:before {
+  content: "\e602";
+}
+
+.icon-Vue:before {
+  content: "\e799";
+}
+
+.icon-shell:before {
+  content: "\e604";
+}
+
+.icon-linux:before {
+  content: "\e80b";
+}
+
+.icon-mybatis:before {
+  content: "\e60b";
+}
+
+.icon-mysql:before {
+  content: "\e638";
+}
+
+.icon-aliyun:before {
+  content: "\e8f0";
+}
+
+.icon-mybatisplus:before {
+  content: "\e603";
+}
+
+.icon-echarts:before {
+  content: "\e605";
+}
+
+.icon-more:before {
+  content: "\e6cb";
+}
+
+.icon-right:before {
+  content: "\e65f";
+}
+
+.icon-left:before {
+  content: "\e660";
+}
+
+.icon-calendar:before {
+  content: "\e809";
+}
+
+.icon-achievements:before {
+  content: "\e690";
+}
+
+.icon-profession:before {
+  content: "\e6ae";
+}
+
+.icon-education:before {
+  content: "\e739";
+}
+
+.icon-backend:before {
+  content: "\e601";
+}
+
+.icon-desktop:before {
+  content: "\e606";
+}
+
+.icon-frontend:before {
+  content: "\e608";
+}
+
+.icon-language:before {
+  content: "\e609";
+}
+
+.icon-server:before {
+  content: "\e60a";
+}
+
+.icon-download:before {
+  content: "\e607";
+}
+
+.icon-xiala:before {
+  content: "\e6b9";
+}
+
+.icon-mouse:before {
+  content: "\e635";
+}
+
+.icon-list:before {
+  content: "\e7f4";
+}
+
+.icon-send:before {
+  content: "\e643";
+}
+
+.icon-edu:before {
+  content: "\e62a";
+}
+
+.icon-translate:before {
+  content: "\e888";
+}
+
+.icon-moon:before {
+  content: "\e6c3";
+}
+
+.icon-sun:before {
+  content: "\e6da";
+}
