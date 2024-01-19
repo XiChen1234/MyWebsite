@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4417340 */
+  src: url('iconfont.woff2?t=1705655138864') format('woff2'),
+       url('iconfont.woff?t=1705655138864') format('woff'),
+       url('iconfont.ttf?t=1705655138864') format('truetype'),
+       url('iconfont.svg?t=1705655138864#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xiala:before {
+  content: "\e6b9";
+}
+
+.icon-download:before {
+  content: "\e607";
+}
+
+.icon-calendar:before {
+  content: "\e809";
+}
+
+.icon-edu:before {
+  content: "\e62a";
+}
+
+.icon-list:before {
+  content: "\e7f4";
+}
+
+.icon-send:before {
+  content: "\e643";
+}
+
+.icon-backend:before {
+  content: "\e601";
+}
+
+.icon-desktop:before {
+  content: "\e606";
+}
+
+.icon-language:before {
+  content: "\e609";
+}
+
+.icon-server:before {
+  content: "\e60a";
+}
+
+.icon-mouse:before {
+  content: "\e635";
+}
+
+.icon-achievements:before {
+  content: "\e690";
+}
+
+.icon-profession:before {
+  content: "\e6ae";
+}
+
+.icon-translate:before {
+  content: "\e888";
+}
+

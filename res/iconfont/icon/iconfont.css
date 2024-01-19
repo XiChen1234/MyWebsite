@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4417316 */
+  /* Color fonts */
+  src: 
+       url('iconfont.woff2?t=1705656224931') format('woff2'),
+       url('iconfont.woff?t=1705656224931') format('woff'),
+       url('iconfont.ttf?t=1705656224931') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shell:before {
+  content: "\e600";
+}
+
+.icon-aliyun:before {
+  content: "\e601";
+}
+
+.icon-wx-mini:before {
+  content: "\e61b";
+}
+
+.icon-mybatisplus:before {
+  content: "\e602";
+}
+
+.icon-mongodb:before {
+  content: "\e65b";
+}
+
+.icon-Vue:before {
+  content: "\e799";
+}
+
+.icon-linux:before {
+  content: "\e80b";
+}
+
+.icon-mybatis:before {
+  content: "\e60b";
+}
+
+.icon-mysql:before {
+  content: "\e638";
+}
+
+.icon-spring:before {
+  content: "\ed0b";
+}
+
+.icon-echarts:before {
+  content: "\e605";
+}
+

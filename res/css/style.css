@@ -345,7 +345,7 @@ section.container h2 {
     background-color: var(--global-background);
 }
 .qualification .content .tab h3 .iconfont {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
 }
 .qualification .content .timeline {
@@ -383,8 +383,26 @@ section.container h2 {
     margin: 10px 0;
 }
 .qualification .content .timeline .detail p {
+    line-height: 25px;
     font-size: 23px;
     color: var(--sub-text);
+}
+.qualification .content .timeline p .iconfont {
+    font-size: 20px;
+}
+.qualification .content .timeline .detail.icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.qualification .content .timeline .detail.icon.left {
+    justify-content: flex-end;
+}
+.qualification .content .timeline .detail.icon.right {
+    justify-content: flex-start;
+}
+.qualification .content .timeline .detail.icon .iconfont {
+    font-size: 50px;
 }
 .qualification .content .timeline .detail img {
     width: 200px;
