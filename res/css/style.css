@@ -508,7 +508,7 @@ section.container h2 {
     margin-top: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px 5px;
+    grid-gap: 20px;
 }
 .contact .content .item {
     display: flex;
