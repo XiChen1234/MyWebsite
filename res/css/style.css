@@ -182,7 +182,7 @@ section.container h1 {
     font-weight: lighter;
 }
 section.container h2 {
-    font-size: 30px;
+    font-size: 20px;
     color: var(--sub-text);
     font-weight: lighter;
 }
@@ -429,6 +429,7 @@ section.container h2 {
     border-radius: 50%;
 }
 
+/* portfolio */
 .portfolio .content .view {
     width: 700px;
     height: 400px;
