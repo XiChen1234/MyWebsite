@@ -7,6 +7,7 @@
     --sub-text: #aaa;
     --global-background: #eee;
     --main-bottom: #fff;
+    --background-transparent: rgba(0, 0, 0, 0.35);
 }
 
 /* css reset */
@@ -428,6 +429,78 @@ section.container h2 {
     border-radius: 50%;
 }
 
+.portfolio .content .view {
+    width: 700px;
+    height: 400px;
+    outline: 1px solid #000;
+    position: relative;
+}
+.portfolio .content .view .img-list {
+    width: 300%;
+    height: 100%;
+    display: flex;
+}
+.portfolio .content .view .img-list .item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: transparent solid 30px;
+}
+.portfolio .content .view .img-list .item h3 {
+    font-size: 25px;
+}
+.portfolio .content .view .img-list .item h4 {
+    font-size: 23px;
+    font-weight: lighter;
+    color: var(--sub-text);
+}
+.portfolio .content .view .img-list .item p {
+    text-align: start;
+    font-size: 20px;
+}
+.portfolio .content .view .img-list .item img {
+    margin: 20px;
+}
+.portfolio .content .view .iconfont {
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--sub-text);
+}
+.portfolio .content .view .iconfont.icon-left {
+    left: 10px;
+}
+.portfolio .content .view .iconfont.icon-right {
+    right: 10px;
+}
+.portfolio .content .view .iconfont:hover {
+    color: var(--orange-color);
+    background-color: var(--background-transparent);
+    border-radius: 10px;
+}
+.portfolio .content .view .indicator {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.portfolio .content .view .indicator span {
+    width: 15px;
+    height: 15px;
+    background-color: var(--sub-text);
+    border-radius: 50%;
+    margin: 10px;
+}
+.portfolio .content .view .indicator span.active {
+    background-color: var(--light-orange-color);
+}
+.portfolio .content .view .indicator span:hover {
+    background-color: var(--orange-color);
+}
 
 main div {
     width: 500px;
