@@ -1,9 +1,9 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4417340 */
-  src: url('//at.alicdn.com/t/c/font_4417340_9tykuruitoo.woff2?t=1705843944556') format('woff2'),
-       url('//at.alicdn.com/t/c/font_4417340_9tykuruitoo.woff?t=1705843944556') format('woff'),
-       url('//at.alicdn.com/t/c/font_4417340_9tykuruitoo.ttf?t=1705843944556') format('truetype'),
-       url('//at.alicdn.com/t/c/font_4417340_9tykuruitoo.svg?t=1705843944556#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/c/font_4417340_wr6ji4woze.woff2?t=1705846547710') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4417340_wr6ji4woze.woff?t=1705846547710') format('woff'),
+       url('//at.alicdn.com/t/c/font_4417340_wr6ji4woze.ttf?t=1705846547710') format('truetype'),
+       url('//at.alicdn.com/t/c/font_4417340_wr6ji4woze.svg?t=1705846547710#iconfont') format('svg');
 }
 
 .iconfont {
@@ -12,6 +12,18 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+  content: "\e85a";
+}
+
+.icon-gitee:before {
+  content: "\e686";
+}
+
+.icon-bilibili:before {
+  content: "\e61f";
 }
 
 .icon-wechat:before {

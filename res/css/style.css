@@ -525,15 +525,41 @@ section.container h2 {
     color: var(--orange-color);
 }
 
-
-main div {
-    width: 500px;
-    height: 200px;
-    background-color: aquamarine;
+footer {
+    width: 90%;
+    background-color: var(--main-bottom);
+    display: flex;
+    margin-bottom: 100px;
+    background-color: var(--orange-color);
+    flex-wrap: wrap;
+    justify-content: center;
+    border: transparent solid 40px;
+    align-items: center;
 }
-
 footer div {
-    width: 500px;
-    height: 200px;
-    background-color: bisque;
+    width: 33%;
+    color: var(--a-hover);
+}
+footer .inner-link ul{
+    display: flex;  
+    justify-content: space-between;  
+}
+footer .inner-link ul li {
+    font-size: 20px;
+}
+footer .inner-link ul li:hover {
+    color: var(--light-orange-color);
+}
+footer .outer-link {
+    display: flex;  
+    justify-content: flex-end;  
+}
+footer .outer-link .iconfont {
+    font-size: 30px;
+    padding: 10px;
+}
+footer .copyright {
+    text-align: center;
+    margin: 30px 0;
+    color: var(--sub-text);
 }
