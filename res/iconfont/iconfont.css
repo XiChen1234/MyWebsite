@@ -1,9 +1,9 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4417340 */
-  src: url('//at.alicdn.com/t/c/font_4417340_j3ivqzyx4e.woff2?t=1705839583699') format('woff2'),
-       url('//at.alicdn.com/t/c/font_4417340_j3ivqzyx4e.woff?t=1705839583699') format('woff'),
-       url('//at.alicdn.com/t/c/font_4417340_j3ivqzyx4e.ttf?t=1705839583699') format('truetype'),
-       url('//at.alicdn.com/t/c/font_4417340_j3ivqzyx4e.svg?t=1705839583699#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/c/font_4417340_9tykuruitoo.woff2?t=1705843944556') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4417340_9tykuruitoo.woff?t=1705843944556') format('woff'),
+       url('//at.alicdn.com/t/c/font_4417340_9tykuruitoo.ttf?t=1705843944556') format('truetype'),
+       url('//at.alicdn.com/t/c/font_4417340_9tykuruitoo.svg?t=1705843944556#iconfont') format('svg');
 }
 
 .iconfont {
@@ -12,6 +12,26 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wechat:before {
+  content: "\e66e";
+}
+
+.icon-phone:before {
+  content: "\e6a2";
+}
+
+.icon-location:before {
+  content: "\e6db";
+}
+
+.icon-email:before {
+  content: "\e66f";
+}
+
+.icon-qq:before {
+  content: "\e6e8";
 }
 
 .icon-right:before {
