@@ -287,6 +287,7 @@ section.container h2 {
     font-weight: bold;
     color: var(--orange-color);
     margin: 10px;
+    cursor: pointer;
 }
 .skill .content .skill-content .skill-head div .iconfont {
     position: relative;
@@ -329,7 +330,6 @@ section.container h2 {
 }
 /* 收起状态 */
 .skill .skill-content.close .skill-head .icon-right {
-    transform: rotate(-90deg);
 }
 .skill .skill-content.close .skill-list {
     display: none;
