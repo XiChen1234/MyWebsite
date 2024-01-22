@@ -18,6 +18,9 @@
     box-sizing: border-box;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+}
 ul {
     list-style: none;
 }
@@ -26,7 +29,6 @@ a {
     outline: none;
     color: #000; 
 }
-
 /* css init */
 body {
     display: flex;
@@ -84,7 +86,7 @@ nav li:hover {
 
 /* space */
 .space {
-    height: 10px;
+    height: 15px;
 }
 
 /* container part */
@@ -131,7 +133,6 @@ header .text h3 .iconfont {
     font-weight: bold;
 }
 header .text div {
-    color: var(--main-bottom);
     font-size: 30px;
     width: 250px;
     height: 40px;
@@ -140,6 +141,9 @@ header .text div {
     background-color: var(--orange-color);
     text-align: center;
     margin-top: 60px;
+}
+header .text div a {
+    color: var(--main-bottom);
 }
 header .text div .iconfont {
     font-size: 30px;
@@ -153,18 +157,19 @@ header .image {
 header .image img {
     border-radius: 50%/35% 35% 65% 65%;
 }
-header .image div {
+header .image div a {
     font-size: 25px;
     margin-top: 50px;
     display: flex;
+    cursor: pointer;
 }
-header .image div .iconfont {
+header .image div a .iconfont {
     margin: 0 20px;
     font-size: 25px;
     color: var(--orange-color);
     font-weight: bold;
 }
-header .image div .icon-mouse {
+header .image div a .icon-mouse {
     animation: bounce 1s infinite;
 }
 @keyframes bounce {
