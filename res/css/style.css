@@ -264,8 +264,10 @@ section.container h2 {
     padding: 15px 30px;
     border-radius: 20px;
     background-color: var(--orange-color);
-    color: var(--main-bottom);
     line-height: 1.5;
+}
+.about .content .text .button a {
+    color: var(--main-bottom);
 }
 .about .content .text .button .iconfont {
     font-size: 20px;
