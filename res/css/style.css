@@ -82,7 +82,7 @@ nav li:hover {
     width: 90%;
     background-color: var(--main-bottom);
     min-height: calc(100vh - 100px);
-    outline: 1px solid;
+    /* outline: 1px solid; */
 }
 
 /* Header */
@@ -435,7 +435,7 @@ section.container h2 {
 .portfolio .content .view {
     width: 700px;
     height: 400px;
-    outline: 1px solid #000;
+    /* outline: 1px solid #000; */
     position: relative;
 }
 .portfolio .content .view .img-list {
