@@ -1,10 +1,9 @@
 @font-face {
-  font-family: "iconfont"; /* Project id 4417316 */
-  /* Color fonts */
-  src: 
-       url('iconfont.woff2?t=1705656224931') format('woff2'),
-       url('iconfont.woff?t=1705656224931') format('woff'),
-       url('iconfont.ttf?t=1705656224931') format('truetype');
+  font-family: "iconfont"; /* Project id 4417340 */
+  src: url('//at.alicdn.com/t/c/font_4417340_qhoby77mcbl.woff2?t=1705910223788') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4417340_qhoby77mcbl.woff?t=1705910223788') format('woff'),
+       url('//at.alicdn.com/t/c/font_4417340_qhoby77mcbl.ttf?t=1705910223788') format('truetype'),
+       url('//at.alicdn.com/t/c/font_4417340_qhoby77mcbl.svg?t=1705910223788#iconfont') format('svg');
 }
 
 .iconfont {
@@ -15,47 +14,102 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-shell:before {
-  content: "\e600";
+.icon-frontend:before {
+  content: "\e670";
 }
 
-.icon-aliyun:before {
+.icon-github:before {
+  content: "\e85a";
+}
+
+.icon-gitee:before {
+  content: "\e686";
+}
+
+.icon-bilibili:before {
+  content: "\e61f";
+}
+
+.icon-wechat:before {
+  content: "\e66e";
+}
+
+.icon-phone:before {
+  content: "\e6a2";
+}
+
+.icon-location:before {
+  content: "\e6db";
+}
+
+.icon-email:before {
+  content: "\e66f";
+}
+
+.icon-qq:before {
+  content: "\e6e8";
+}
+
+.icon-right:before {
+  content: "\e63c";
+}
+
+.icon-left:before {
+  content: "\e889";
+}
+
+.icon-xiala:before {
+  content: "\e88a";
+}
+
+.icon-download:before {
+  content: "\e607";
+}
+
+.icon-calendar:before {
+  content: "\e809";
+}
+
+.icon-edu:before {
+  content: "\e62a";
+}
+
+.icon-list:before {
+  content: "\e7f4";
+}
+
+.icon-send:before {
+  content: "\e643";
+}
+
+.icon-backend:before {
   content: "\e601";
 }
 
-.icon-wx-mini:before {
-  content: "\e61b";
+.icon-desktop:before {
+  content: "\e606";
 }
 
-.icon-mybatisplus:before {
-  content: "\e602";
+.icon-language:before {
+  content: "\e609";
 }
 
-.icon-mongodb:before {
-  content: "\e65b";
+.icon-server:before {
+  content: "\e60a";
 }
 
-.icon-Vue:before {
-  content: "\e799";
+.icon-mouse:before {
+  content: "\e635";
 }
 
-.icon-linux:before {
-  content: "\e80b";
+.icon-achievements:before {
+  content: "\e690";
 }
 
-.icon-mybatis:before {
-  content: "\e60b";
+.icon-profession:before {
+  content: "\e6ae";
 }
 
-.icon-mysql:before {
-  content: "\e638";
+.icon-translate:before {
+  content: "\e888";
 }
-
-.icon-spring:before {
-  content: "\ed0b";
-}
-
-.icon-echarts:before {
-  content: "\e605";
-}
-

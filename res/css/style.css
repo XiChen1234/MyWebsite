@@ -21,6 +21,11 @@
 ul {
     list-style: none;
 }
+a {
+    text-decoration: none;
+    outline: none;
+    color: #000; 
+}
 
 /* css init */
 body {
@@ -75,6 +80,11 @@ nav li:hover {
     color: var(--orange-color);
     background-color: var(--a-hover);
     border-radius: 10px;
+}
+
+/* space */
+.space {
+    height: 10px;
 }
 
 /* container part */
