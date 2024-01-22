@@ -329,8 +329,6 @@ section.container h2 {
     width: 50%; /* 这里可以设置进度百分比 */
 }
 /* 收起状态 */
-.skill .skill-content.close .skill-head .icon-right {
-}
 .skill .skill-content.close .skill-list {
     display: none;
 }
