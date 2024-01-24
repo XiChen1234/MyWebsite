@@ -1,92 +1,26 @@
 var skills = [
     {
         arrow: document.querySelector('#icon-language'),
-        list:[
-            {
-                name: 'Java',
-                value: 85
-            }, {
-                name: 'Python',
-                value: 85
-            }, {
-                name: 'C/C++',
-                value: 60
-            }, {
-                name: 'Node.js',
-                value: 40
-            }
-        ]
+        list: document.getElementsByName('list')[0]
     }, 
     {
         arrow: document.querySelector('#icon-backend'),
-        list:[
-            {
-                name: 'Spring Boot',
-                value: 85
-            }, {
-                name: 'MyBatis & Plus',
-                value: 85
-            }, {
-                name: 'MongoDB',
-                value: 60
-            }, {
-                name: 'WebSocket',
-                value: 60
-            }, {
-                name: 'Flask',
-                value: 50
-            }
-        ]
+        list: document.getElementsByName('list')[1]
     }, 
     {
         arrow: document.querySelector('#icon-frontend'),
-        list:[
-            {
-                name: 'HTML / CSS / JavaScript',
-                value: 85
-            }, {
-                name: 'jQuery',
-                value: 75
-            }, {
-                name: 'Vue.js',
-                value: 60
-            }
-        ]
+        list: document.getElementsByName('list')[2]
     }, 
     {
         arrow: document.querySelector('#icon-server'),
-        list:[
-            {
-                name: 'Linux & Shell',
-                value: 70
-            }, {
-                name: 'Network',
-                value: 85
-            }, {
-                name: 'Nginx & Tomcat',
-                value: 60
-            }, {
-                name: 'Docker',
-                value: 50
-            }, {
-                name: 'Git',
-                value: 85
-            }
-        ]
+        list: document.getElementsByName('list')[3]
     }, 
     {
         arrow: document.querySelector('#icon-desktop'),
-        list:[
-            {
-                name: 'Qt',
-                value: 80
-            }, {
-                name: 'JavaFX',
-                value: 60
-            }
-        ]
+        list: document.getElementsByName('list')[4]
     }
 ]
+var list = document.getElementsByName('list')
 
 var current_open = 0
 
@@ -94,6 +28,14 @@ skills.forEach(function(item, i) {
     item.arrow.addEventListener('click', ()=>{
         open(i)
     })
+
+    // 绑定熟练度与进度条
+    var children = item.list.querySelectorAll('.item')
+    for(let i=0;i<children.length;i++) {
+        var num = children[i].querySelector('.num').textContent
+        var line = children[i].querySelector('.line')
+        line.style.setProperty('--width', num);
+    }
 })
 
 /**

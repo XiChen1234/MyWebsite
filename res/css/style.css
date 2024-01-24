@@ -326,7 +326,7 @@ section.container h2 {
     height: 100%;
     background-color: var(--orange-color);
     position: absolute; 
-    width: 50%; /* 这里可以设置进度百分比 */
+    width: var(--width); /* 这里可以设置进度百分比 */
 }
 /* 收起状态 */
 .skill .skill-content.close .skill-list {
