@@ -290,11 +290,11 @@
         <h2>Education and Work</h2>
         <div class="content">
             <div class="tab">
-                <h3><i class="iconfont icon-achievements"></i> Education</h3>
-                <h3><i class="iconfont icon-profession"></i> Work</h3>
+                <h3 id="edu-tab" class="active"><i class="iconfont icon-achievements"></i> Education</h3>
+                <h3 id="work-tab"><i class="iconfont icon-profession"></i> Work</h3>
             </div>
             <!-- edu -->
-            <div class="timeline hidden">
+            <div id="edu-timeline" class="timeline">
                 <!-- 入学 -->
                 <div class="item detail left">
                     <h3>Software Engineering</h3>
@@ -363,7 +363,7 @@
             </div>
             
             <!-- work -->
-            <div class="timeline">
+            <div id="work-timeline" class="timeline hidden">
                 <!-- 天基 -->
                 <div class="item detail left">
                     <h3>中南大学天基计算课题组</h3>
@@ -522,5 +522,6 @@
     </footer>
 
     <script src="./res/js/skill.js"></script>
+    <script src="./res/js/qualification.js"></script>
 </body>
 </html>

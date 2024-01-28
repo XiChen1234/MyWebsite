@@ -362,6 +362,9 @@ section.container h2 {
     color: var(--orange-color);
     background-color: var(--global-background);
 }
+.qualification .content .tab h3.active {
+    color: var(--orange-color);
+}
 .qualification .content .tab h3 .iconfont {
     font-size: 30px;
     font-weight: bold;
