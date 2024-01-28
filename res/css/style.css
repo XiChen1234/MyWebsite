@@ -422,7 +422,7 @@ section.container h2 {
 .qualification .content .timeline .detail.icon.right {
     justify-content: flex-start;
 }
-.qualification .content .timeline .detail.icon .iconfont {
+.qualification .content .timeline .detail.icon .color {
     font-size: 50px;
 }
 .qualification .content .timeline .detail img {
