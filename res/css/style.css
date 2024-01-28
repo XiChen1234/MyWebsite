@@ -7,7 +7,7 @@
     --sub-text: #aaa;
     --global-background: #eee;
     --main-bottom: #fff;
-    --background-transparent: rgba(0, 0, 0, 0.35);
+    --background-transparent: rgba(0, 0, 0, 0.1);
 }
 
 /* css reset */
@@ -501,6 +501,7 @@ section.container h2 {
     color: var(--orange-color);
     background-color: var(--background-transparent);
     border-radius: 10px;
+    cursor: pointer;
 }
 .portfolio .content .view .indicator {
     display: flex;
@@ -515,9 +516,11 @@ section.container h2 {
     background-color: var(--sub-text);
     border-radius: 50%;
     margin: 10px;
+    cursor: pointer;
 }
 .portfolio .content .view .indicator span.active {
     background-color: var(--light-orange-color);
+    cursor: auto;
 }
 .portfolio .content .view .indicator span:hover {
     background-color: var(--orange-color);
