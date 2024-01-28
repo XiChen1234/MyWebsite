@@ -25,6 +25,7 @@ var list = document.getElementsByName('list')
 var current_open = 0
 
 skills.forEach(function(item, i) {
+    // 为每个arrow添加点击事件
     item.arrow.addEventListener('click', ()=>{
         open(i)
     })
