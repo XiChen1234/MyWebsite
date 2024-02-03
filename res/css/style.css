@@ -569,6 +569,8 @@ footer {
 }
 footer div {
     width: 33%;
+}
+footer div a{
     color: var(--a-hover);
 }
 footer .inner-link ul{
@@ -588,6 +590,8 @@ footer .outer-link {
 footer .outer-link .iconfont {
     font-size: 30px;
     padding: 10px;
+    color: var(--a-hover);
+    cursor: pointer;
 }
 footer .copyright {
     text-align: center;
