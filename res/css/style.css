@@ -357,6 +357,7 @@ section.container h2 {
     border-radius: 10px;
     font-size: 30px;
     font-weight: lighter;
+    cursor: pointer;
 }
 .qualification .content .tab h3:hover {
     color: var(--orange-color);
