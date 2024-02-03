@@ -596,5 +596,7 @@ footer .outer-link .iconfont {
 footer .copyright {
     text-align: center;
     margin: 30px 0;
-    color: var(--sub-text);
+}
+footer .copyright a {
+    color: var(--background-transparent)
 }
