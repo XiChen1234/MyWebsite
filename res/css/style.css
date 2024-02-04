@@ -61,7 +61,7 @@ nav h1 {
     font-weight: 1000;
     cursor: pointer;
 }
-nav h1:hover {
+nav h1:hover a {
     color: var(--orange-color);
 }
 nav ul {
@@ -82,6 +82,9 @@ nav li:hover {
     color: var(--orange-color);
     background-color: var(--a-hover);
     border-radius: 10px;
+}
+nav li:hover {
+    color: var(--orange-color);
 }
 
 /* space */
