@@ -1,0 +1,82 @@
+/*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2024 @XiChen1234 
+ * https://github.com/XiChen1234
+ */
+
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+li {
+    list-style: none;
+}
+
+img,
+ion-icon,
+a,
+button,
+time,
+span {
+    display: block;
+}
+
+button {
+    font: inherit;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    background: none;
+    font: inherit;
+}
+
+
+html {
+    font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei", sans-serif;
+}
+
+
+
+
+/*-----------------------------------*\
+  #MAIN
+\*-----------------------------------*/
+
+main {
+    min-width: 260px;
+}
+
+/*-----------------------------------*\
+  #SIDEBAR
+\*-----------------------------------*/
+
+aside {
+    position: fixed;
+    right: 10%;
+    bottom: 20%;
+    cursor: pointer;
+}
