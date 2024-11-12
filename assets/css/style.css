@@ -17,14 +17,20 @@
 *::after {
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
+    font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei", sans-serif;
 }
 
 a {
     text-decoration: none;
+    outline: none;
     color: var(--text);
 }
 
+ul {
+    list-style: none;
+}
 li {
     list-style: none;
 }
@@ -54,21 +60,20 @@ textarea {
     font: inherit;
 }
 
-
 html {
-    font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei", sans-serif;
+    scroll-behavior: smooth;
 }
-
-
-
-
-/*-----------------------------------*\
-  #MAIN
-\*-----------------------------------*/
-
-main {
+body {
     min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--global-background);
 }
+img {
+    width: 100px;
+}
+
 
 /*-----------------------------------*\
   #SIDEBAR

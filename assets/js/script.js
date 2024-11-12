@@ -5,7 +5,6 @@ const sidebar = document.getElementById('sidebar')
 
 sidebar.addEventListener('click', function() {
     window.scrollTo({
-        top:0,
-        behavior:"smooth"
+        top:0
     })
 })
