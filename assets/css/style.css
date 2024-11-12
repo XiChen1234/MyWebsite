@@ -7,6 +7,25 @@
  * https://github.com/XiChen1234
  */
 
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+    
+  /**
+   * colors
+   */
+
+   --text: #000000;
+   --background: #fff;
+   --common-background: #eee;
+
+   /** dark */
+   --dark-text: #fff;
+   --dark-background: #000;
+   --dark-common-background: #333;
+}
 
 /*-----------------------------------*\
   #RESET
@@ -68,12 +87,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--global-background);
+    background-color: var(--common-background);
+    color: var(--text);
 }
 img {
     width: 100px;
 }
 
+
+.dark-mode {
+    --text: var(--dark-text);
+    --background: var(--dark-background);
+    --common-background: var(--dark-common-background);
+}
 
 /*-----------------------------------*\
   #SIDEBAR
