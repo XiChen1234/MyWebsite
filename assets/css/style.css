@@ -12,19 +12,24 @@
 \*-----------------------------------*/
 
 :root {
-    
-  /**
+
+    /**
    * colors
    */
 
-   --text: #000000;
-   --background: #fff;
-   --common-background: #eee;
+    --text: #000000;
+    --background: #fff;
+    --common-background: #eee;
 
-   /** dark */
-   --dark-text: #fff;
-   --dark-background: #000;
-   --dark-common-background: #333;
+    /** dark */
+    --dark-text: #fff;
+    --dark-background: #000;
+    --dark-common-background: #333;
+
+    --orange: #FFA500;
+    --gray: #918f8f;
+    --light-orange: #FFE4B5;
+    --dark-orange: #6c604d;
 }
 
 /*-----------------------------------*\
@@ -38,7 +43,6 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei", sans-serif;
 }
 
 a {
@@ -50,6 +54,7 @@ a {
 ul {
     list-style: none;
 }
+
 li {
     list-style: none;
 }
@@ -81,7 +86,9 @@ textarea {
 
 html {
     scroll-behavior: smooth;
+    font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei", sans-serif;
 }
+
 body {
     min-width: 260px;
     display: flex;
@@ -90,6 +97,7 @@ body {
     background-color: var(--common-background);
     color: var(--text);
 }
+
 img {
     width: 100px;
 }
@@ -110,4 +118,26 @@ aside {
     right: 10%;
     bottom: 20%;
     cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+}
+
+aside:hover {
+    box-shadow: 0 0 20px 2px var(--gray);
+    transition: all 0.3s;
+}
+
+aside .iconfont {
+    font-size: 30px;
+    transform: rotate(-90deg);
+}
+
+aside:hover .iconfont {
+    color: var(--orange);
 }
