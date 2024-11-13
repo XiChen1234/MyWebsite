@@ -115,7 +115,7 @@ img {
 aside {
     position: fixed;
     right: 10%;
-    bottom: 20%;
+    bottom: 10%;
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -124,10 +124,13 @@ aside {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 3px solid var(--gray);
+    opacity: 50%;
 }
 
 aside:hover {
     box-shadow: 0 0 20px 2px var(--gray);
+    border: 3px solid var(--orange);
 }
 
 aside .iconfont {
@@ -166,7 +169,7 @@ nav.navbar {
     position: fixed;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     z-index: 999;
 }
 
@@ -213,6 +216,10 @@ nav .iconfont:hover {
     border-radius: 10px;
 }
 
+nav .iconfont.hidden {
+    display: none;
+}
+
 nav ul li:hover {
     color: var(--orange);
     background-color: var(--button-bg);
@@ -220,7 +227,7 @@ nav ul li:hover {
 }
 
 article {
-    width: 100%;
+    width: 90%;
     height: 80vh;
     margin-top: 20px;
     background-color: var(--background);

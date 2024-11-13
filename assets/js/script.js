@@ -1,19 +1,19 @@
-const sidebar = document.getElementById('sidebar')
-const side_list = document.getElementById('side-list')
-
 /**
- * 明暗切换（暂时绑定到sidebar中）
+ * 明暗切换
  */
+const light = document.getElementById('light')
+const body = document.body
 
-const body = document.body;
-
-sidebar.addEventListener('click', function() {
+light.addEventListener('click', function () {
     body.classList.toggle('dark-mode')
+    light.classList.toggle('icon-moon')
+    light.classList.toggle('icon-sun')
 })
 
 /**
  * 展开侧边栏，打开全局遮罩
  */
+const side_list = document.getElementById('side-list')
 const menu = document.getElementById('menu')
 const overlay = document.getElementById('overlay')
 
