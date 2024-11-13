@@ -20,6 +20,7 @@
     --text: #000000;
     --background: #fff;
     --common-background: #eee;
+    --button-bg: var(--light-orange);
 
     /** dark */
     --dark-text: #fff;
@@ -28,9 +29,17 @@
 
     --orange: #FFA500;
     --gray: #918f8f;
-    --light-orange: #FFE4B5;
+    --light-orange: #ffe4b599;
     --dark-orange: #6c604d;
 }
+
+.dark-mode {
+    --text: var(--dark-text);
+    --background: var(--dark-background);
+    --common-background: var(--dark-common-background);
+    --button-bg: var(--dark-orange);
+}
+
 
 /*-----------------------------------*\
   #RESET
@@ -91,22 +100,11 @@ html {
 
 body {
     min-width: 260px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--common-background);
     color: var(--text);
 }
 
 img {
     width: 100px;
-}
-
-
-.dark-mode {
-    --text: var(--dark-text);
-    --background: var(--dark-background);
-    --common-background: var(--dark-common-background);
 }
 
 /*-----------------------------------*\
@@ -140,4 +138,75 @@ aside .iconfont {
 
 aside:hover .iconfont {
     color: var(--orange);
+}
+
+
+/*-----------------------------------*\
+  #CONTENT
+\*-----------------------------------*/
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--common-background);
+}
+
+
+
+/*-----------------------------------*\
+  #NAV
+\*-----------------------------------*/
+nav {
+    height: 75px;
+}
+
+nav.navbar {
+    width: 100%;
+    background-color: var(--background);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a:hover {
+    color: var(--orange);
+}
+
+
+nav .logo {
+    display: flex;
+    font-size: 35px;
+    font-weight: 1000;
+    min-width: 30%;
+    justify-content: center;
+}
+
+nav .logo img {
+    width: 30px;
+    margin: 5px;
+}
+
+nav ul {
+    min-width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+nav ul li .iconfont {
+    font-size: 25px;
+}
+
+nav ul li:hover {
+    color: var(--orange);
+    background-color: var(--button-bg);
+    border-radius: 10px;
 }
