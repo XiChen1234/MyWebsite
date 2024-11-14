@@ -443,6 +443,10 @@ nav .iconfont.icon-list {
         display: block;
     }
 
+    article {
+        width: 100%;
+    }
+
     article#home .container {
         margin: 20px 20px 40px 20px;
         display: grid;
