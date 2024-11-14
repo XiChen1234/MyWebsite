@@ -272,7 +272,7 @@ article#home .container .header {
 }
 
 article#home .container .header img {
-    width: 250px;
+    width: 300px;
     border-radius: 50%/35% 35% 65% 65%;
 }
 
@@ -464,8 +464,5 @@ nav .iconfont.icon-list {
         align-items: center;
         justify-content: center;
         font-size: 35px;
-    }
-    article#home .container .header img{
-        width: 60%;
     }
 }
