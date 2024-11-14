@@ -8,6 +8,16 @@ Welcome to Xi_Chen's Website
 Backend·Student·CSU·Meituan's Offer  
 后端开发·25应届·中南大学·美团Offer
 
+Contact Me  
+联系我
+
+我的头像
+
+Scroller down  
+下一步
+
+# About
+
 - I live in Xi'an / Changsha / Beijing and work as a SoftWare Engineer 🖥
 - 我居住在西安/长沙/北京，职业为软件工程师🖥
 - I graduated from the School of Computer Science 👨‍💻 , Central South University 🚀
@@ -16,12 +26,6 @@ Backend·Student·CSU·Meituan's Offer
 - 我喜欢踢足球⚽
 - I am a gamer and have a PS5 🎮 from my Girlfriend ❤
 - 我是一个游戏玩家并且有一个❤女朋友❤送的PS5🎮
-
-Contact Me  
-联系我
-
-Scroller down  
-下一步
 
 
 

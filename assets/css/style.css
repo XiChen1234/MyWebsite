@@ -20,15 +20,17 @@
     --text: #000000;
     --background: #fff;
     --common-background: #eee;
+    --tag-background: var(--dark-common-background);
     --button-bg: var(--light-orange);
 
     /** dark */
     --dark-text: #fff;
     --dark-background: #000;
     --dark-common-background: #333;
+    --dark-tag-background: #777;
 
     --orange: #FFA500;
-    --gray: #918f8f;
+    --gray: #bababa;
     --light-orange: #ffe4b599;
     --dark-orange: #6c604d;
 }
@@ -38,6 +40,7 @@
     --background: var(--dark-background);
     --common-background: var(--dark-common-background);
     --button-bg: var(--dark-orange);
+    --tag-background: var(--dark-tag-background);
 }
 
 
@@ -226,13 +229,170 @@ nav ul li:hover {
     border-radius: 10px;
 }
 
+
+/*-----------------------------------*\
+  #ARTICLE
+\*-----------------------------------*/
+
 article {
     width: 90%;
-    height: 80vh;
+    min-height: 80vh;
     margin-top: 20px;
     background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+
+/*-----------------------------------*\
+  #HOME
+\*-----------------------------------*/
+
+article#home .container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "title header"
+        "tags header"
+        "contact next";
+    width: 90%;
+}
+
+article#home .container .header {
+    grid-area: header;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article#home .container .header img {
+    width: 250px;
+    border-radius: 50%/35% 35% 65% 65%;
+}
+
+article#home .container .title {
+    grid-area: title;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+}
+
+article#home .container .tags {
+    grid-area: tags;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+article#home .container .tags .box {
+    display: flex;
+    mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+}
+
+article#home .container .tags .box div {
+    white-space: nowrap;
+}
+
+article#home .container .tags .box div {
+    animation: animate var(--t) linear infinite;
+}
+
+article#home .container .tags .box div:nth-child(2) {
+    animation: animate2 var(--t) linear infinite;
+    animation-delay: calc(var(--t) / -2);
+}
+
+@keyframes animate {
+    from {
+        transform: translate(100%);
+    }
+
+    to {
+        transform: translate(-100%);
+    }
+}
+
+@keyframes animate2 {
+    from {
+        transform: translate(0%);
+    }
+
+    to {
+        transform: translate(-200%);
+    }
+}
+
+article#home .container .tags .box div span {
+    display: inline-flex;
+    margin: 10px;
+    letter-spacing: .2em;
+    background-color: #888;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+article#home .container .contact {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+article#home .container .contact a {
+    width: 70%;
+    text-align: center;
+    border-radius: 50px;
+    padding: 10px 0;
+    background-color: var(--orange);
+}
+
+article#home .container .contact a .iconfont {
+    font-size: 30px;
+}
+article#home .container .next {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+article#home .container .next a {
+    font-size: 30px;
+    display: flex;
+}
+
+article#home .container .next a .iconfont {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+article#home .container .next a .icon-mouse {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40%{transform: translateY(12px);} 60% {transform: translateY(5px);} 
+}
+
+article#home .container .next a .icon-right {
+    transform: rotate(90deg);
+}
 
 /*-----------------------------------*\
   #RESPONSIVE
