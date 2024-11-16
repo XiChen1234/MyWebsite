@@ -283,7 +283,8 @@ article#home .container .title {
     font-size: 50px;
     font-weight: bold;
     text-align: left;
-    width: 100%;
+    display: flex;
+    justify-content: center;
     height: 100%;
 }
 
