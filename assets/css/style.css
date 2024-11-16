@@ -17,21 +17,26 @@
    * colors
    */
 
-    --text: #000000;
-    --background: #fff;
-    --common-background: #eee;
+    --text: var(--black);
+    --background: var(--white);
+    --common-background: var(--very-light-gray);
     --tag-background: var(--dark-common-background);
     --button-bg: var(--light-orange);
 
     /** dark */
-    --dark-text: #fff;
-    --dark-background: #000;
-    --dark-common-background: #333;
-    --dark-tag-background: #777;
+    --dark-text: var(--white);
+    --dark-background: var(--black);
+    --dark-common-background: var(--dark-gray);
+    --dark-tag-background: var(--light-gray);
 
-    --orange: #FFA500;
+    --black: #000;
+    --white: #fff;
+    --very-light-gray: #eee;
+    --light-gray: #777;
     --gray: #bababa;
+    --dark-gray: #333;
     --light-orange: #ffe4b599;
+    --orange: #FFA500;
     --dark-orange: #6c604d;
 }
 
@@ -47,15 +52,12 @@
 /*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
-
-*,
-*::before,
-*::after {
+* {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    transition: all 0.3s;
+    transition: background-color 0.3s;
 }
 
 a {
@@ -355,6 +357,7 @@ article#home .container .contact a {
     border-radius: 50px;
     padding: 10px 0;
     background-color: var(--orange);
+    color: var(--white);
 }
 
 article#home .container .contact a .iconfont {
