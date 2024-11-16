@@ -415,17 +415,22 @@ nav .iconfont.icon-list {
         display: block;
     }
 
-    nav ul {
-        display: none;
-        grid-template-columns: 1fr 1fr 1fr;
+    nav #menu {
         position: fixed;
         top: 75px;
-        min-width: 100%;
+        display: block;
+        max-height: 0;
+        width: 100%;
+        /* Initially hidden */
+        overflow: hidden;
         background-color: var(--background);
+        transition: max-height 0.5s ease-out;
     }
 
-    nav ul.active {
-        display: block;
+
+    nav #menu li a {
+        text-decoration: none;
+        color: #333;
     }
 
     #overlay {
