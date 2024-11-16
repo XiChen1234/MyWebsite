@@ -258,7 +258,7 @@ article#home .container {
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-        "title header"
+        "welcome header"
         "tags header"
         "contact next";
     width: 90%;
@@ -278,8 +278,8 @@ article#home .container .header img {
     border-radius: 50%/35% 35% 65% 65%;
 }
 
-article#home .container .title {
-    grid-area: title;
+article#home .container .welcome {
+    grid-area: welcome;
     font-size: 50px;
     font-weight: bold;
     text-align: left;
@@ -464,14 +464,14 @@ nav .iconfont.icon-list {
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
-            "title"
+            "welcome"
             "header"
             "next"
             "tags"
             "contact ";
         width: 90%;
     }
-    article#home .container .title {
+    article#home .container .welcome {
         display: flex;
         flex-direction: column;
         align-items: center;
