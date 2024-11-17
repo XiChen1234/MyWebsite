@@ -149,10 +149,10 @@ aside:hover .iconfont {
 
 
 /*-----------------------------------*\
-  #CONTENT
+  #MAIN
 \*-----------------------------------*/
 
-.content {
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -242,14 +242,25 @@ article {
     margin-top: 20px;
     background-color: var(--background);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
+article .title {
+
+}
+
+article .subtitle
 
 
 /*-----------------------------------*\
   #HOME
 \*-----------------------------------*/
+
+article#home {
+    flex-direction: row;
+}
 
 article#home .container {
     display: grid;

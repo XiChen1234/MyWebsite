@@ -1,7 +1,6 @@
 XiChen1234 - Personal Portfolio
 
 # Home
-
 Welcome to Xi_Chen's Website  
 欢迎来到希晨er的个人网站
 
@@ -11,12 +10,17 @@ Backend·Student·CSU·Meituan's Offer
 Contact Me  
 联系我
 
-我的头像
+> 我的头像
 
 Scroller down  
 下一步
 
 # About
+About Me  
+关于我  
+
+Self-introduction  
+自我介绍
 
 - I live in Xi'an / Changsha / Beijing and work as a SoftWare Engineer 🖥
 - 我居住在西安/长沙/北京，职业为软件工程师🖥
@@ -27,5 +31,84 @@ Scroller down
 - I am a gamer and have a PS5 🎮 from my Girlfriend ❤
 - 我是一个游戏玩家并且有一个❤女朋友❤送的PS5🎮
 
+# Skill
+Skill Set  
+技术栈
 
+Core Competencies  
+核心竞争力
 
+> 核心的使用简单的进度条，摘选4个出来  
+> 其余的用logo墙的形式表达
+
+## Core
+- HTML/CSS/JavaScript
+- Spring 
+- MySQL
+- Linux
+
+## logo墙
+- Frontend
+  - HTML/CSS/JavaScript
+  - jQuery
+  - uni-app
+  - Vue.js
+- Backend
+  - Java
+  - Spring
+  - C/C++
+  - Qt
+  - Python
+  - Flask
+  - Node.js
+  - Golang
+- Database
+  - MySQL
+  - Redis
+  - MongoDB
+- Dev Ops
+  - Linux/Shell
+  - Docker
+  - Git
+
+# Resume
+My Resume  
+我的简历
+
+Education and Work  
+教育和工作经历
+
+> 超过高度的要显示省略号，等待用户点击即可查看
+
+## Education
+- 中南大学 软件工程 2021.9
+- 大学生创新创业竞赛 省级优秀项目 2022.4
+- 湖南三甲生命科学实验室 校企合作 2022.10
+- 中南大学第十六届交通科技运输赛 校级二等奖 2023.4
+- 湖南省第三届大学生化学化工虚拟仿真竞赛 省级三等奖 2023.6
+- 第十七届中国大学生计算机设计大赛 地区级二等奖 2024.6
+- 美团Offer、腾讯Offer 暑期实习 2024.6
+- 美团Offer、数字马力Offer、米哈游Offer 秋招 2024.11
+
+## Work
+- 中南大学天基计算课题组 后端开发 2023.4
+- 中南大学知新馆网络技术部 云服务器运维/微信小程序开发 2023.6
+- 中南大学可视化实验室 前端开发 2023.10
+- 恒安嘉新科技股份公司 SRE运维 2024.1
+- 北京三快在线科技有限公司 后端开发 2024.6
+
+# Portfolio
+Portfolio of Me  
+我的作品集
+
+Most Recent Works  
+最新作品
+
+> 项目等待筛选填充中
+
+# Contact
+Contact Me  
+联系我
+
+Ask Me Anything  
+善意咨询
