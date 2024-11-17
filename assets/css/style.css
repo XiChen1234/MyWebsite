@@ -248,10 +248,16 @@ article {
 }
 
 article .title {
-
+    font-size: 50px;
+    font-weight: bold;
 }
 
-article .subtitle
+article .subtitle {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--light-gray);
+    margin: 10px 0;
+}
 
 
 /*-----------------------------------*\

@@ -110,5 +110,31 @@ Most Recent Works
 Contact Me  
 联系我
 
-Ask Me Anything  
-善意咨询
+Say Hello
+打个招呼
+
+> 左侧为联系方式，右侧为邮件发送请求
+
+## 联系方式
+- Email：xichen.public@foxmail.com  
+电子邮件：
+- Phone：17792728712
+手机号码
+- We Chat：zlc66752878
+微信
+> 可以贴二维码
+- Location：Xi‘an/Beijing/Changsha
+地理位置
+
+## 发送邮件
+- username
+用户昵称
+- email address
+用户邮箱地址
+- topic
+邮件主题
+- message
+邮件信息
+
+
+Send Message No
