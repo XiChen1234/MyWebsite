@@ -19,6 +19,8 @@ Scroller down
 About Me  
 关于我  
 
+> 放上我的照片，圆角
+
 Self-introduction  
 自我介绍
 
