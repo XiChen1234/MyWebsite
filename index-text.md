@@ -24,13 +24,15 @@ About Me
 Self-introduction  
 自我介绍
 
-- I live in Xi'an / Changsha / Beijing and work as a SoftWare Engineer 🖥
+大家好，我是希晨er！  
+Hello, I'm XiChen!
+- I live in Xi'an / Changsha / Beijing and work as a SoftWare Engineer🖥
 - 我居住在西安/长沙/北京，职业为软件工程师🖥
-- I graduated from the School of Computer Science 👨‍💻 , Central South University 🚀
-- 我毕业于🚀中南大学计算机学院👨‍💻
-- I like playing football ⚽
-- 我喜欢踢足球⚽
-- I am a gamer and have a PS5 🎮 from my Girlfriend ❤
+- I graduated from the Major of Software Engineering in the School of Computer Science 👨‍💻, Central South University 🚀
+- 我毕业于🚀中南大学计算机学院👨‍💻软件工程专业
+- I like playing football⚽. Recently started exercising💪
+- 我喜欢踢足球⚽，近期开始健身💪
+- I am a player and have a PS5🎮 from my Girlfriend❤
 - 我是一个游戏玩家并且有一个❤女朋友❤送的PS5🎮
 
 # Skill

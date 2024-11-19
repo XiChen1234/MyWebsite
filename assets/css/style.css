@@ -101,7 +101,7 @@ textarea {
 
 html {
     scroll-behavior: smooth;
-    font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft Yahei", sans-serif;
+    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols, sans-serif;
 }
 
 body {
@@ -407,14 +407,55 @@ article#home .container .next a .icon-mouse {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0);
     }
-    40%{transform: translateY(12px);} 60% {transform: translateY(5px);} 
+
+    40% {
+        transform: translateY(12px);
+    }
+
+    60% {
+        transform: translateY(5px);
+    }
 }
 
 article#home .container .next a .icon-right {
     transform: rotate(90deg);
+}
+
+/*-----------------------------------*\
+  #RESPONSIVE
+\*-----------------------------------*/
+article#about .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+article#about .content .pic img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+article#about .content .list {
+    width: 50%;
+    margin-left: 20px;
+    font-size: 20px;
+}
+article#about .content .list div {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+article#about .content .list ul li{
+    display: list-item;
 }
 
 /*-----------------------------------*\
@@ -488,6 +529,7 @@ nav .iconfont.icon-list {
             "contact ";
         width: 90%;
     }
+
     article#home .container .welcome {
         display: flex;
         flex-direction: column;
