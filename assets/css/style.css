@@ -240,6 +240,7 @@ article {
     width: 90%;
     min-height: 80vh;
     margin-top: 20px;
+    padding: 20px;
     background-color: var(--background);
     display: flex;
     flex-direction: column;
@@ -256,18 +257,18 @@ article .subtitle {
     font-size: 30px;
     font-weight: bold;
     color: var(--light-gray);
-    margin: 10px 0;
 }
 
 article .content {
-    margin-top: 20px;
+    margin: 20px;
 }
 
 article .button {
     transition: transform 0.2s, box-shadow 0.2s;
 }
+
 article .button:hover {
-    transform: translateY(2px); 
+    transform: translateY(2px);
     box-shadow: 5px 4px 8px var(--light-gray);
 }
 
@@ -442,7 +443,7 @@ article#home .container .next a .icon-right {
 }
 
 /*-----------------------------------*\
-  #RESPONSIVE
+  #ABOUT
 \*-----------------------------------*/
 article#about .content {
     display: flex;
@@ -462,6 +463,7 @@ article#about .content .list {
     font-size: 20px;
     margin: 0 10px;
 }
+
 article#about .content .list h3 {
     font-weight: bold;
     margin: 20px 0;
@@ -471,7 +473,7 @@ article#about .content .list ul {
     position: relative;
 }
 
-article#about .content .list ul li{
+article#about .content .list ul li {
     padding-left: 1em;
 }
 
@@ -492,6 +494,7 @@ article#about .content .tags {
     justify-content: space-evenly;
     padding: 20px 0;
 }
+
 article#about .content .tags .tag {
     height: 80px;
     max-width: 90px;
@@ -504,10 +507,12 @@ article#about .content .tags .tag {
     align-items: center;
     justify-content: center;
 }
+
 article#about .content .tags .tag h3 {
     color: var(--orange);
     margin: 5px 0;
 }
+
 article#about .content .tags .tag span {
     font-weight: bold;
     font-size: 13px;
@@ -516,7 +521,7 @@ article#about .content .tags .tag span {
 article#about .content .download {
     width: 80%;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     font-size: 25px;
     font-weight: bold;
@@ -527,6 +532,7 @@ article#about .content .download {
     border-radius: 100px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
+
 article#about .content .download .iconfont {
     font-size: 25px;
     vertical-align: middle;
@@ -588,6 +594,11 @@ nav .iconfont.icon-list {
         width: 100%;
     }
 
+    article .button {
+        transform: translateY(2px);
+        box-shadow: 5px 4px 8px var(--light-gray);
+    }
+
     article#home .container {
         margin: 20px 20px 40px 20px;
         display: grid;
@@ -610,5 +621,14 @@ nav .iconfont.icon-list {
         align-items: center;
         justify-content: center;
         font-size: 35px;
+    }
+
+    article#about .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    article#about .content .list {
+        max-width: 100%;
     }
 }
