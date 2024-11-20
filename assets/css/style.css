@@ -440,22 +440,93 @@ article#about .content {
 }
 
 article#about .content .pic img {
-    width: 250px;
+    width: 280px;
     border-radius: 10px;
+    margin: 0 10px;
 }
 
 article#about .content .list {
-    width: 50%;
-    margin-left: 20px;
+    max-width: 40%;
     font-size: 20px;
+    margin: 0 10px;
 }
-article#about .content .list div {
+article#about .content .list h3 {
     font-weight: bold;
-    margin: 10px 0;
+    margin: 20px 0;
+}
+
+article#about .content .list ul {
+    position: relative;
 }
 
 article#about .content .list ul li{
-    display: list-item;
+    padding-left: 1em;
+}
+
+article#about .content .list ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    transform: translateY(100%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--orange);
+    border-radius: 50%;
+}
+
+article#about .content .tags {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 0;
+}
+article#about .content .tags .tag {
+    height: 80px;
+    max-width: 90px;
+    padding: 10px;
+    background-color: var(--common-background);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+article#about .content .tags .tag:hover {
+    transform: translateY(2px); 
+    box-shadow: 5px 4px 8px var(--light-gray);
+}
+article#about .content .tags .tag h3 {
+    color: var(--orange);
+    margin: 5px 0;
+}
+article#about .content .tags .tag span {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+article#about .content .download {
+    width: 80%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px auto;
+    color: var(--white);
+    background-color: orange;
+    padding: 10px;
+    border-radius: 100px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+article#about .content .download .iconfont {
+    font-size: 25px;
+    vertical-align: middle;
+}
+article#about .content .download:hover {
+    transform: translateY(2px); 
+    box-shadow: 5px 4px 8px var(--light-gray);
 }
 
 /*-----------------------------------*\
