@@ -259,6 +259,14 @@ article .subtitle {
     margin: 10px 0;
 }
 
+article .button {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+article .button:hover {
+    transform: translateY(2px); 
+    box-shadow: 5px 4px 8px var(--light-gray);
+}
+
 
 /*-----------------------------------*\
   #HOME
@@ -491,11 +499,6 @@ article#about .content .tags .tag {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-article#about .content .tags .tag:hover {
-    transform: translateY(2px); 
-    box-shadow: 5px 4px 8px var(--light-gray);
 }
 article#about .content .tags .tag h3 {
     color: var(--orange);
@@ -523,10 +526,6 @@ article#about .content .download {
 article#about .content .download .iconfont {
     font-size: 25px;
     vertical-align: middle;
-}
-article#about .content .download:hover {
-    transform: translateY(2px); 
-    box-shadow: 5px 4px 8px var(--light-gray);
 }
 
 /*-----------------------------------*\
