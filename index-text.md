@@ -39,14 +39,8 @@ Hello, I'm XiChen!
 Skill Set  
 技术栈
 
-Core Competencies  
-核心竞争力
-
-> 核心的使用简单的进度条，摘选4个出来  
-> 其余的用logo墙的形式表达
-
 ## Core
-- HTML/CSS/JavaScript
+- Vue.js
 - Spring 
 - MySQL
 - Linux
@@ -54,26 +48,31 @@ Core Competencies
 ## logo墙
 - Frontend
   - HTML/CSS/JavaScript
-  - jQuery
   - uni-app
   - Vue.js
+  - 我能够使用多种技术完成良好的用户界面的构建和用户体验的设计，包括网页布局、样式设计、交互效果等，实现构建响应式、现代化的网页和跨平台的应用，提供一致且优质的用户体验。
+  - I am capable of using a variety of technologies to create effective user interfaces and design user experiences, including web layouts, style designs, interactive effects, etc. This enables the construction of responsive, modern webpages and cross-platform applications, providing a consistent and high-quality user experience.
 - Backend
   - Java
   - Spring
   - C/C++
-  - Qt
   - Python
   - Flask
   - Node.js
   - Golang
-- Database
   - MySQL
   - Redis
   - MongoDB
+  - 我精通多种后端开发语言和技术，具备丰富的后端开发经验，能够熟练运用多种编程语言和技术构建高效、可扩展的后端系统。我擅长根据业务需求选择合适的技术栈，并进行系统架构设计，优化系统性能。
+  - I am proficient in multiple back-end development languages and technologies, with extensive experience in back-end development. I can skillfully utilize various programming languages and technologies to build efficient, scalable back-end systems. I am adept at selecting appropriate technology stacks based on business requirements, designing system architecture, and optimizing system performance.
 - Dev Ops
   - Linux/Shell
   - Docker
+  - k8s
   - Git
+  - ansible
+  - 我具备一定的Dev Ops经验，能够使用相关工具进行持续集成和部署。并致力于提高软件开发的效率和质量。通过编写自动化脚本，优化部署流程，减少人为错误，提高系统的可靠性和可维护性。
+  - I have some experience in Dev Ops and can use related tools for continuous integration and deployment. I am committed to improving the efficiency and quality of software development. By writing automation scripts and optimizing deployment processes, I aim to reduce human errors and enhance system reliability and maintainability.
 
 # Resume
 My Resume  
