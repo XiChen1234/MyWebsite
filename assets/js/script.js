@@ -24,7 +24,7 @@ light.addEventListener('click', function () {
 const sideList = document.getElementById('side-list');
 const menu = document.getElementById('menu');
 const overlay = document.getElementById('overlay')
-let isOpen = false;
+let isMenuOpen = false;
 
 sideList.addEventListener('click', changeSideList)
 menu.addEventListener('click', changeSideList)
@@ -34,12 +34,12 @@ menu.addEventListener('click', changeSideList)
  */
 function changeSideList() {
     overlay.classList.toggle('active') // 全局遮罩
-    if (isOpen) {
+    if (isMenuOpen) {
         menu.style.maxHeight = null;
     } else {
         menu.style.maxHeight = menu.scrollHeight + 'px';
     }
-    isOpen = !isOpen;
+    isMenuOpen = !isMenuOpen;
 }
 
 /**
@@ -56,6 +56,7 @@ openSkillList.forEach(function(openSkill, index) {
         } else {
             skillList[index].style.maxHeight = skillList[index].scrollHeight + 'px';
         }
-        isSkillOpen[index] = !isOpen[index]
+        openSkill.classList.toggle('active')
+        isSkillOpen[index] = !isSkillOpen[index]
     })
 })

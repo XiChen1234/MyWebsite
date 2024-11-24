@@ -561,6 +561,12 @@ article#skill .content .skill-content .skill-header {
 article#skill .content .skill-content .skill-header .iconfont {
     font-size: 30px;
     color: var(--orange);
+    transition: transform 0.2s ease-out;
+    cursor: pointer;
+}
+
+article#skill .content .skill-content .skill-header .iconfont.active {
+    transform: rotate(90deg);
 }
 
 article#skill .content .skill-content .skill-list {
