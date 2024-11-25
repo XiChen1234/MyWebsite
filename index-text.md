@@ -74,9 +74,9 @@ Skill Set
   - 我具备一定的Dev Ops经验，能够使用相关工具进行持续集成和部署。并致力于提高软件开发的效率和质量。通过编写自动化脚本，优化部署流程，减少人为错误，提高系统的可靠性和可维护性。
   - I have some experience in Dev Ops and can use related tools for continuous integration and deployment. I am committed to improving the efficiency and quality of software development. By writing automation scripts and optimizing deployment processes, I aim to reduce human errors and enhance system reliability and maintainability.
 
-# Resume
-My Resume  
-我的简历
+# Career
+My Career  
+我的经历
 
 Education and Work  
 教育和工作经历
