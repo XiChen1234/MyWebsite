@@ -584,11 +584,10 @@ article#skill .content .skill-content .skill-list .item img {
 
 article#skill .content .skill-content .skill-desc {
     font-size: 20px;
-    color: var(--tag-background);
+    color: var(--gray);
     border-left: 5px solid var(--gray);
     padding-left: 10px;
     margin: 10px;
-    font-style: italic;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-out;
