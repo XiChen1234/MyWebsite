@@ -328,7 +328,6 @@ article#home .container .tags {
 
 article#home .container .tags .box {
     display: flex;
-    mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
 }
 
 article#home .container .tags .box div {
@@ -548,6 +547,7 @@ article#skill .content {
     flex-direction: column;
     align-items: center;
 }
+
 article#skill .content .skill-content {
     width: 80%;
 }
@@ -593,6 +593,105 @@ article#skill .content .skill-content .skill-desc {
     overflow: hidden;
     transition: max-height 0.5s ease-out;
 }
+
+/*-----------------------------------*\
+  #CAREER
+\*-----------------------------------*/
+article#career .content {
+    width: 80%;
+}
+
+article#career .content .tab {
+    display: flex;
+    font-size: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+article#career .content .tab .button {
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 100px;
+    margin: 0 10px;
+}
+
+article#career .content .tab .button:hover {
+    color: var(--orange);
+    background-color: var(--button-bg);
+}
+
+article#career .content .tab h2 .iconfont {
+    font-size: 30px;
+}
+
+article#career .content .timeline {
+    overflow: hidden;
+    display: grid;
+    max-height: 80vh;
+    grid-template-columns: 6fr 4px 6fr;
+    grid-column-gap: 20px;
+    mask-image: linear-gradient(#fff 80%, transparent);
+}
+
+/* article#career .content .timeline:hover {
+    max-height: none;
+    background-color: red;
+    mask-image:none;
+} */
+
+article#career .content .timeline .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+article#career .content .timeline .item.left {
+    align-items: flex-end;
+}
+
+article#career .content .timeline .item.spilt {
+    background-color: var(--orange);
+}
+
+article#career .content .timeline .item.spilt::before {
+    content: '';
+    width: 13px;
+    height: 13px;
+    background-color: var(--orange);
+    border-radius: 100%;
+}
+
+article#career .content .timeline .item.right {
+    align-items: flex-start;
+}
+
+article#career .content .timeline .item img {
+    width: 300px;
+    padding: 20px;
+}
+
+article#career .content .expand {
+    width: 50%;
+    margin: 30px auto;
+    text-align: center  ;
+    padding: 15px 0;
+    border-radius: 100px;
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 25px;
+}
+
+article#career .content .expand .iconfont {
+    font-size: 25px;
+}
+
+
+/* article#career .content .timeline .item:nth-child(odd) {
+    flex-direction: row-reverse;
+} */
+
 
 /*-----------------------------------*\
   #RESPONSIVE
