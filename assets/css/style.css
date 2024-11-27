@@ -615,6 +615,10 @@ article#career .content .tab .button {
     margin: 0 10px;
 }
 
+article#career .content .tab .button.active {
+    color: var(--orange);
+}
+
 article#career .content .tab .button:hover {
     color: var(--orange);
     background-color: var(--button-bg);
@@ -631,13 +635,16 @@ article#career .content .timeline {
     grid-template-columns: 6fr 4px 6fr;
     grid-column-gap: 20px;
     mask-image: linear-gradient(#fff 80%, transparent);
+    transition: max-height 0.5s ease-out;
 }
 
-/* article#career .content .timeline:hover {
-    max-height: none;
-    background-color: red;
+article#career .content .timeline.hidden, .expand.hidden {
+    display: none;
+}
+
+article#career .content .timeline.open {
     mask-image:none;
-} */
+}
 
 article#career .content .timeline .item {
     display: flex;
@@ -685,12 +692,6 @@ article#career .content .expand {
 article#career .content .expand .iconfont {
     font-size: 25px;
 }
-
-
-/* article#career .content .timeline .item:nth-child(odd) {
-    flex-direction: row-reverse;
-} */
-
 
 /*-----------------------------------*\
   #RESPONSIVE

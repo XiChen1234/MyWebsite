@@ -315,10 +315,10 @@
             <div class="subtitle">Education and Work</div>
             <div class="content">
                 <div class="tab">
-                    <h2 id="education" class="button"><i class="iconfont icon-achievements"></i>Education</h2>
-                    <h2 id="work" class="button"><i class="iconfont icon-profession"></i>Work</h2>
+                    <h2 id="edu-button" class="button active"><i class="iconfont icon-achievements"></i>Education</h2>
+                    <h2 id="work-button" class="button"><i class="iconfont icon-profession"></i>Work</h2>
                 </div>
-                <div class="timeline education" style="display: none;">
+                <div class="timeline education">
                     <!-- 入学 -->
                     <div class="item left">
                         <h3>2021.9</h3>
@@ -400,7 +400,7 @@
                         <h4>米哈游转正实习</h4>
                     </div>
                 </div>
-                <div class="timeline work">
+                <div class="timeline work hidden">
                     <!-- 校内 天基 -->
                     <div class="item left">
                         <h3>2023.4</h3>
@@ -462,7 +462,10 @@
                         <h4>游戏测试工程师</h4>
                     </div>
                 </div>
-                <div class="expand button"><i class="iconfont icon-right"></i> 展开</div>
+                <!-- 教育btn -->
+                <div class="expand button"><i class="iconfont icon-right"></i> 展开/关闭</div>
+                <!-- 工作btn -->
+                <div class="expand button hidden"><i class="iconfont icon-right"></i> 展开/关闭</div>
             </div>
         </article>
 
@@ -495,6 +498,7 @@
 
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/skill.js"></script>
+    <script src="./assets/js/career.js"></script>
 </body>
 
 </html>
