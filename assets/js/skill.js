@@ -7,8 +7,8 @@ const openSkillList = document.querySelectorAll('article#skill .content .skill-c
 const skillList = document.querySelectorAll('article#skill .content .skill-content .skill-desc')
 const isSkillOpen = [false, false, false]
 
-openSkillList.forEach(function(openSkill, index) {
-    openSkill.addEventListener('click', function() {
+openSkillList.forEach(function (openSkill, index) {
+    openSkill.addEventListener('click', function () {
         if (isSkillOpen[index]) {
             skillList[index].style.maxHeight = null;
         } else {

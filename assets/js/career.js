@@ -45,13 +45,13 @@ function expand(type) {
     timeline[type].classList.toggle('open') // 时间线下方阴影
 
     // 若当前是打开状态，则关闭
-    if(isOpenList[type]) {
+    if (isOpenList[type]) {
         timeline[type].style.maxHeight = 80 + 'vh' // 时间线高度调整
         // 回退到时间线顶部
         window.scrollTo({
             top: careerPage.offsetTop
         })
-    } 
+    }
     // 当前是关闭状态，则打开
     else {
         timeline[type].style.maxHeight = timeline[type].scrollHeight + 'px' // 时间线高度调到最大

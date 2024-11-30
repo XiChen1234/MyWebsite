@@ -638,12 +638,13 @@ article#career .content .timeline {
     transition: max-height 0.5s ease-out;
 }
 
-article#career .content .timeline.hidden, .expand.hidden {
+article#career .content .timeline.hidden,
+.expand.hidden {
     display: none;
 }
 
 article#career .content .timeline.open {
-    mask-image:none;
+    mask-image: none;
 }
 
 article#career .content .timeline .item {
@@ -681,7 +682,7 @@ article#career .content .timeline .item img {
 article#career .content .expand {
     width: 50%;
     margin: 30px auto;
-    text-align: center  ;
+    text-align: center;
     padding: 15px 0;
     border-radius: 100px;
     background-color: var(--orange);
