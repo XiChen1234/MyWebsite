@@ -45,4 +45,14 @@
 }
 
 
+/* 小屏手机 */
+@media (max-width: 480px) {
+  .sidebar {
+    transform: scale(0.8);
+  }
+}
+/* 平板 */
+@media (min-width: 481px) and (max-width: 1023px) {
+}
+
 </style>

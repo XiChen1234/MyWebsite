@@ -15,4 +15,14 @@
   min-height: 300px;
   background-color: var(--page-bg);
 }
+
+/* 小屏手机 */
+@media (max-width: 480px) {
+  .page {
+    width: 100%;
+  }
+}
+/* 平板 */
+@media (min-width: 481px) and (max-width: 1023px) {
+}
 </style>
