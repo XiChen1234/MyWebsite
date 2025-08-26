@@ -1,9 +1,33 @@
+<template>
+  <div class="container">
+    <SideBar />
+    <NavigationBar />
+    <div class="page-list">
+      <PageBox />
+      <PageBox v-for="n in 1000" :key="n" />
+      <FooterBar />
+    </div>
+  </div>
+</template>
+
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import SideBar from '@/components/SideBar.vue';
+import NavigationBar from '@/components/NavigationBar.vue';
+import PageBox from '@/components/PageBox.vue';
+import FooterBar from '@/components/FooterBar.vue';
 </script>
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>
+<style scoped>
+.container {
+  min-width: 260px;
+  background-color: var(--common-bg);
+}
+
+.page-list {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+</style>
