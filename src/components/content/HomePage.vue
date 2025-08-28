@@ -82,7 +82,6 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: var(--text-main-focus); */
 }
 
 .next a .iconfont {
@@ -141,4 +140,31 @@ h1 {
   margin-right: 10px;
   font-size: 30px;
 }
+
+/* 小屏手机 */
+@media (max-width: 480px) {
+  .home-page {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "welcome"
+      "header"
+      "contact"
+      "tags"
+      "next";
+    padding: 20px 10px;
+  }
+
+  .header img {
+    width: 200px;
+  }
+
+  h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+
+/* 平板 */
+@media (min-width: 481px) and (max-width: 1023px) {}
 </style>
