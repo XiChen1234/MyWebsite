@@ -64,6 +64,7 @@ h1 {
   justify-content: center;
   text-align: left;
   height: 100%;
+  color: var(--text-main);
 }
 
 .tags {
@@ -82,6 +83,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--text-main);
 }
 
 .next a .iconfont {
