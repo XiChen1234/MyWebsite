@@ -143,8 +143,8 @@ h1 {
   font-size: 30px;
 }
 
-/* 小屏手机 */
-@media (max-width: 480px) {
+/* 手机和平板响应式 */
+@media (max-width: 1023px) {
   .home-page {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto;
@@ -166,7 +166,4 @@ h1 {
     text-align: center;
   }
 }
-
-/* 平板 */
-@media (min-width: 481px) and (max-width: 1023px) {}
 </style>
