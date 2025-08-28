@@ -13,10 +13,10 @@
 </template>
 
 <script setup lang="ts">
-import SideBar from '@/components/SideBar.vue';
-import NavigationBar from '@/components/NavigationBar.vue';
-import PageBox from '@/components/PageBox.vue';
-import FooterBar from '@/components/FooterBar.vue';
+import SideBar from '@/components/layout/SideBar.vue';
+import NavigationBar from '@/components/layout/NavigationBar.vue';
+import PageBox from '@/components/layout/PageBox.vue';
+import FooterBar from '@/components/layout/FooterBar.vue';
 </script>
 
 <style scoped>
