@@ -7,6 +7,8 @@
   --bg-focus-light: #e7e7e7;
   --bg-focus-dark: #333333;
 
+  --bg-card: #888;
+
   /* text */
   --text-main-light: #000;
   --text-main-dark: #c3c3c3;
@@ -15,11 +17,12 @@
   --text-main-focus: orange;
   --text-secondary-focus: #ffaf1a;
 
+  --text-card: #fff;
+
   /* border */
   --border-color-light: #333;
   --border-color-dark: #c3c3c3;
   --border-color-focus: orange;
-
 }
 
 [data-theme="light"] {

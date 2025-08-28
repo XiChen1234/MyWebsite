@@ -18,7 +18,7 @@ import ThemeSwitch from '@/components/ThemeSwitch.vue';
       <li><a href="#contact">Contact</a></li>
       <ThemeSwitch class="iconfont" />
       <i class="iconfont icon-translate"></i>
-      <i class="iconfont icon-right" id="openBtn"></i>
+      <i class="iconfont icon-list" id="openBtn"></i>
     </ul>
   </div>
 </template>
@@ -36,6 +36,7 @@ import ThemeSwitch from '@/components/ThemeSwitch.vue';
   padding: 0 20px;
   background-color: var(--page-bg);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .logo {

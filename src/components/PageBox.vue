@@ -1,11 +1,21 @@
 <!-- 分页展示内容 -->
 <script setup lang="ts">
+import Home from './content/HomePage.vue';
+import About from './content/AboutPage.vue';
 
+const props = defineProps<{
+  content: 'Home' | 'About';
+}>();
+
+const pages = {
+  Home,
+  About
+};
 </script>
 
 <template>
   <div class="page">
-    page
+    <component :is="pages[props.content]" />
   </div>
 </template>
 
@@ -13,7 +23,11 @@
 .page {
   width: 90%;
   min-height: 300px;
+  margin-top: 20px;
   background-color: var(--page-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* 小屏手机 */
@@ -22,7 +36,7 @@
     width: 100%;
   }
 }
+
 /* 平板 */
-@media (min-width: 481px) and (max-width: 1023px) {
-}
+@media (min-width: 481px) and (max-width: 1023px) {}
 </style>

@@ -3,8 +3,10 @@
     <SideBar />
     <NavigationBar />
     <div class="page-list">
-      <PageBox />
-      <PageBox v-for="n in 1000" :key="n" />
+      <PageBox content="Home"/>
+      <PageBox content="About"/>
+      <PageBox content="Home"/>
+      <PageBox content="Home"/>
       <FooterBar />
     </div>
   </div>
