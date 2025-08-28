@@ -1,6 +1,18 @@
 <!-- 顶部导航栏 -->
 <script setup lang="ts">
-import ThemeSwitch from '@/components/ThemeSwitch.vue';
+const themeSwitch = () => {
+  const html = document.documentElement;
+  const switchBtn = document.getElementById('switchBtn');
+  if (html.getAttribute('data-theme') === 'dark') {
+    html.setAttribute('data-theme', 'light');
+    switchBtn?.classList.remove('icon-sun');
+    switchBtn?.classList.add('icon-moon');
+  } else {
+    html.setAttribute('data-theme', 'dark');
+    switchBtn?.classList.remove('icon-moon');
+    switchBtn?.classList.add('icon-sun');
+  }
+};
 </script>
 
 <template>
@@ -16,7 +28,7 @@ import ThemeSwitch from '@/components/ThemeSwitch.vue';
       <li><a href="#career">Career</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#contact">Contact</a></li>
-      <ThemeSwitch class="iconfont" />
+      <i class="iconfont icon-moon" @click="themeSwitch" id="switchBtn"></i>
       <i class="iconfont icon-translate"></i>
       <i class="iconfont icon-list" id="openBtn"></i>
     </ul>
@@ -98,6 +110,7 @@ import ThemeSwitch from '@/components/ThemeSwitch.vue';
   #menu {
     width: 30%;
   }
+
   #menu li {
     display: none;
   }
@@ -112,6 +125,7 @@ import ThemeSwitch from '@/components/ThemeSwitch.vue';
   #menu {
     width: 30%;
   }
+
   #menu li {
     display: none;
   }

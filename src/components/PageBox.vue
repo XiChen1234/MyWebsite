@@ -1,7 +1,7 @@
 <!-- 分页展示内容 -->
 <script setup lang="ts">
-import Home from './content/HomePage.vue';
-import About from './content/AboutPage.vue';
+import Home from './page/HomePage.vue';
+import About from './page/AboutPage.vue';
 
 const props = defineProps<{
   content: 'Home' | 'About';
