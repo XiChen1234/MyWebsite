@@ -4,7 +4,31 @@
 </script>
 
 <template>
-  <div>about</div>
+  <div id="about">
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+    <div>About</div>
+  </div>
 </template>
 
 <style scoped>
