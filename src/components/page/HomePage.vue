@@ -21,7 +21,7 @@ import TagsWall from './ui/TagsWall.vue';
       </a>
     </div>
     <div class="contact">
-      <a href="#contact">
+      <a href="#contact" class="button">
         <i class="iconfont icon-send"></i>
         <span>Contact Me</span>
       </a>

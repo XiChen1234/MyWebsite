@@ -1,0 +1,28 @@
+/* 部分通用组件样式代码 */
+
+/* 通用标题 */
+.title {
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  color: var(--text-main);
+}
+
+.sub-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  color: var(--text-secondary);
+}
+
+/* 通用按钮 */
+.button {
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.button:hover {
+  transform: translateY(2px);
+  box-shadow: 5px 4px 8px var(--text-secondary);
+}

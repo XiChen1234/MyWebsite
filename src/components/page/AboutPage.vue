@@ -20,20 +20,20 @@
           <li>未来希望能成为一名优秀的程序员，参与一些有趣的项目，做出一些有意义的东西。</li>
         </ul>
         <div class="card-list">
-          <div class="card">
+          <div class="card button">
             <div class="num">01+</div>
             <div class="span">年工作经验</div>
           </div>
-          <div class="card">
+          <div class="card button">
             <div class="num">04+</div>
             <div class="span">段实习经历</div>
           </div>
-          <div class="card">
+          <div class="card button">
             <div class="num">03+</div>
             <div class="span">个项目推进</div>
           </div>
         </div>
-        <div class="download">
+        <div class="download button">
           <i class="iconfont icon-download"></i> Download My Resume
         </div>
       </div>
@@ -47,22 +47,6 @@
   width: 90%;
   padding: 40px 20px;
   flex-direction: column;
-}
-
-.title {
-  font-size: 45px;
-  font-weight: bold;
-  text-align: center;
-  margin: auto;
-  color: var(--text-main);
-}
-
-.sub-title {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  margin: auto;
-  color: var(--text-secondary);
 }
 
 .content {
@@ -135,12 +119,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.content .text .card-list .card:hover {
-  transform: translateY(2px);
-  box-shadow: 5px 4px 8px var(--text-secondary);
 }
 
 .content .text .card-list .card .num {
