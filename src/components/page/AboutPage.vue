@@ -33,9 +33,9 @@
             <div class="span">个项目推进</div>
           </div>
         </div>
-        <div class="download button">
+        <a class="download button" href="/resume.pdf" download>
           <i class="iconfont icon-download"></i> Download My Resume
-        </div>
+        </a>
       </div>
     </div>
   </div>
