@@ -2,14 +2,16 @@
 <script setup lang="ts">
 import Home from '../page/HomePage.vue';
 import About from '../page/AboutPage.vue';
+import Skill from '../page/SkillPage.vue';
 
 const props = defineProps<{
-  content: 'Home' | 'About';
+  content: 'Home' | 'About' | 'Skill';
 }>();
 
 const pages = {
   Home,
-  About
+  About,
+  Skill,
 };
 </script>
 

@@ -5,6 +5,7 @@
     <div class="page-list">
       <PageBox content="Home"/>
       <PageBox content="About"/>
+      <PageBox content="Skill"/>
       <FooterBar />
     </div>
   </div>
