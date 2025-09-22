@@ -143,4 +143,19 @@
   font-size: 24px;
   padding: 10px;
 }
+
+@media screen and (max-width: 1023px) {
+  .content {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .content .text {
+    width: 100%;
+  }
+
+  .content .pic img {
+    width: 200px;
+  }
+}
 </style>
