@@ -59,8 +59,8 @@ const handleSectionClick = (section: string) => {
     <div class="title">Skill Set</div>
     <div class="sub-title">Backend-Focused, Full-Stack Capable</div>
     <div class="content">
-      <SkillSection 
-        v-for="(sectionSkills, sectionKey) in skills" 
+      <SkillSection
+        v-for="(sectionSkills, sectionKey) in skills"
         :key="sectionKey"
         :section="sectionKey"
         :title="sectionTitles[sectionKey as keyof typeof sectionTitles]"

@@ -45,7 +45,7 @@ const handleTitleClick = () => {
   <div class="skill-section">
     <h3 class="section-title" @click="handleTitleClick">
       {{ title }}
-      <span class="toggle-icon" :class="{ 'expanded': isExpanded }">▼</span>
+      <i class="iconfont icon-right" :class="{ 'expanded': isExpanded }"></i>
     </h3>
     <transition name="skill-expand">
       <div v-if="isExpanded" class="skill-list">
@@ -89,14 +89,15 @@ const handleTitleClick = () => {
   color: var(--text-main-focus);
 }
 
-.toggle-icon {
+.iconfont {
   transition: transform 0.3s ease;
-  font-size: 16px;
+  font-size: 20px;
   color: var(--text-secondary);
+  transform: rotate(-90deg);
 }
 
-.toggle-icon.expanded {
-  transform: rotate(180deg);
+.iconfont.expanded {
+  transform: rotate(90deg);
   color: var(--text-main-focus);
 }
 
@@ -179,7 +180,7 @@ const handleTitleClick = () => {
   .section-title {
     font-size: 20px;
   }
-  
+
   .toggle-icon {
     font-size: 14px;
   }
