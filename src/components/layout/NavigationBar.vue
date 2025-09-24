@@ -29,7 +29,6 @@ const themeSwitch = () => {
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#contact">Contact</a></li>
       <i class="iconfont icon-moon" @click="themeSwitch" id="switchBtn"></i>
-      <i class="iconfont icon-translate"></i>
       <i class="iconfont icon-list" id="openBtn"></i>
     </ul>
   </div>
