@@ -1,0 +1,65 @@
+{
+  "id": "5006037",
+  "name": "MyWebsite",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1368581",
+      "name": "download",
+      "font_class": "download",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "5226621",
+      "name": "send",
+      "font_class": "send",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "10168392",
+      "name": "mouse",
+      "font_class": "mouse",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "4767060",
+      "name": "unordered list",
+      "font_class": "list",
+      "unicode": "e7f4",
+      "unicode_decimal": 59380
+    },
+    {
+      "icon_id": "8474311",
+      "name": "moon",
+      "font_class": "moon",
+      "unicode": "e6c3",
+      "unicode_decimal": 59075
+    },
+    {
+      "icon_id": "8474377",
+      "name": "sun",
+      "font_class": "sun",
+      "unicode": "e6da",
+      "unicode_decimal": 59098
+    },
+    {
+      "icon_id": "36209395",
+      "name": "translate",
+      "font_class": "translate",
+      "unicode": "e888",
+      "unicode_decimal": 59528
+    },
+    {
+      "icon_id": "11132210",
+      "name": "arrow",
+      "font_class": "right",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "id": "5030404",
+  "name": "MyWebsite Color",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "11155582",
+      "name": "Postman",
+      "font_class": "Postman",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "4886688",
+      "name": "Shell",
+      "font_class": "Shell",
+      "unicode": "e684",
+      "unicode_decimal": 59012
+    },
+    {
+      "icon_id": "11155597",
+      "name": "Nginx",
+      "font_class": "Nginx",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "27272945",
+      "name": "TypeScript",
+      "font_class": "TypeScript",
+      "unicode": "ed33",
+      "unicode_decimal": 60723
+    },
+    {
+      "icon_id": "7467733",
+      "name": "RabbitMQ",
+      "font_class": "RabbitMQ",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "40851222",
+      "name": "C",
+      "font_class": "C",
+      "unicode": "e6cc",
+      "unicode_decimal": 59084
+    },
+    {
+      "icon_id": "6496027",
+      "name": "React",
+      "font_class": "React",
+      "unicode": "e799",
+      "unicode_decimal": 59289
+    },
+    {
+      "icon_id": "20834553",
+      "name": "Python",
+      "font_class": "Python",
+      "unicode": "e891",
+      "unicode_decimal": 59537
+    },
+    {
+      "icon_id": "45044435",
+      "name": "Pandas",
+      "font_class": "Pandas",
+      "unicode": "e7db",
+      "unicode_decimal": 59355
+    },
+    {
+      "icon_id": "42599949",
+      "name": "Spring",
+      "font_class": "Spring",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "42599948",
+      "name": "Flask",
+      "font_class": "Flask",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "42599947",
+      "name": "MongoDB",
+      "font_class": "MongoDB",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "42599943",
+      "name": "Docker",
+      "font_class": "Docker",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "42599944",
+      "name": "Linux",
+      "font_class": "Linux",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "42599945",
+      "name": "MySQL",
+      "font_class": "MySQL",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "42599942",
+      "name": "Go",
+      "font_class": "Go",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "42599937",
+      "name": "Java",
+      "font_class": "Java",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "42599938",
+      "name": "Vue",
+      "font_class": "Vue",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "42599941",
+      "name": "Redis",
+      "font_class": "Redis",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "42599933",
+      "name": "Git",
+      "font_class": "Git",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "42599934",
+      "name": "HTML5",
+      "font_class": "HTML5",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "42599935",
+      "name": "JavaScript",
+      "font_class": "JavaScript",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "42599931",
+      "name": "CSS3",
+      "font_class": "CSS3",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "42599929",
+      "name": "Ansible",
+      "font_class": "Ansible",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    }
+  ]
+}

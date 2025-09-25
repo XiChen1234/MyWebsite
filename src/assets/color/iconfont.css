@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 5030404 */
+  /* Color fonts */
+  src: 
+       url('iconfont.woff2?t=1758813403789') format('woff2'),
+       url('iconfont.woff?t=1758813403789') format('woff'),
+       url('iconfont.ttf?t=1758813403789') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Postman:before {
+  content: "\e60c";
+}
+
+.icon-Shell:before {
+  content: "\e684";
+}
+
+.icon-Nginx:before {
+  content: "\e60b";
+}
+
+.icon-TypeScript:before {
+  content: "\ed33";
+}
+
+.icon-RabbitMQ:before {
+  content: "\e605";
+}
+
+.icon-C:before {
+  content: "\e6cc";
+}
+
+.icon-React:before {
+  content: "\e799";
+}
+
+.icon-Python:before {
+  content: "\e891";
+}
+
+.icon-Pandas:before {
+  content: "\e7db";
+}
+
+.icon-Spring:before {
+  content: "\e600";
+}
+
+.icon-Flask:before {
+  content: "\e601";
+}
+
+.icon-MongoDB:before {
+  content: "\e602";
+}
+
+.icon-Docker:before {
+  content: "\e603";
+}
+
+.icon-Linux:before {
+  content: "\e604";
+}
+
+.icon-MySQL:before {
+  content: "\e606";
+}
+
+.icon-Go:before {
+  content: "\e607";
+}
+
+.icon-Java:before {
+  content: "\e608";
+}
+
+.icon-Vue:before {
+  content: "\e609";
+}
+
+.icon-Redis:before {
+  content: "\e60a";
+}
+
+.icon-Git:before {
+  content: "\e60e";
+}
+
+.icon-HTML5:before {
+  content: "\e60f";
+}
+
+.icon-JavaScript:before {
+  content: "\e610";
+}
+
+.icon-CSS3:before {
+  content: "\e611";
+}
+
+.icon-Ansible:before {
+  content: "\e614";
+}
+
