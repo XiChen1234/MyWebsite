@@ -20,7 +20,7 @@ const props = defineProps<Props>();
 
 // 生成星级显示
 const generateStars = (level: number) => {
-  return '⭐'.repeat(level) + '☆'.repeat(5 - level);
+  return '⭐'.repeat(level) + '🎈'.repeat(5 - level);
 };
 
 // 获取等级文本描述
