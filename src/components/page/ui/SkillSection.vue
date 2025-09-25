@@ -172,25 +172,11 @@ const handleTitleClick = () => {
 }
 
 /* 为每个技能项添加微小的延迟，实现级联效果 */
-.skill-expand-enter-active .skill-item:nth-child(1) {
-  transition-delay: 0ms;
-}
-
-.skill-expand-enter-active .skill-item:nth-child(2) {
-  transition-delay: 50ms;
-}
-
-.skill-expand-enter-active .skill-item:nth-child(3) {
-  transition-delay: 100ms;
-}
-
-.skill-expand-enter-active .skill-item:nth-child(4) {
-  transition-delay: 150ms;
-}
-
-.skill-expand-enter-active .skill-item:nth-child(5) {
-  transition-delay: 200ms;
-}
+.skill-expand-enter-active .skill-item:nth-child(1) { transition-delay: 0ms; }
+.skill-expand-enter-active .skill-item:nth-child(2) { transition-delay: 50ms; }
+.skill-expand-enter-active .skill-item:nth-child(3) { transition-delay: 100ms; }
+.skill-expand-enter-active .skill-item:nth-child(4) { transition-delay: 150ms; }
+.skill-expand-enter-active .skill-item:nth-child(5) { transition-delay: 200ms; }
 
 /* 响应式设计 */
 @media (max-width: 480px) {
