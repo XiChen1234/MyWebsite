@@ -41,7 +41,7 @@ const handleTitleClick = () => {
         <div v-for="skill in section.list" :key="skill.name" class="skill-item">
           <div class="skill-header">
             <div class="skill-name">
-              <i :class="`iconfont icon-${skill.name}`"></i>
+              <i :class="`iconcolor icon-${skill.name}`"></i>
               {{ skill.name }}
             </div>
             <div class="skill-level">
@@ -121,6 +121,10 @@ const handleTitleClick = () => {
   font-size: 18px;
   font-weight: bold;
   color: var(--text-main);
+}
+
+.skill-name .iconcolor {
+  font-size: 20px;
 }
 
 .skill-level {

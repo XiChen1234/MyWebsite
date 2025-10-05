@@ -1,10 +1,17 @@
 {
   "id": "5030404",
   "name": "MyWebsite Color",
-  "font_family": "iconfont",
+  "font_family": "iconcolor",
   "css_prefix_text": "icon-",
   "description": "",
   "glyphs": [
+    {
+      "icon_id": "15756155",
+      "name": "Go",
+      "font_class": "Go",
+      "unicode": "e7bc",
+      "unicode_decimal": 59324
+    },
     {
       "icon_id": "11155582",
       "name": "Postman",
@@ -109,13 +116,6 @@
       "font_class": "MySQL",
       "unicode": "e606",
       "unicode_decimal": 58886
-    },
-    {
-      "icon_id": "42599942",
-      "name": "Go",
-      "font_class": "Go",
-      "unicode": "e607",
-      "unicode_decimal": 58887
     },
     {
       "icon_id": "42599937",
