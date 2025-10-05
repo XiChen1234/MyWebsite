@@ -9,9 +9,10 @@ interface Skill {
 
 // 定义组件props
 interface Props {
-  section: string;
-  title: string;
-  skills: Skill[];
+  section: {
+    title: string;
+    list: Skill[];
+  };
   isExpanded: boolean;
   onToggle: (section: string) => void;
 }
@@ -23,39 +24,27 @@ const generateStars = (level: number) => {
   return '⭐'.repeat(level) + '🎈'.repeat(5 - level);
 };
 
-// 获取等级文本描述
-const getLevelText = (level: number) => {
-  const levelTexts = {
-    5: '核心主力 (专家)',
-    4: '熟练使用',
-    3: '掌握基础',
-    2: '了解概念',
-    1: '初步接触'
-  };
-  return levelTexts[level as keyof typeof levelTexts] || '';
-};
-
 // 处理标题点击事件
 const handleTitleClick = () => {
-  props.onToggle(props.section);
+  props.onToggle(props.section.title);
 };
 </script>
 
 <template>
-  <div class="skill-section">
+  <div class="skill-section" :id="`data-section-${section.title}`">
     <h3 class="section-title" @click="handleTitleClick">
-      {{ title }}
+      {{ section.title }}
       <i class="iconfont icon-right" :class="{ 'expanded': isExpanded }"></i>
     </h3>
     <transition name="skill-expand">
       <div v-if="isExpanded" class="skill-list">
-        <div v-for="skill in skills" :key="skill.name" class="skill-item">
+        <div v-for="skill in section.list" :key="skill.name" class="skill-item">
           <div class="skill-header">
             <div class="skill-name">
               <i :class="`iconfont icon-${skill.name}`"></i>
               {{ skill.name }}
             </div>
-            <div class="skill-level" :title="getLevelText(skill.level)">
+            <div class="skill-level">
               {{ generateStars(skill.level) }}
             </div>
           </div>
@@ -136,7 +125,6 @@ const handleTitleClick = () => {
 
 .skill-level {
   font-size: 16px;
-  cursor: help;
 }
 
 .skill-description {
@@ -172,11 +160,25 @@ const handleTitleClick = () => {
 }
 
 /* 为每个技能项添加微小的延迟，实现级联效果 */
-.skill-expand-enter-active .skill-item:nth-child(1) { transition-delay: 0ms; }
-.skill-expand-enter-active .skill-item:nth-child(2) { transition-delay: 50ms; }
-.skill-expand-enter-active .skill-item:nth-child(3) { transition-delay: 100ms; }
-.skill-expand-enter-active .skill-item:nth-child(4) { transition-delay: 150ms; }
-.skill-expand-enter-active .skill-item:nth-child(5) { transition-delay: 200ms; }
+.skill-expand-enter-active .skill-item:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.skill-expand-enter-active .skill-item:nth-child(2) {
+  transition-delay: 50ms;
+}
+
+.skill-expand-enter-active .skill-item:nth-child(3) {
+  transition-delay: 100ms;
+}
+
+.skill-expand-enter-active .skill-item:nth-child(4) {
+  transition-delay: 150ms;
+}
+
+.skill-expand-enter-active .skill-item:nth-child(5) {
+  transition-delay: 200ms;
+}
 
 /* 响应式设计 */
 @media (max-width: 480px) {
