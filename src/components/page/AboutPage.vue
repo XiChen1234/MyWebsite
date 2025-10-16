@@ -114,7 +114,7 @@
   width: 100px;
   font-weight: 500;
   text-align: center;
-  background-color: var(--common-bg);
+  background-color: var(--bg-card);
   display: flex;
   flex-direction: column;
   justify-content: center;

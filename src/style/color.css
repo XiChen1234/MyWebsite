@@ -7,7 +7,7 @@
   --bg-focus-light: #e7e7e7;
   --bg-focus-dark: #333333;
 
-  --bg-card: #888;
+  --bg-card: rgba(150, 150, 150, 0.4);
 
   /* text */
   --text-main-light: #000;
