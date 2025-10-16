@@ -122,10 +122,4 @@ const handleSectionClick = (section: string) => {
     font-size: 20px;
   }
 }
-
-@media (min-width: 481px) and (max-width: 1023px) {
-  .skill-page {
-    width: 95%;
-  }
-}
 </style>
