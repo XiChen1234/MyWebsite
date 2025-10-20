@@ -82,7 +82,7 @@ const experienceData: ExperienceItem[] = [
     start: new Date('2022-09-01'),
     end: new Date('2023-05-01'),
     details: [
-      '“三高人群管理”项目受湖南三甲生命科学实验室青睐并开展校企合作',
+      '“大创”项目受湖南三甲生命科学实验室青睐并开展校企合作',
       '合作顺利推进，项目获省级优秀成绩'
     ],
     skills: ['微信小程序', 'Spring', 'MyBatis-plus'],
@@ -160,7 +160,6 @@ const experienceData: ExperienceItem[] = [
     details: [
       '暑期转正实习（北京）',
       '独立负责团买买调整单运营工具开发',
-      '实现查询、导出、审批、撤回功能，优化导出工具性能',
       '用多线程和线程池优化大数据量导出流程',
       '接入审批、撤回系统，保障分布式事务一致性',
       '设计结算规则快照对比与回滚，保证数据一致'
@@ -218,9 +217,6 @@ const experienceData: ExperienceItem[] = [
 
 // 当前激活的tab
 const activeTab = ref<'Education' | 'Work' | 'All'>('All');
-
-// 解析时间段并返回年份值用于排序（不再需要，但保留注释以便参考）
-
 
 // 根据当前tab过滤数据并按时间排序（升序）
 const filteredExperienceData = computed(() => {
