@@ -4,9 +4,10 @@ import Home from '../page/HomePage.vue';
 import About from '../page/AboutPage.vue';
 import Skill from '../page/SkillPage.vue';
 import Career from '../page/CareerPage.vue';
+import Portfolio from '../page/PortfolioPage.vue';
 
 const props = defineProps<{
-  content: 'Home' | 'About' | 'Skill' | 'Career';
+  content: 'Home' | 'About' | 'Skill' | 'Career' | 'Portfolio';
 }>();
 
 const pages = {
@@ -14,6 +15,7 @@ const pages = {
   About,
   Skill,
   Career,
+  Portfolio,
 };
 </script>
 

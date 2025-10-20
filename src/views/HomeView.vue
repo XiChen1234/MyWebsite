@@ -7,6 +7,7 @@
       <PageBox content="About"/>
       <PageBox content="Skill"/>
       <PageBox content="Career"/>
+      <PageBox content="Portfolio"/>
       <FooterBar />
     </div>
   </div>
