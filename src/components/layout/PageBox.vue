@@ -3,15 +3,17 @@
 import Home from '../page/HomePage.vue';
 import About from '../page/AboutPage.vue';
 import Skill from '../page/SkillPage.vue';
+import Career from '../page/CareerPage.vue';
 
 const props = defineProps<{
-  content: 'Home' | 'About' | 'Skill';
+  content: 'Home' | 'About' | 'Skill' | 'Career';
 }>();
 
 const pages = {
   Home,
   About,
   Skill,
+  Career,
 };
 </script>
 
