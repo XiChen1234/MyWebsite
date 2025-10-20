@@ -1,6 +1,89 @@
 <!-- 主页组件 -->
 <script setup lang="ts">
 import TagsWall from './ui/TagsWall.vue';
+
+interface Tag {
+  name: string;
+  color?: string;
+}
+interface TagGroup {
+  name: string;
+  tags: Tag[];
+}
+
+const tagData: TagGroup[] = [
+  {
+    name: '基本信息',
+    tags: [
+      {
+        name: '中南大学',
+        color: '#0052A9'
+      },
+      {
+        name: '软件工程',
+      },
+      {
+        name: '程序猿',
+      },
+      {
+        name: '中国石油',
+        color: '#C4121D'
+      },
+      {
+        name: 'Software Engineer',
+      }
+    ]
+  },
+  {
+    name: '技术标签',
+    tags: [
+      {
+        name: 'Spring Boot',
+        color: '#6DB33F'
+      },
+      {
+        name: 'MySQL',
+      },
+      {
+        name: 'Docker',
+        color: '#FCC624'
+      },
+      {
+        name: '自动化脚本',
+      },
+      {
+        name: 'Linux',
+      },
+      {
+        name: 'Nginx',
+        color: '#009639'
+      }
+    ]
+  },
+  {
+    name: '兴趣爱好',
+    tags: [
+      {
+        name: '⚽足球边锋',
+        color: '#1E90FF'
+      },
+      {
+        name: '🃏桌游爱好者',
+        color: '#8A2BE2'
+      },
+      {
+        name: '🎮单机游戏',
+      },
+      {
+        name: '🧊魔方Sub20',
+      },
+      {
+        name: '🐺单身贵族',
+        color: '#FF69B4'
+      }
+    ]
+  }
+]
 </script>
 
 <template>
@@ -12,7 +95,7 @@ import TagsWall from './ui/TagsWall.vue';
       Welcome to <br />
       XiChen's Website
     </h1>
-    <TagsWall class="tags" />
+    <TagsWall class="tags" :data="tagData"/>
     <div class="next">
       <a href="#about">
         <i class="iconfont icon-mouse"></i>
