@@ -7,7 +7,6 @@ interface PortfolioItem {
   id: string;
   title: string;
   description: string;
-  category: string;
   imagePath: string;
   link?: string;
   tags: string[];

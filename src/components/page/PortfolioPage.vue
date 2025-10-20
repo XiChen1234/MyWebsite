@@ -9,7 +9,6 @@ interface PortfolioItem {
   id: string;
   title: string;
   description: string;
-  category: string;
   imagePath: string;
   link?: string;
   tags: string[];
@@ -19,43 +18,42 @@ interface PortfolioItem {
 const data: PortfolioItem[] = [
   {
     id: 'project1',
-    title: '个人网站',
+    title: 'MyWebsite',
     description: '使用Vue 3 + TypeScript构建的个人作品集网站，展示我的技能和项目经验。',
-    category: 'Web开发',
-    imagePath: '/src/assets/img/中南大学.jpg',
-    tags: ['Vue 3', 'TypeScript', 'Vite', 'CSS3']
+    imagePath: '/src/assets/img/MyWebsite.png',
+    tags: ['Vue 3', 'TypeScript', 'Vite', 'CSS3'],
+    link: 'https://github.com/XiChen1234/MyWebsite'
   },
   {
     id: 'project2',
-    title: '慧选3C-AIGC数码导购',
-    description: '引入AIGC解决数码选购难题，提供个性化推荐服务的平台。',
-    category: 'AIGC应用',
-    imagePath: '/src/assets/img/恒安嘉新.png',
-    tags: ['Java', 'Spring Boot', 'MySQL', 'Vue.js', 'AIGC算法']
+    title: 'NoBG',
+    description: '一个简单、快速、隐私保护的在线图片背景去除工具，完全在浏览器中本地处理，无需上传任何图片到服务器。',
+    imagePath: '/src/assets/img/NoBG.png',
+    tags: ['TensorFlow.js', 'BodyPix', 'HTML', 'CSS', 'JavaScript'],
+    link: 'https://github.com/XiChen1234/NoBG'
   },
   {
     id: 'project3',
-    title: '三高人群健康管理系统',
-    description: '微信小程序应用，为三高人群提供健康监测和管理服务。',
-    category: '移动应用',
-    imagePath: '/src/assets/img/大创.jpg',
-    tags: ['微信小程序', 'Spring', 'MyBatis-plus']
+    title: '狼人杀统计模拟器',
+    description: '设计并实现一个7人局狼人杀游戏模拟器，通过为不同角色设置不同的AI策略，完全自动运行多轮游戏并统计不同策略组合下的各阵营胜率。该系统无需任何真人参与或输入，完全通过AI策略自主模拟游戏进程。 模拟器支持保存每单局对局的游戏进程信息，供系统主查看复盘',
+    imagePath: '/src/assets/img/狼人杀.png',
+    tags: ['Java'],
+    link: 'https://github.com/XiChen1234/WerewolfSimulator'
   },
   {
     id: 'project4',
-    title: '美团团买买调整单工具',
-    description: '负责团买买调整单运营工具开发，优化大数据量导出流程。',
-    category: '企业应用',
-    imagePath: '/src/assets/img/美团实习.jpg',
-    tags: ['Java', 'Spring', 'MyBatis', 'EasyExcel', '线程池']
+    title: '贪吃蛇小游戏',
+    description: '基于Qt库的C++基础贪吃蛇游戏项目，玩家通过控制蛇的移动来吃到食物，同时避免撞到自己或边界。',
+    imagePath: '/src/assets/img/贪吃蛇.png',
+    tags: ['Qt', 'C++', '游戏开发'],
+    link: 'https://github.com/XiChen1234/SnakeGame'
   },
   {
     id: 'project5',
-    title: '分布式缓存模块',
-    description: '基于Go语言实现的高性能分布式缓存模块，用于云平台核心服务。',
-    category: '后端开发',
-    imagePath: '/src/assets/img/团学会.jpg',
-    tags: ['Go', 'Kubernetes', 'Redis', '微服务']
+    title: '慧选3C-AIGC数码导购',
+    description: '引入AIGC解决数码选购难题，提供个性化推荐服务的平台。',
+    imagePath: '/src/assets/img/慧选3C.png',
+    tags: ['Java', 'Spring Boot', 'MySQL', 'Vue.js', 'AIGC算法']
   }
 ];
 </script>

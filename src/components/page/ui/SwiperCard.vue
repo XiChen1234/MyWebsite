@@ -4,7 +4,6 @@ interface PortfolioItem {
   id: string;
   title: string;
   description: string;
-  category: string;
   imagePath: string;
   link?: string;
   tags: string[];
@@ -37,7 +36,6 @@ const handleCardClick = () => {
     </div>
 
     <div class="info">
-      <div class="category">{{ item.category }}</div>
       <h3 class="title">{{ item.title }}</h3>
       <p class="description">{{ item.description }}</p>
 
@@ -129,19 +127,6 @@ const handleCardClick = () => {
   flex-direction: column;
   gap: 16px;
   flex-grow: 1;
-}
-
-.category {
-  display: inline-block;
-  background-color: #f0f4ff;
-  color: #4a6cf7;
-  padding: 6px 12px;
-  border-radius: 16px;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  align-self: flex-start;
 }
 
 .title {
