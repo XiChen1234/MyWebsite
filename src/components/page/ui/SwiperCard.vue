@@ -22,15 +22,11 @@ const handleCardClick = () => {
 </script>
 
 <template>
-  <div class="card" :class="{ 'has-link': item.link }" @click="handleCardClick">
+  <div class="card">
     <div class="image-container">
-      <img
-        :src="item.imagePath"
-        :alt="item.title"
-        loading="lazy"
-        class="card-image"/>
+      <img :src="item.imagePath" :alt="item.title" class="card-image" loading="lazy" />
       <!-- 悬停时显示的放大效果覆盖层 -->
-      <div class="image-overlay" v-if="item.link">
+      <div class="image-overlay" v-if="item.link" @click="handleCardClick">
         <span class="view-project">查看项目</span>
       </div>
     </div>
@@ -59,12 +55,7 @@ const handleCardClick = () => {
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: default;
   will-change: transform, box-shadow;
-}
-
-.card.has-link {
-  cursor: pointer;
 }
 
 .image-container {
@@ -99,6 +90,7 @@ const handleCardClick = () => {
   justify-content: center;
   opacity: 0;
   transition: opacity 0.4s ease;
+  cursor: pointer;
 }
 
 .card:hover .image-overlay {
@@ -114,6 +106,7 @@ const handleCardClick = () => {
   border: 2px solid var(--border);
   border-radius: 10px;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .view-project:hover {
