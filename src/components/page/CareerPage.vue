@@ -314,8 +314,8 @@ function switchTab(tab: 'Education' | 'Work' | 'All') {
 .tab-button {
   width: 200px;
   padding: 10px 0;
-  color: var(--button-text-black);
-  background-color: var(--button-bg-gray);
+  color: var(--text-main);
+  background-color: var(--bg-tag);
   border-radius: 25px;
   font-size: 20px;
   font-weight: 500;
