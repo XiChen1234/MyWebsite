@@ -210,18 +210,19 @@ const toRight = () => {
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  color: var(--text-light-300);
+  background-color: var(--button-bg-gray);
+  color: var(--text-main);
 }
 
 .indicator:hover {
-  background-color: var(--text-secondary-focus);
+  background-color: var(--button-bg-gray);
   color: var(--text-main-focus);
   transform: scale(1.1);
 }
 
 .indicator.active {
-  background-color: var(--bg-control-dark);
-  box-shadow: 0 2px 8px var(--shadow-indicator);
+  background-color: var(--bg-tag-focus);
+  color: var(--text-main-focus);
   font-weight: bold;
 }
 </style>

@@ -106,7 +106,6 @@ const handleCardClick = () => {
   border: 2px solid var(--border);
   border-radius: 10px;
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 
 .view-project:hover {
