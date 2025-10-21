@@ -5,9 +5,10 @@ import About from '../page/AboutPage.vue';
 import Skill from '../page/SkillPage.vue';
 import Career from '../page/CareerPage.vue';
 import Portfolio from '../page/PortfolioPage.vue';
+import Contact from '../page/ContactPage.vue';
 
 const props = defineProps<{
-  content: 'Home' | 'About' | 'Skill' | 'Career' | 'Portfolio';
+  content: 'Home' | 'About' | 'Skill' | 'Career' | 'Portfolio' | 'Contact';
 }>();
 
 const pages = {
@@ -16,6 +17,7 @@ const pages = {
   Skill,
   Career,
   Portfolio,
+  Contact,
 };
 </script>
 

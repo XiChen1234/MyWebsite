@@ -1,18 +1,41 @@
 @font-face {
   font-family: "iconcolor"; /* Project id 5030404 */
   /* Color fonts */
-  src: 
-       url('iconfont.woff2?t=1759653770565') format('woff2'),
-       url('iconfont.woff?t=1759653770565') format('woff'),
-       url('iconfont.ttf?t=1759653770565') format('truetype');
+  src:
+       url('iconfont.woff2?t=1761063571375') format('woff2'),
+       url('iconfont.woff?t=1761063571375') format('woff'),
+       url('iconfont.ttf?t=1761063571375') format('truetype');
 }
 
 .iconcolor {
   font-family: "iconcolor" !important;
-  font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+  content: "\e85a";
+}
+
+.icon-qq:before {
+  content: "\e667";
+}
+
+.icon-local:before {
+  content: "\e607";
+}
+
+.icon-gmail:before {
+  content: "\e60d";
+}
+
+.icon-juejin:before {
+  content: "\e612";
+}
+
+.icon-phone:before {
+  content: "\e63b";
 }
 
 .icon-Go:before {
