@@ -114,7 +114,7 @@
   width: 100px;
   font-weight: 500;
   text-align: center;
-  background-color: var(--bg-card);
+  background-color: var(--bg-tag);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,8 +132,8 @@
   width: fit-content;
   padding: 10px 20px;
   border-radius: 30px;
-  background-color: var(--text-main-focus);
-  color: var(--text-card);
+  background-color: var(--button-bg-orange);
+  color: var(--button-text-white);
   font-size: 20px;
   font-weight: bold;
   display: flex;

@@ -58,6 +58,10 @@ const themeSwitch = () => {
   color: var(--text-main);
 }
 
+.logo:hover {
+  color: var(--text-main-focus);
+}
+
 .logo img {
   width: 40px;
   height: 40px;

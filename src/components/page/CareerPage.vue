@@ -314,8 +314,8 @@ function switchTab(tab: 'Education' | 'Work' | 'All') {
 .tab-button {
   width: 200px;
   padding: 10px 0;
-  color: var(--text-main);
-  background-color: var(--common-bg);
+  color: var(--button-text-black);
+  background-color: var(--button-bg-gray);
   border-radius: 25px;
   font-size: 20px;
   font-weight: 500;
@@ -328,8 +328,8 @@ function switchTab(tab: 'Education' | 'Work' | 'All') {
 }
 
 .tab-button.active {
-  color: var(--text-card);
-  background-color: var(--text-main-focus);
+  color: var(--button-text-white);
+  background-color: var(--button-bg-orange);
 }
 
 /* 时间线 */
@@ -347,7 +347,7 @@ function switchTab(tab: 'Education' | 'Work' | 'All') {
   transform: translateX(-50%);
   width: 4px;
   height: 100%;
-  background-color: var(--border-color-focus);
+  background-color: var(--orange-500);
 }
 
 .timeline-item::before {
@@ -381,7 +381,7 @@ function switchTab(tab: 'Education' | 'Work' | 'All') {
 /* 时间段 */
 .timeline-period {
   color: var(--text-secondary);
-  background-color: var(--common-bg);
+  background-color: var(--bg-tag);
   padding: 2px 12px;
   border-radius: 20px;
   font-weight: 500;
@@ -448,7 +448,7 @@ function switchTab(tab: 'Education' | 'Work' | 'All') {
 
 /* 技能标签 */
 .skill-badge {
-  background-color: rgba(255, 140, 0, 0.1);
+  background-color: var(--bg-tag-focus);
   color: var(--text-main-focus);
   padding: 2px 10px;
   border-radius: 15px;

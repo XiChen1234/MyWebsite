@@ -214,8 +214,8 @@ h1 {
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  background-color: var(--text-main-focus);
-  color: var(--text-card);
+  background-color: var(--button-bg-orange);
+  color: var(--button-text-white);
   padding: 10px 20px;
   border-radius: 30px;
   width: 50%;

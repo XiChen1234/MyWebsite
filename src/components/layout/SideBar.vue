@@ -19,14 +19,13 @@
   height: 50px;
   background-color: var(--page-bg);
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   opacity: 50%;
   border: 3px solid var(--border);
   z-index: 999;
 }
 .sidebar:hover {
-  box-shadow: 0 0 20px 2px var(--border);
+  box-shadow: 0 0 10px 2px var(--transparent-black);
   border: 3px solid var(--border-color-focus);
 }
 .sidebar a {

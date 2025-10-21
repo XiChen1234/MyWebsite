@@ -36,7 +36,7 @@ const handleCardClick = () => {
     </div>
 
     <div class="info">
-      <h3 class="title">{{ item.title }}</h3>
+      <h3 class="name">{{ item.title }}</h3>
       <p class="description">{{ item.description }}</p>
 
       <div class="tags">
@@ -92,7 +92,8 @@ const handleCardClick = () => {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--transparent-black);
+  color: var(--neutral-50);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,20 +106,19 @@ const handleCardClick = () => {
 }
 
 .view-project {
-  color: #fff;
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 12px 24px;
-  border: 2px solid #fff;
-  border-radius: 30px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
   transition: all 0.3s ease;
 }
 
 .view-project:hover {
-  background-color: #fff;
-  color: #333;
+  color: var(--text-main-focus);
+  border-color: var(--text-main-focus);
 }
 
 .info {
@@ -129,20 +129,15 @@ const handleCardClick = () => {
   flex-grow: 1;
 }
 
-.title {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 700;
-  color: #333;
-  line-height: 1.3;
+.name {
+  color: var(--text-main);
 }
 
 .description {
   margin: 0;
   font-size: 16px;
   line-height: 1.6;
-  color: #666;
-  flex-grow: 1;
+  color: var(--text-main);
 }
 
 .tags {
@@ -153,8 +148,8 @@ const handleCardClick = () => {
 }
 
 .tag {
-  background-color: var(--bg-card);
-  color: #666;
+  background-color: var(--bg-tag-focus);
+  color: var(--text-main-focus);
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 13px;

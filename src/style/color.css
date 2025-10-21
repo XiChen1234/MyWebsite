@@ -1,44 +1,150 @@
 :root {
-  /* bg */
-  --common-bg-light: #e2e2e2;
-  --common-bg-dark: #1e1e1e;
-  --page-bg-light: #ffffff;
-  --page-bg-dark: #121212;
-  --bg-focus-light: #e7e7e7;
-  --bg-focus-dark: #333333;
+  /* ========== 基础颜色系统 ========== */
 
-  --bg-card: rgba(150, 150, 150, 0.4);
+  /* 主色调 - 橙色系列 */
+  --orange-50: #fff7ed;
+  --orange-100: #ffedd5;
+  --orange-200: #fed7aa;
+  --orange-300: #fdba74;
+  --orange-400: #fd9a56;
+  --orange-500: #fb923c; /* 主橙色 */
+  --orange-600: #f17d2b;
+  --orange-700: #d9681f;
+  --orange-800: #b8541a;
+  --orange-900: #964215;
+  --orange-950: #431407;
 
-  /* text */
-  --text-main-light: #000;
-  --text-main-dark: #c3c3c3;
-  --text-secondary-light: #666666;
-  --text-secondary-dark: #999999;
-  --text-main-focus: orange;
-  --text-secondary-focus: #ffaf1a;
+  /* 中性色 - 灰度系列 */
+  --neutral-50: #fafafa;
+  --neutral-100: #f4f4f5;
+  --neutral-200: #e4e4e7;
+  --neutral-300: #d4d4d8;
+  --neutral-400: #a1a1aa;
+  --neutral-500: #71717a;
+  --neutral-600: #52525b;
+  --neutral-700: #3f3f46;
+  --neutral-800: #27272a;
+  --neutral-900: #18181b;
+  --neutral-950: #09090b;
 
-  --text-card: #fff;
+  /* 背景颜色 */
+  --common-bg-light: var(--neutral-100);
+  --common-bg-dark: var(--neutral-900);
+  --page-bg-light: var(--neutral-50);
+  --page-bg-dark: var(--neutral-950);
+  --bg-focus-light: var(--neutral-200);
+  --bg-focus-dark: var(--neutral-800);
+  --bg-card-light: var(--neutral-50);
+  --bg-card-dark: var(--neutral-900);
+  --bg-hover-light: var(--neutral-100);
+  --bg-hover-dark: var(--neutral-800);
 
-  /* border */
-  --border-color-light: #333;
-  --border-color-dark: #c3c3c3;
-  --border-color-focus: orange;
+  /* 文本颜色 */
+  --text-main-light: var(--neutral-900);
+  --text-main-dark: var(--neutral-100);
+  --text-secondary-light: var(--neutral-600);
+  --text-secondary-dark: var(--neutral-400);
+  --text-muted-light: var(--neutral-500);
+  --text-muted-dark: var(--neutral-500);
+  --text-inverse-light: var(--neutral-50);
+  --text-inverse-dark: var(--neutral-900);
+
+  /* 焦点文本颜色 */
+  --text-main-focus: var(--orange-500);
+  --text-secondary-focus: var(--orange-400);
+
+  /* 按钮颜色 */
+  --button-text-white: var(--neutral-50);
+  --button-text-black: var(--neutral-900);
+  --button-bg-orange: var(--orange-500);
+  --button-bg-orange-hover: var(--orange-600);
+  --button-bg-gray: var(--neutral-200);
+  --button-bg-gray-hover: var(--neutral-300);
+
+  /* 边框颜色 */
+  --border: var(--neutral-300);
+  --border-color-focus: var(--orange-500);
+  --border-color-hover: var(--orange-400);
+
+  /* 标签颜色 */
+  --bg-tag-light: var(--neutral-200);
+  --bg-tag-dark: var(--neutral-800);
+  --bg-tag-focus-light: rgba(249, 115, 22, 0.1);
+  --bg-tag-focus-dark: rgba(249, 115, 22, 0.2);
+  --text-tag-light: var(--neutral-800);
+  --text-tag-dark: var(--neutral-300);
+
+  /* 半透明颜色 */
+  --transparent-gray-light: rgba(229, 231, 235, 0.5);
+  --transparent-black-light: rgba(0, 0, 0, 0.6);
+  --transparent-gray-dark: rgba(55, 65, 81, 0.5);
+  --transparent-black-dark: rgba(0, 0, 0, 0.8);
+
+  /* ========== 功能色 ========== */
+  --success-color: #10b981; /* 成功 - 绿色 */
+  --warning-color: #f59e0b; /* 警告 - 黄色 */
+  --error-color: #ef4444;   /* 错误 - 红色 */
+  --info-color: #3b82f6;    /* 信息 - 蓝色 */
 }
 
+/* ========== 浅色模式变量映射 ========== */
 [data-theme="light"] {
+  /* 背景变量 */
   --common-bg: var(--common-bg-light);
   --page-bg: var(--page-bg-light);
   --bg-focus: var(--bg-focus-light);
+  --bg-card: var(--bg-card-light);
+  --bg-hover: var(--bg-hover-light);
+
+  /* 文本变量 */
   --text-main: var(--text-main-light);
   --text-secondary: var(--text-secondary-light);
-  --border: var(--border-color-light);
+  --text-muted: var(--text-muted-light);
+  --text-inverse: var(--text-inverse-light);
+
+  /* 标签变量 */
+  --bg-tag: var(--bg-tag-light);
+  --bg-tag-focus: var(--bg-tag-focus-light);
+  --text-tag: var(--text-tag-light);
+
+  /* 半透明变量 */
+  --transparent-gray: var(--transparent-gray-light);
+  --transparent-black: var(--transparent-black-light);
+
+  /* 颜色模式标识 */
+  --color-mode: "light";
 }
 
+/* ========== 深色模式变量映射 ========== */
 [data-theme="dark"] {
+  /* 背景变量 */
   --common-bg: var(--common-bg-dark);
   --page-bg: var(--page-bg-dark);
   --bg-focus: var(--bg-focus-dark);
+  --bg-card: var(--bg-card-dark);
+  --bg-hover: var(--bg-hover-dark);
+
+  /* 文本变量 */
   --text-main: var(--text-main-dark);
   --text-secondary: var(--text-secondary-dark);
-  --border: var(--border-color-dark);
+  --text-muted: var(--text-muted-dark);
+  --text-inverse: var(--text-inverse-dark);
+
+  /* 标签变量 */
+  --bg-tag: var(--bg-tag-dark);
+  --bg-tag-focus: var(--bg-tag-focus-dark);
+  --text-tag: var(--text-tag-dark);
+
+  /* 半透明变量 */
+  --transparent-gray: var(--transparent-gray-dark);
+  --transparent-black: var(--transparent-black-dark);
+
+  /* 颜色模式标识 */
+  --color-mode: "dark";
+}
+
+/* ========== 通用样式增强 ========== */
+/* 确保颜色模式切换时的平滑过渡 */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }

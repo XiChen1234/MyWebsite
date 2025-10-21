@@ -151,24 +151,31 @@ const toRight = () => {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--page-bg);
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
   cursor: pointer;
+  opacity: 50%;
+  border: 3px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #333;
   transition: all 0.3s ease;
-  z-index: 10;
 }
 
 .control-btn:hover {
-  background-color: rgba(255, 255, 255, 1);
-  transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 10px 2px var(--transparent-black);
+  border: 3px solid var(--border-color-focus);
+}
+
+.control-btn .iconfont {
+  font-size: 28px;
+  color: var(--text-main);
+}
+
+.control-btn:hover .iconfont {
+  color: var(--text-main-focus);
 }
 
 .left-btn {
@@ -202,7 +209,7 @@ const toRight = () => {
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  color: #333;
+  color: var(--text-light-300);
 }
 
 .indicator:hover {
@@ -212,8 +219,8 @@ const toRight = () => {
 }
 
 .indicator.active {
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: var(--bg-control-dark);
+  box-shadow: 0 2px 8px var(--shadow-indicator);
   font-weight: bold;
 }
 </style>

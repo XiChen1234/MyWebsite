@@ -81,8 +81,8 @@ const getAnimationDuration = (index: number): string => {
   display: inline-flex;
   margin: 10px;
   letter-spacing: .2em;
-  background-color: var(--bg-card);
-  color: var(--text-card);
+  background-color: var(--bg-tag);
+  color: var(--text-tag);
   padding: 5px 10px;
   border-radius: 5px;
 }
