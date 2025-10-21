@@ -172,6 +172,7 @@ const toRight = () => {
 .control-btn .iconfont {
   font-size: 28px;
   color: var(--text-main);
+  cursor: pointer;
 }
 
 .control-btn:hover .iconfont {
