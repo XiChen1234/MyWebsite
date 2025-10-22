@@ -529,12 +529,6 @@ function switchTab(tab: 'Education' | 'Work' | 'All') {
   width: 100%;
 }
 
-/* 延迟动画，使项目依次显示，但减少延迟时间 */
-.timeline-item {
-  animation: fadeIn 0.6s ease-out;
-  animation-fill-mode: forwards;
-}
-
 /* tab切换时的过渡效果 */
 .content-area {
   position: relative;
