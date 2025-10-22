@@ -157,10 +157,10 @@ const handleSubmit = () => {
             </div>
             <div class="contact-info">
               <div class="contact-label">{{ item.label }}</div>
-              <a v-if="item.url" class="contact-value" :href="item.url"
-                :target="item.id === 'email' ? '_self' : '_blank'">
-                {{ item.value }}
-              </a>
+              <div v-if="item.url" class="contact-value">
+                <a v-if="item.id === 'email'" :href="item.url">{{ item.value }}</a>
+                <a v-else :href="item.url" target="_blank">{{ item.value }}</a>
+              </div>
               <div v-else class="contact-value">{{ item.value }}</div>
             </div>
           </div>
