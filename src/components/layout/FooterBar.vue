@@ -98,7 +98,7 @@ onUnmounted(() => {
 <style scoped>
 /* 页脚容器 */
 .footer {
-  padding: 2rem 1rem;
+  padding: 2rem 0;
   width: 100%;
   background-color: var(--footer-bg);
   color: var(--footer-text);
