@@ -60,7 +60,7 @@ const handleTitleClick = () => {
   background-color: var(--bg-focus);
   border-radius: 10px;
   padding: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.3s ease;
 }
 
 .section-title {
@@ -82,7 +82,7 @@ const handleTitleClick = () => {
 }
 
 .iconfont {
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
   font-size: 20px;
   color: var(--text-secondary);
   transform: rotate(-90deg);
@@ -103,7 +103,7 @@ const handleTitleClick = () => {
   background-color: var(--page-bg);
   border-radius: 8px;
   padding: 15px;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .skill-item:hover {
