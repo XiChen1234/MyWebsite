@@ -34,9 +34,15 @@ const contactItems = ref<ContactItem[]>([
     url: 'https://juejin.cn/user/2878958587880362'
   },
   {
+    id: 'local',
+    icon: 'icon-local',
+    label: '位置',
+    value: '中国 西安'
+  },
+  {
     id: 'qq',
     icon: 'icon-qq',
-    label: 'QQ',
+    label: '腾讯QQ',
     value: '66752878'
   },
   {
@@ -45,12 +51,6 @@ const contactItems = ref<ContactItem[]>([
     label: '电话',
     value: '+86 177 9272 8712'
   },
-  {
-    id: 'local',
-    icon: 'icon-local',
-    label: '位置',
-    value: '中国 西安'
-  }
 ]);
 
 // 表单数据
