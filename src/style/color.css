@@ -53,6 +53,11 @@
   --text-main-focus: var(--orange-500);
   --text-secondary-focus: var(--orange-400);
 
+  /* footer颜色 */
+  --footer-bg-light: var(--orange-400);
+  --footer-bg-dark: var(--orange-800);
+  --footer-text: var(--orange-50);
+
   /* 按钮颜色 */
   --button-text-white: var(--neutral-50);
   --button-text-black: var(--neutral-900);
@@ -77,8 +82,9 @@
   /* 半透明颜色 */
   --transparent-gray-light: rgba(229, 231, 235, 0.5);
   --transparent-black-light: rgba(0, 0, 0, 0.6);
-  --transparent-gray-dark: rgba(55, 65, 81, 0.5);
+  --transparent-gray-dark: rgba(89, 89, 89, 0.5);
   --transparent-black-dark: rgba(0, 0, 0, 0.8);
+  --transparent: rgba(255, 255, 255, 0.1);
 
   /* ========== 功能色 ========== */
   --success-color: #10b981; /* 成功 - 绿色 */
@@ -105,6 +111,9 @@
   --text-secondary: var(--text-secondary-light);
   --text-muted: var(--text-muted-light);
   --text-inverse: var(--text-inverse-light);
+
+  /* footer颜色 */
+  --footer-bg: var(--footer-bg-light);
 
   /* 标签变量 */
   --bg-tag: var(--bg-tag-light);
@@ -133,6 +142,9 @@
   --text-secondary: var(--text-secondary-dark);
   --text-muted: var(--text-muted-dark);
   --text-inverse: var(--text-inverse-dark);
+
+  /* footer颜色 */
+  --footer-bg: var(--footer-bg-dark);
 
   /* 标签变量 */
   --bg-tag: var(--bg-tag-dark);
