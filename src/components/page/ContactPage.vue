@@ -67,6 +67,9 @@ const formData = ref<ContactForm>({
   message: ''
 });
 
+// 留言功能开关 - 设置为 true 可开通留言功能
+const messageFeatureEnabled = ref(false);
+
 // 提交状态和消息
 const isSubmitting = ref(false);
 const submitMessage = ref('');
@@ -167,32 +170,41 @@ const handleSubmit = () => {
       <!-- 留言表单部分 -->
       <div class="form-section">
         <h2>给我留言</h2>
-        <form @submit.prevent="handleSubmit" class="contact-form">
-          <div class="form-group">
-            <label for="name">姓名 <span class="required">*</span></label>
-            <input id="name" class="form-input" type="text"
-            placeholder="请输入您的姓名" v-model="formData.name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">邮箱 <span class="required">*</span></label>
-            <input id="email" class="form-input" type="email"
-            placeholder="请输入您的邮箱" v-model="formData.email" required />
-          </div>
-          <div class="form-group">
-            <label for="message">留言内容 <span class="required">*</span></label>
-            <textarea id="message" class="form-input"
-            placeholder="请输入您想对我说的话" v-model="formData.message" rows="5"
-            required></textarea>
-          </div>
+        <div class="form-container">
+          <form @submit.prevent="handleSubmit" class="contact-form" :class="{ 'form-disabled': !messageFeatureEnabled }">
+            <div class="form-group">
+              <label for="name">姓名 <span class="required">*</span></label>
+              <input id="name" class="form-input" type="text"
+              placeholder="请输入您的姓名" v-model="formData.name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">邮箱 <span class="required">*</span></label>
+              <input id="email" class="form-input" type="email"
+              placeholder="请输入您的邮箱" v-model="formData.email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">留言内容 <span class="required">*</span></label>
+              <textarea id="message" class="form-input"
+              placeholder="请输入您想对我说的话" v-model="formData.message" rows="5"
+              required></textarea>
+            </div>
 
-          <button class="submit-button button" type="submit" :disabled="isSubmitting">
-            {{ isSubmitting ? '发送中...' : '发送留言' }}
-          </button>
+            <button class="submit-button button" type="submit" :disabled="isSubmitting || !messageFeatureEnabled">
+              {{ isSubmitting ? '发送中...' : '发送留言' }}
+            </button>
 
-          <div v-show="submitMessage" class="submit-message" :class="submitMessageType">
-            {{ submitMessage }}
+            <div v-show="submitMessage" class="submit-message" :class="submitMessageType">
+              {{ submitMessage }}
+            </div>
+          </form>
+
+          <!-- 毛玻璃遮罩层 - 当留言功能未开通时显示 -->
+          <div v-if="!messageFeatureEnabled" class="form-overlay">
+            <div class="overlay-content">
+              <div class="overlay-text">尚未开通留言功能</div>
+            </div>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>
@@ -310,6 +322,11 @@ const handleSubmit = () => {
   flex: 2;
 }
 
+.form-container {
+  position: relative;
+  width: 100%;
+}
+
 .contact-form {
   background-color: var(--bg-card);
   padding: 20px;
@@ -318,6 +335,42 @@ const handleSubmit = () => {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  transition: filter 0.3s ease;
+}
+
+/* 表单禁用状态 */
+.contact-form.form-disabled {
+  filter: blur(3px);
+  pointer-events: none;
+}
+
+/* 毛玻璃遮罩层样式 */
+.form-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.overlay-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.overlay-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-main);
+  padding: 15px 25px;
 }
 
 .form-group label {
