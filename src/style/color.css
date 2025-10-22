@@ -44,8 +44,8 @@
   --text-main-dark: var(--neutral-100);
   --text-secondary-light: var(--neutral-600);
   --text-secondary-dark: var(--neutral-400);
-  --text-muted-light: var(--neutral-500);
-  --text-muted-dark: var(--neutral-500);
+  --text-muted-light: var(--neutral-400);
+  --text-muted-dark: var(--neutral-400);
   --text-inverse-light: var(--neutral-50);
   --text-inverse-dark: var(--neutral-900);
 

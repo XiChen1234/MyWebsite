@@ -21,14 +21,19 @@ const getAnimationDuration = (index: number): string => {
 
 <template>
   <div class="tags-wall">
-    <div class="tag-row" v-for="(tagsRow, rowIndex) in props.data" :key="rowIndex" :style="{ '--t': getAnimationDuration(rowIndex) }">
+    <div class="tag-row" v-for="(tagsRow, rowIndex) in props.data" :key="rowIndex"
+      :style="{ '--t': getAnimationDuration(rowIndex) }">
       <div>
-        <span class="tag" v-for="(tag, index) in tagsRow.tags" :key="index" :style="{ backgroundColor: tag.color }">{{
-          tag.name }}</span>
+        <span class="tag" v-for="(tag, index) in tagsRow.tags" :key="index"
+        :style="tag.color ? { backgroundColor: tag.color, color: 'var(--neutral-50)' } : {}">
+          {{ tag.name }}
+        </span>
       </div>
       <div>
-        <span class="tag" v-for="(tag, index) in tagsRow.tags" :key="index" :style="{ backgroundColor: tag.color }">{{
-          tag.name }}</span>
+        <span class="tag" v-for="(tag, index) in tagsRow.tags" :key="index"
+        :style="tag.color ? { backgroundColor: tag.color, color: 'var(--neutral-50)' } : {}">
+          {{ tag.name }}
+        </span>
       </div>
     </div>
   </div>
@@ -82,7 +87,7 @@ const getAnimationDuration = (index: number): string => {
   margin: 10px;
   letter-spacing: .2em;
   background-color: var(--bg-tag);
-  color: var(--text-tag);
+  color: var(--text-main);
   padding: 5px 10px;
   border-radius: 5px;
 }
