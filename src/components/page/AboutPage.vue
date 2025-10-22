@@ -119,6 +119,7 @@ import bodyImg from '@/assets/img/body.jpg';
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .content .text .card-list .card .num {
