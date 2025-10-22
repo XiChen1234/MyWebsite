@@ -1,5 +1,18 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
+import CSU from '@/assets/img/中南大学.jpg';
+import studentUnion from '@/assets/img/团学会.jpg';
+import innovationContest from '@/assets/img/大创.jpg';
+import industryCooperation from '@/assets/img/校企合作.jpg';
+import trafficContest from '@/assets/img/交科赛.jpg';
+import virtualSim from '@/assets/img/虚拟仿真.jpg';
+import csContest from '@/assets/img/计算机设计大赛.jpg';
+import hengAn from '@/assets/img/恒安嘉新.png';
+import meiTuan from '@/assets/img/美团实习.jpg';
+import tencent from '@/assets/img/腾讯实习.png';
+import miHoYo from '@/assets/img/米哈游实习.jpg';
+import orange from '@/assets/img/orange.svg';
+
 
 // 定义经历数据接口
 interface ExperienceItem {
@@ -42,7 +55,7 @@ const experienceData: ExperienceItem[] = [
       '班级组宣委员，统筹班级活动，获“优秀学生干部”'
     ],
     skills: ['Java', 'C/C++/C#', 'MySQL', 'Vue.js', 'Git'],
-    imagePath: '/src/assets/img/中南大学.jpg'
+    imagePath: CSU
   },
   {
     id: 'edu-1',
@@ -57,7 +70,7 @@ const experienceData: ExperienceItem[] = [
       '协同多部门保障活动推进'
     ],
     skills: ['Adobe Premiere', 'Adobe Photoshop', '专业摄影摄像', '策划案设计', '跨平台新媒体运营'],
-    imagePath: '/src/assets/img/团学会.jpg'
+    imagePath: studentUnion
   },
   {
     id: 'edu-2',
@@ -72,7 +85,7 @@ const experienceData: ExperienceItem[] = [
       '项目圆满完成。获省级优秀项目'
     ],
     skills: ['微信小程序', 'Spring', 'MyBatis-plus'],
-    imagePath: '/src/assets/img/大创.jpg'
+    imagePath: innovationContest
   },
   {
     id: 'edu-3',
@@ -86,7 +99,7 @@ const experienceData: ExperienceItem[] = [
       '合作顺利推进，项目获省级优秀成绩'
     ],
     skills: ['微信小程序', 'Spring', 'MyBatis-plus'],
-    imagePath: '/src/assets/img/校企合作.jpg'
+    imagePath: industryCooperation
   },
   {
     id: 'edu-4',
@@ -101,7 +114,7 @@ const experienceData: ExperienceItem[] = [
       '项目顺利完成，获得中南大学第十六届交通运输科技大赛二等奖。'
     ],
     skills: ['Android Studio', 'Spring', 'WebSocket'],
-    imagePath: '/src/assets/img/交科赛.jpg'
+    imagePath: trafficContest
   },
   {
     id: 'edu-5',
@@ -116,7 +129,7 @@ const experienceData: ExperienceItem[] = [
       '凭借该系统在竞赛中荣获三等奖'
     ],
     skills: ['Python', 'OpenGL'],
-    imagePath: '/src/assets/img/虚拟仿真.jpg'
+    imagePath: virtualSim
   },
   {
     id: 'edu-6',
@@ -133,7 +146,7 @@ const experienceData: ExperienceItem[] = [
       '含用户、订单、后台等模块'
     ],
     skills: ['Java', 'Spring Boot', 'MySQL', 'Vue.js', 'AIGC算法'],
-    imagePath: '/src/assets/img/计算机设计大赛.jpg'
+    imagePath: csContest
   },
   {
     id: 'work-0',
@@ -148,7 +161,7 @@ const experienceData: ExperienceItem[] = [
       '编写Ansible Playbook并部署、升级服务集群'
     ],
     skills: ['Linux', 'Ansible', 'Nginx', 'zookeeper', 'Portainer'],
-    imagePath: '/src/assets/img/恒安嘉新.png'
+    imagePath: hengAn
   },
   {
     id: 'work-1',
@@ -165,7 +178,7 @@ const experienceData: ExperienceItem[] = [
       '设计结算规则快照对比与回滚，保证数据一致'
     ],
     skills: ['Java', 'Spring', 'MyBatis', 'EasyExcel', '线程池', '分布式事务', 'Mafka'],
-    imagePath: '/src/assets/img/美团实习.jpg'
+    imagePath: meiTuan
   },
   {
     id: 'work-2',
@@ -181,7 +194,7 @@ const experienceData: ExperienceItem[] = [
       '基于Go语言完善开发运维监控工具'
     ],
     skills: ['Go', 'Kubernetes', 'Redis', '微服务'],
-    imagePath: '/src/assets/img/腾讯实习.png'
+    imagePath: tencent
   },
   {
     id: 'work-3',
@@ -196,7 +209,7 @@ const experienceData: ExperienceItem[] = [
       '设计实现新活动系统，提升玩家活跃度'
     ],
     skills: ['C++', 'Golang', 'Lua', 'Redis', 'Perforce'],
-    imagePath: '/src/assets/img/米哈游实习.jpg'
+    imagePath: miHoYo
   },
   {
     id: 'work-4',
@@ -211,7 +224,7 @@ const experienceData: ExperienceItem[] = [
       '开发自动化办公工具，提高日常工作效率'
     ],
     skills: ['Python', 'YOLO'],
-    imagePath: '/src/assets/img/orange.svg'
+    imagePath: orange
   },
 ];
 

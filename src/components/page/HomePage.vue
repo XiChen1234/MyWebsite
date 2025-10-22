@@ -1,6 +1,7 @@
 <!-- 主页组件 -->
 <script setup lang="ts">
 import TagsWall from './ui/TagsWall.vue';
+import headerImg from '@/assets/img/header.jpg';
 
 interface Tag {
   name: string;
@@ -89,7 +90,7 @@ const tagData: TagGroup[] = [
 <template>
   <div class="home-page" id="home">
     <div class="header">
-      <img src="/header.jpg" alt="">
+      <img :src="headerImg" alt="XiChen's Header Image">
     </div>
     <h1>
       Welcome to <br />

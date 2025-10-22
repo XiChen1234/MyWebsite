@@ -1,6 +1,6 @@
 <!-- 关于组件 -->
 <script setup lang="ts">
-
+import bodyImg from '@/assets/img/body.jpg';
 </script>
 
 <template>
@@ -9,7 +9,7 @@
     <div class="sub-title">Self-introduction</div>
     <div class="content">
       <div class="pic">
-        <img src="/body.jpg" alt="">
+        <img :src="bodyImg" alt="XiChen's Body Image">
       </div>
       <div class="text">
         <div class="welcome">大家好，我是希晨er！👋</div>
