@@ -374,6 +374,7 @@ function switchTab(tab: 'Education' | 'Work' | 'All') {
   background-color: var(--text-main-focus);
   border-radius: 100%;
   border: 4px solid var(--page-bg);
+  transition: all 0.3s ease;
   z-index: 1;
 }
 
