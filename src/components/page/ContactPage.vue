@@ -133,7 +133,7 @@ const handleSubmit = () => {
         message: ''
       };
       submitMessage.value = '';
-    }, 30000);
+    }, 3000);
   }, 1000);
 };
 </script>
@@ -147,7 +147,7 @@ const handleSubmit = () => {
       <div class="contact-section">
         <h2>联系方式</h2>
         <div class="contact-grid">
-          <a v-for="item in contactItems" :key="item.id"  class="contact-item">
+          <a v-for="item in contactItems" :key="item.id" class="contact-item">
             <div class="contact-icon">
               <i :class="['iconcolor', item.icon]"></i>
             </div>
@@ -169,27 +169,27 @@ const handleSubmit = () => {
         <h2>给我留言</h2>
         <form @submit.prevent="handleSubmit" class="contact-form">
           <div class="form-group">
-              <label for="name">姓名 <span class="required">*</span></label>
-              <input id="name" class="form-input" type="text" placeholder="请输入您的姓名"
-               v-model="formData.name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">邮箱 <span class="required">*</span></label>
-              <input id="email" class="form-input" type="email" placeholder="请输入您的邮箱"
-                v-model="formData.email" required />
-            </div>
-            <div class="form-group">
-              <label for="message">留言内容 <span class="required">*</span></label>
-              <textarea id="message" class="form-input" placeholder="请输入您想对我说的话"
-                v-model="formData.message" rows="5" required></textarea>
-            </div>
+            <label for="name">姓名 <span class="required">*</span></label>
+            <input id="name" class="form-input" type="text"
+            placeholder="请输入您的姓名" v-model="formData.name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">邮箱 <span class="required">*</span></label>
+            <input id="email" class="form-input" type="email"
+            placeholder="请输入您的邮箱" v-model="formData.email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">留言内容 <span class="required">*</span></label>
+            <textarea id="message" class="form-input"
+            placeholder="请输入您想对我说的话" v-model="formData.message" rows="5"
+            required></textarea>
+          </div>
 
-          <button class="submit-button button" type="submit"
-            :disabled="isSubmitting" >
+          <button class="submit-button button" type="submit" :disabled="isSubmitting">
             {{ isSubmitting ? '发送中...' : '发送留言' }}
           </button>
 
-          <div v-if="submitMessage" class="submit-message" :class="submitMessageType" >
+          <div v-show="submitMessage" class="submit-message" :class="submitMessageType">
             {{ submitMessage }}
           </div>
         </form>
@@ -265,7 +265,7 @@ const handleSubmit = () => {
 .contact-item:hover {
   transform: translateY(-4px);
   border-color: var(--border-color-focus);
-  box-shadow: 0 8px 16px ;
+  box-shadow: 0 8px 16px;
   background-color: var(--bg-focus);
 }
 
