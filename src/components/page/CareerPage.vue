@@ -199,14 +199,14 @@ const experienceData: ExperienceItem[] = [
   {
     id: 'work-3',
     type: 'Work',
-    title: '服务端开发',
+    title: 'QA游戏测试',
     organization: '米哈游-原神',
     start: new Date('2024-12-26'),
     end: new Date('2025-03-26'),
     details: [
-      '《原神》纳塔5.3-5.6版本服务端开发',
-      '协同客户端联调，跨平台功能兼容',
-      '设计实现新活动系统，提升玩家活跃度'
+      '《原神》纳塔5.3-5.6版本游戏测试',
+      '负责测试游戏功能、性能、稳定性',
+      '发现并报告游戏bug，与开发团队合作解决问题'
     ],
     skills: ['C++', 'Golang', 'Lua', 'Redis', 'Perforce'],
     imagePath: miHoYo
