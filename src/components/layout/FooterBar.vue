@@ -221,7 +221,7 @@ onUnmounted(() => {
 /* 响应式设计 - 平板尺寸 */
 @media (max-width: 768px) {
   .footer {
-    padding: 1.75rem 0.75rem;
+    padding: 1.75rem 0;
     gap: 1.2rem;
   }
 
