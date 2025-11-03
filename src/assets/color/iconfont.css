@@ -2,16 +2,21 @@
   font-family: "iconcolor"; /* Project id 5030404 */
   /* Color fonts */
   src:
-       url('iconfont.woff2?t=1761063571375') format('woff2'),
-       url('iconfont.woff?t=1761063571375') format('woff'),
-       url('iconfont.ttf?t=1761063571375') format('truetype');
+       url('iconfont.woff2?t=1762179339478') format('woff2'),
+       url('iconfont.woff?t=1762179339478') format('woff'),
+       url('iconfont.ttf?t=1762179339478') format('truetype');
 }
 
 .iconcolor {
   font-family: "iconcolor" !important;
+  font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-qq-mail:before {
+  content: "\e6ed";
 }
 
 .icon-github:before {
@@ -32,10 +37,6 @@
 
 .icon-juejin:before {
   content: "\e612";
-}
-
-.icon-phone:before {
-  content: "\e63b";
 }
 
 .icon-Go:before {

@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "13898256",
+      "name": "qq-mail",
+      "font_class": "qq-mail",
+      "unicode": "e6ed",
+      "unicode_decimal": 59117
+    },
+    {
       "icon_id": "1469225",
       "name": "github",
       "font_class": "github",
@@ -39,13 +46,6 @@
       "font_class": "juejin",
       "unicode": "e612",
       "unicode_decimal": 58898
-    },
-    {
-      "icon_id": "38574175",
-      "name": "phone",
-      "font_class": "phone",
-      "unicode": "e63b",
-      "unicode_decimal": 58939
     },
     {
       "icon_id": "15756155",

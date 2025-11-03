@@ -21,6 +21,13 @@ const contactItems = ref<ContactItem[]>([
     url: 'mailto:xichen888.private@gmail.com'
   },
   {
+    id: 'qq-mail',
+    icon: 'icon-qq-mail',
+    label: 'QQ邮箱',
+    value: 'xichen.public@foxmail.com',
+    url: 'mailto:xichen.public@foxmail.com'
+  },
+  {
     id: 'github',
     icon: 'icon-github',
     label: 'GitHub',
@@ -45,13 +52,7 @@ const contactItems = ref<ContactItem[]>([
     icon: 'icon-qq',
     label: '腾讯QQ',
     value: '66752878'
-  },
-  {
-    id: 'phone',
-    icon: 'icon-phone',
-    label: '电话',
-    value: '+86 177 9272 8712'
-  },
+  }
 ]);
 
 // 表单数据
@@ -287,8 +288,12 @@ const handleSubmit = () => {
   justify-content: center;
   border-radius: 50%;
   margin-right: 10px;
+}
+
+.contact-icon .iconcolor {
   font-size: 30px;
 }
+
 
 .contact-info {
   flex: 1;
