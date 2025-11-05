@@ -55,92 +55,92 @@ const contactItems = ref<ContactItem[]>([
   }
 ]);
 
-// 表单数据
-interface ContactForm {
-  name: string;
-  email: string;
-  message: string;
-}
+// // 表单数据
+// interface ContactForm {
+//   name: string;
+//   email: string;
+//   message: string;
+// }
 
-// 表单数据响应式引用
-const formData = ref<ContactForm>({
-  name: '',
-  email: '',
-  message: ''
-});
+// // 表单数据响应式引用
+// const formData = ref<ContactForm>({
+//   name: '',
+//   email: '',
+//   message: ''
+// });
 
 // 留言功能开关 - 设置为 true 可开通留言功能
-const messageFeatureEnabled = ref(false);
+// const messageFeatureEnabled = ref(false);
 
 // 提交状态和消息
-const isSubmitting = ref(false);
-const submitMessage = ref('');
-const submitMessageType = ref<'success' | 'error'>('success');
+// const isSubmitting = ref(false);
+// const submitMessage = ref('');
+// const submitMessageType = ref<'success' | 'error'>('success');
 
 /**
  * 邮箱格式验证
  * @param email 邮箱地址
  * @returns 是否是有效邮箱
  */
-const isValidEmail = (email: string): boolean => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-};
+// const isValidEmail = (email: string): boolean => {
+//   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//   return emailRegex.test(email);
+// };
 
 /**
  * 处理表单提交
  */
-const handleSubmit = () => {
-  // 表单验证
-  if (!formData.value.name.trim()) {
-    submitMessage.value = '请输入您的姓名';
-    submitMessageType.value = 'error';
-    return;
-  }
+// const handleSubmit = () => {
+//   // 表单验证
+//   if (!formData.value.name.trim()) {
+//     submitMessage.value = '请输入您的姓名';
+//     submitMessageType.value = 'error';
+//     return;
+//   }
 
-  if (!formData.value.email.trim()) {
-    submitMessage.value = '请输入您的邮箱';
-    submitMessageType.value = 'error';
-    return;
-  }
+//   if (!formData.value.email.trim()) {
+//     submitMessage.value = '请输入您的邮箱';
+//     submitMessageType.value = 'error';
+//     return;
+//   }
 
-  if (!isValidEmail(formData.value.email)) {
-    submitMessage.value = '请输入有效的邮箱地址';
-    submitMessageType.value = 'error';
-    return;
-  }
+//   if (!isValidEmail(formData.value.email)) {
+//     submitMessage.value = '请输入有效的邮箱地址';
+//     submitMessageType.value = 'error';
+//     return;
+//   }
 
-  if (!formData.value.message.trim()) {
-    submitMessage.value = '请输入留言内容';
-    submitMessageType.value = 'error';
-    return;
-  }
+//   if (!formData.value.message.trim()) {
+//     submitMessage.value = '请输入留言内容';
+//     submitMessageType.value = 'error';
+//     return;
+//   }
 
-  // 模拟提交过程
-  isSubmitting.value = true;
-  submitMessage.value = '';
+//   // 模拟提交过程
+//   isSubmitting.value = true;
+//   submitMessage.value = '';
 
-  // 模拟API调用延迟
-  setTimeout(() => {
-    // 以console.log输出代替实际提交
-    console.log('表单数据:', formData.value);
+//   // 模拟API调用延迟
+//   setTimeout(() => {
+//     // 以console.log输出代替实际提交
+//     console.log('表单数据:', formData.value);
 
-    // 显示成功消息
-    submitMessage.value = '感谢您的留言！我会尽快回复您。';
-    submitMessageType.value = 'success';
-    isSubmitting.value = false;
+//     // 显示成功消息
+//     submitMessage.value = '感谢您的留言！我会尽快回复您。';
+//     submitMessageType.value = 'success';
+//     isSubmitting.value = false;
 
-    // 3秒后重置表单
-    setTimeout(() => {
-      formData.value = {
-        name: '',
-        email: '',
-        message: ''
-      };
-      submitMessage.value = '';
-    }, 3000);
-  }, 1000);
-};
+//     // 3秒后重置表单
+//     setTimeout(() => {
+//       formData.value = {
+//         name: '',
+//         email: '',
+//         message: ''
+//       };
+//       submitMessage.value = '';
+//     }, 3000);
+//   }, 1000);
+// };
 </script>
 
 <template>
@@ -169,43 +169,43 @@ const handleSubmit = () => {
       </div>
 
       <!-- 留言表单部分 -->
-      <div class="form-section">
-        <h2>给我留言</h2>
-        <div class="form-container">
-          <form @submit.prevent="handleSubmit" class="contact-form"
-            :class="{ 'form-disabled': !messageFeatureEnabled }">
-            <div class="form-group">
-              <label for="name">姓名 <span class="required">*</span></label>
-              <input id="name" class="form-input" type="text" placeholder="请输入您的姓名" v-model="formData.name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">邮箱 <span class="required">*</span></label>
-              <input id="email" class="form-input" type="email" placeholder="请输入您的邮箱" v-model="formData.email"
-                required />
-            </div>
-            <div class="form-group">
-              <label for="message">留言内容 <span class="required">*</span></label>
-              <textarea id="message" class="form-input" placeholder="请输入您想对我说的话" v-model="formData.message" rows="5"
-                required></textarea>
-            </div>
+      <!-- <div class="form-section"> -->
+        <!-- <h2>给我留言</h2> -->
+        <!-- <div class="form-container"> -->
+          <!-- <form @submit.prevent="handleSubmit" class="contact-form" -->
+            <!-- :class="{ 'form-disabled': !messageFeatureEnabled }"> -->
+            <!-- <div class="form-group"> -->
+              <!-- <label for="name">姓名 <span class="required">*</span></label> -->
+              <!-- <input id="name" class="form-input" type="text" placeholder="请输入您的姓名" v-model="formData.name" required /> -->
+            <!-- </div> -->
+            <!-- <div class="form-group"> -->
+              <!-- <label for="email">邮箱 <span class="required">*</span></label> -->
+              <!-- <input id="email" class="form-input" type="email" placeholder="请输入您的邮箱" v-model="formData.email" -->
+                <!-- required /> -->
+            <!-- </div> -->
+            <!-- <div class="form-group"> -->
+              <!-- <label for="message">留言内容 <span class="required">*</span></label> -->
+              <!-- <textarea id="message" class="form-input" placeholder="请输入您想对我说的话" v-model="formData.message" rows="5" -->
+                <!-- required></textarea> -->
+            <!-- </div> -->
 
-            <button class="submit-button button" type="submit" :disabled="isSubmitting || !messageFeatureEnabled">
-              {{ isSubmitting ? '发送中...' : '发送留言' }}
-            </button>
+            <!-- <button class="submit-button button" type="submit" :disabled="isSubmitting || !messageFeatureEnabled"> -->
+              <!-- {{ isSubmitting ? '发送中...' : '发送留言' }} -->
+            <!-- </button> -->
 
-            <div v-show="submitMessage" class="submit-message" :class="submitMessageType">
-              {{ submitMessage }}
-            </div>
-          </form>
+            <!-- <div v-show="submitMessage" class="submit-message" :class="submitMessageType"> -->
+              <!-- {{ submitMessage }} -->
+            <!-- </div> -->
+          <!-- </form> -->
 
           <!-- 毛玻璃遮罩层 - 当留言功能未开通时显示 -->
-          <div v-if="!messageFeatureEnabled" class="form-overlay">
-            <div class="overlay-content">
-              <div class="overlay-text">尚未开通留言功能</div>
-            </div>
-          </div>
-        </div>
-      </div>
+          <!-- <div v-if="!messageFeatureEnabled" class="form-overlay"> -->
+            <!-- <div class="overlay-content"> -->
+              <!-- <div class="overlay-text">尚未开通留言功能</div> -->
+            <!-- </div> -->
+          <!-- </div> -->
+        <!-- </div> -->
+      <!-- </div> -->
     </div>
   </div>
 </template>
@@ -242,7 +242,7 @@ const handleSubmit = () => {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   grid-auto-rows: minmax(0, auto);
 }
@@ -321,7 +321,7 @@ const handleSubmit = () => {
 }
 
 /* 表单部分样式 */
-.form-section {
+/* .form-section {
   flex: 2;
 }
 
@@ -339,16 +339,16 @@ const handleSubmit = () => {
   flex-direction: column;
   gap: 20px;
   transition: filter 0.3s ease;
-}
+} */
 
 /* 表单禁用状态 */
-.contact-form.form-disabled {
+/* .contact-form.form-disabled {
   filter: blur(3px);
   pointer-events: none;
-}
+} */
 
 /* 毛玻璃遮罩层样式 */
-.form-overlay {
+/* .form-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -362,9 +362,9 @@ const handleSubmit = () => {
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.2);
-}
+} */
 
-.overlay-content {
+/* .overlay-content {
   text-align: center;
   padding: 20px;
 }
@@ -453,7 +453,7 @@ textarea.form-input {
   background-color: var(--error-bg);
   color: var(--error-color);
   border: 1px solid var(--error-color);
-}
+} */
 
 /* 响应式设计 */
 @media (max-width: 768px) {
@@ -469,7 +469,7 @@ textarea.form-input {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .contact-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 </style>
