@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "30674021",
+      "name": "newcoder",
+      "font_class": "newcoder",
+      "unicode": "e735",
+      "unicode_decimal": 59189
+    },
+    {
+      "icon_id": "34698077",
+      "name": "csdn",
+      "font_class": "csdn",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
       "icon_id": "13898256",
       "name": "qq-mail",
       "font_class": "qq-mail",

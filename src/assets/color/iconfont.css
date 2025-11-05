@@ -1,10 +1,10 @@
 @font-face {
   font-family: "iconcolor"; /* Project id 5030404 */
   /* Color fonts */
-  src:
-       url('iconfont.woff2?t=1762179339478') format('woff2'),
-       url('iconfont.woff?t=1762179339478') format('woff'),
-       url('iconfont.ttf?t=1762179339478') format('truetype');
+  src: 
+       url('iconfont.woff2?t=1762307492756') format('woff2'),
+       url('iconfont.woff?t=1762307492756') format('woff'),
+       url('iconfont.ttf?t=1762307492756') format('truetype');
 }
 
 .iconcolor {
@@ -13,6 +13,14 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-newcoder:before {
+  content: "\e735";
+}
+
+.icon-csdn:before {
+  content: "\e613";
 }
 
 .icon-qq-mail:before {

@@ -52,6 +52,20 @@ const contactItems = ref<ContactItem[]>([
     icon: 'icon-qq',
     label: '腾讯QQ',
     value: '66752878'
+  },
+  {
+    id: 'csdn',
+    icon: 'icon-csdn',
+    label: 'CSDN',
+    value: 'CSDN - Xi_Chen123的个人博客',
+    url: 'https://blog.csdn.net/Xi_Chen123'
+  },
+  {
+    id: 'newcoder',
+    icon: 'icon-newcoder',
+    label: '牛客',
+    value: '牛客 - 程序猿希晨er的个人主页',
+    url: 'https://www.nowcoder.com/users/407093750'
   }
 ]);
 
