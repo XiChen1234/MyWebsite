@@ -2,6 +2,9 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
 
+// 最后更新时间
+const lastUpdate = ref('2025年11月'); // 示例更新时间
+
 // 网站开始运行时间常量
 const SITE_START_TIME = new Date('2025-10-22T15:30:00'); // 示例起始时间
 
@@ -81,7 +84,7 @@ onUnmounted(() => {
 
     <!-- 网站信息 -->
     <div class="info">
-      <span>最后更新：2025年10月</span>
+      <span>最后更新：{{ lastUpdate }}</span>
       <span>由Vue 3 + TypeScript构建</span>
     </div>
 
