@@ -1,6 +1,7 @@
 <!-- 页脚组件 -->
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
+import beian from '@/assets/img/beian.png';
 
 // 最后更新时间
 const lastUpdate = ref('2025年11月'); // 示例更新时间
@@ -52,6 +53,14 @@ onUnmounted(() => {
     <!-- 版权信息 -->
     <div class="copyright">
       © 2025 XiChen. All Rights Reserved.
+    </div>
+
+    <!-- 备案号 -->
+    <div class="beian">
+      <img :src="beian" alt="ICP备案图标" class="beian-icon">
+      <a href="https://beian.miit.gov.cn/" target="_blank" class="beian-link">
+        陕ICP备2025081193号-1
+      </a>
     </div>
 
     <!-- 社交链接 -->
@@ -119,6 +128,25 @@ onUnmounted(() => {
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.5px;
+}
+
+/* 备案信息样式 */
+.beian {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+/* 备案图标样式 */
+.beian-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* 备案链接样式 */
+.beian-link {
+  font-size: 0.9rem;
 }
 
 /* 社交链接容器 */
