@@ -17,6 +17,7 @@ interface PortfolioItem {
   description: string;
   imagePath: string;
   link?: string;
+  demo?: string;
   tags: string[];
 }
 
@@ -28,7 +29,8 @@ const data: PortfolioItem[] = [
     description: '使用Vue 3 + TypeScript构建的个人作品集网站，展示我的技能和项目经验。',
     imagePath: MyWebsite,
     tags: ['Vue 3', 'TypeScript', 'Vite', 'CSS3'],
-    link: 'https://github.com/XiChen1234/MyWebsite'
+    link: 'https://github.com/XiChen1234/MyWebsite',
+    demo: 'https://xichen8.top',
   },
   {
     id: 'project2',
@@ -36,7 +38,8 @@ const data: PortfolioItem[] = [
     description: '一个简单、快速、隐私保护的在线图片背景去除工具，完全在浏览器中本地处理，无需上传任何图片到服务器。',
     imagePath: NoBG,
     tags: ['TensorFlow.js', 'BodyPix', 'HTML', 'CSS', 'JavaScript'],
-    link: 'https://github.com/XiChen1234/NoBG'
+    link: 'https://github.com/XiChen1234/NoBG',
+    demo: 'https://xichen8.top/NoBG',
   },
   {
     id: 'project3',

@@ -6,17 +6,18 @@ interface PortfolioItem {
   description: string;
   imagePath: string;
   link?: string;
+  demo?: string;
   tags: string[];
 }
 
-const props = defineProps<{
+defineProps<{
   item: PortfolioItem;
 }>();
 
 // 处理卡片点击事件
-const handleCardClick = () => {
-  if (props.item.link) {
-    window.open(props.item.link, '_blank');
+const handleCardClick = (url: string | undefined) => {
+  if (url) {
+    window.open(url, '_blank');
   }
 };
 </script>
@@ -26,8 +27,9 @@ const handleCardClick = () => {
     <div class="image-container">
       <img :src="item.imagePath" :alt="item.title" class="card-image" loading="lazy" />
       <!-- 悬停时显示的放大效果覆盖层 -->
-      <div class="image-overlay" v-if="item.link" @click="handleCardClick">
-        <span class="view-project">查看项目</span>
+      <div class="image-overlay" v-if="item.demo || item.link">
+        <span class="view-project" v-if="item.demo" @click="handleCardClick(item.demo)">查看项目</span>
+        <span class="view-project" v-if="item.link" @click="handleCardClick(item.link)">仓库链接</span>
       </div>
     </div>
 
@@ -86,11 +88,12 @@ const handleCardClick = () => {
   background: var(--transparent-black);
   color: var(--neutral-50);
   display: flex;
+  flex-direction: column;
+  gap: 12px;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity 0.4s ease;
-  cursor: pointer;
 }
 
 .card:hover .image-overlay {
@@ -111,6 +114,7 @@ const handleCardClick = () => {
 .view-project:hover {
   color: var(--text-main-focus);
   border-color: var(--text-main-focus);
+  cursor: pointer;
 }
 
 .info {

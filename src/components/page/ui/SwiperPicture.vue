@@ -9,6 +9,7 @@ interface PortfolioItem {
   description: string;
   imagePath: string;
   link?: string;
+  demo?: string;
   tags: string[];
 }
 
