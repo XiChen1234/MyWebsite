@@ -1,31 +1,29 @@
-# MyWebsite
+# 个人网站 - XiChen's Website
 
-## 开发进度
-功能完善
-1. 完善"关于"页面 - 当前AboutPage.vue内容为空，需要添加个人介绍、技能展示等内容。
-2. 实现其他导航页面 - 导航栏中有Skill、Career、Portfolio、Contact等链接，但尚未实现对应页面和路由。
-3. 移动端菜单 - NavigationBar.vue中为移动端预留了菜单按钮，但未实现展开功能。
+这是一个使用 Vue 3、Vite 和 TypeScript 构建的个人网站项目，用于展示个人信息、技能、经历和项目等内容。
 
-性能优化
-1. 图片优化 - 对header.jpg和orange.svg进行压缩，减少加载时间。
-2. 代码分割 - 为不同页面组件启用路由级别的代码分割，提升首屏加载速度。
+体验地址：[晨光随笔 - 简历页](https://www.xichen8.top)
 
-用户体验
-1. 平滑滚动 - 为页面内锚点链接添加平滑滚动效果。
-2. 加载状态 - 为页面切换添加加载动画或过渡效果。
-3. SEO优化 - 为不同页面添加合适的meta标签和页面标题。
+## 项目概述
 
-技术改进
-1. 状态管理 - 引入Pinia或Vuex管理全局状态，如主题切换状态。
-2. 组件复用 - 将标签墙等通用组件提取到更通用的位置，方便复用。
-3. 类型定义 - 为组件属性和数据添加更完善的TypeScript类型定义。
+本项目是一个现代化的个人网站，旨在提供一个专业、美观的平台来展示个人信息。网站采用响应式设计，适配各种屏幕尺寸，包括桌面、平板和移动设备。
 
-内容扩展
-1. 多语言支持 - 实现网站的多语言切换功能。
-2. 博客功能 - 添加博客文章展示和详情页面。
-3. 项目展示 - 完善Portfolio部分，展示更多项目详情。
+主要功能模块包括：
+- 个人主页（Home）-> 展示基本信息和标签墙
+- 关于页面（About）-> 个人简介和经历概览
+- 技能页面（Skill）-> 专业技能展示
+- 职业页面（Career）-> 工作经历和实习经验
+- 作品集（Portfolio）-> 项目展示
+- 联系方式（Contact）-> 联系表单和社交媒体链接
 
-这是一个使用 Vue 3、Vite 和 TypeScript 构建的个人网站项目。
+## 技术栈
+
+- **前端框架**: Vue 3 (Composition API)
+- **构建工具**: Vite 7
+- **类型系统**: TypeScript
+- **路由管理**: Vue Router 4
+- **样式处理**: CSS3
+- **图标库**: iconfont
 
 ## 项目结构
 
@@ -33,6 +31,10 @@
 src/
 ├── App.vue                 # 根组件
 ├── main.ts                 # 应用入口文件
+├── assets/                 # 静态资源
+│   ├── color/              # 彩色icon资源
+│   ├── icons/              # 图标资源
+│   └── img/                # 图片资源
 ├── components/             # 组件目录
 │   ├── layout/             # 布局组件
 │   │   ├── FooterBar.vue   # 页脚组件
@@ -41,13 +43,17 @@ src/
 │   │   └── SideBar.vue     # 侧边栏组件
 │   └── page/               # 页面组件
 │       ├── AboutPage.vue   # 关于页面
+│       ├── CareerPage.vue  # 职业页面
+│       ├── ContactPage.vue # 联系页面
 │       ├── HomePage.vue    # 主页页面
+│       ├── PortfolioPage.vue # 作品集页面
+│       ├── SkillPage.vue   # 技能页面
 │       └── ui/             # 页面UI组件
-│           └── TagsWall.vue # 标签墙组件
 ├── router/                 # 路由配置
 │   └── index.ts            # 路由入口文件
 ├── style/                  # 样式文件
 │   ├── color.css           # 颜色变量定义
+│   ├── common.css          # 通用样式
 │   └── reset.css           # CSS重置样式
 └── views/                  # 视图组件
     └── HomeView.vue        # 首页视图
@@ -55,28 +61,85 @@ src/
 
 ## 功能特性
 
-- 响应式设计，适配手机和平板
-- 深色/浅色主题切换
-- 标签墙动画效果
-- 页面滚动动画
+- **响应式设计** - 适配不同屏幕尺寸的设备
+- **标签墙动画** - 动态展示个人技能和兴趣标签
+- **模块化结构** - 组件化设计，易于维护和扩展
+- **深色/浅色主题** - 支持主题切换功能
+- **页面滚动动画** - 增强用户体验的平滑滚动效果
+- **作品集展示** - 可视化展示项目成果
+- **简历下载** - 提供个人简历PDF下载功能
 
-## 技术栈
+## 快速开始
 
-- Vue 3 (Composition API)
-- Vite
-- TypeScript
-- Vue Router
-- CSS3 (动画和响应式设计)
+### 环境要求
 
-## 开发规范
+- Node.js
+- npm 或 yarn
+
+### 安装步骤
+
+1. 克隆项目
+
+```bash
+git clone git@github.com:XiChen1234/MyWebsite.git
+cd MyWebsite
+```
+
+2. 安装依赖
+
+```bash
+npm install
+```
+
+3. 启动开发服务器
+
+```bash
+npm run dev
+```
+
+4. 构建生产版本
+
+```bash
+npm run build
+```
+
+5. 预览生产版本
+
+```bash
+npm run preview
+```
+
+## 开发说明
+
+### 开发规范
 
 - 使用 Vue 单文件组件 (SFC)
 - 使用 TypeScript 进行类型检查
 - 使用 CSS 变量管理主题颜色
 - 遵循组件化开发思想
 
-## 快速开始
+### 命令说明
 
-1. 安装依赖: `npm install`
-2. 启动开发服务器: `npm run dev`
-3. 构建生产版本: `npm run build`
+- `npm run dev`: 启动开发服务器
+- `npm run build`: 构建生产版本
+- `npm run preview`: 预览生产版本
+- `npm run type-check`: TypeScript 类型检查
+- `npm run lint`: ESLint 代码检查和修复
+
+## 更新历史
+
+- 2025.10.22 16:16: 项目正式部署在京东云15天试用服务器
+- 2025.10.23 17:17: 修复了部分bug
+- 2025.11.04 09:49: 项目正式上线阿里云
+- 2025.11.04 10:00: 提交ICP备案表单
+- 2025.11.05 10:30: ICP备案成功，更新网站页脚ICP信息
+- 2025.11.07 16:58: 完成SSL配置和重定向，启用HTTPS访问
+- 2025.11.11 08:45: 更新仓库链接和体验地址
+
+## 许可证
+
+本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
+
+---
+
+*© 2025 XiChen's Website. All rights reserved.*
