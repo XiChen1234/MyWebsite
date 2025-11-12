@@ -4,8 +4,7 @@ import NavigationBar from '@/components/layout/NavigationBar.vue';
 import PageBox from '@/components/layout/PageBox.vue';
 import FooterBar from '@/components/layout/FooterBar.vue';
 
-// 定义页面内容类型
-const pageList: ('Home' | 'About' | 'Skill' | 'Career' | 'Portfolio' | 'Contact')[] = ['Home', 'About', 'Skill', 'Career', 'Portfolio', 'Contact'];
+const pageList = ['Home', 'About', 'Skill', 'Career', 'Portfolio', 'Contact'] as const;
 </script>
 
 <template>
