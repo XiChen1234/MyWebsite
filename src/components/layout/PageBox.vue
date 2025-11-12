@@ -31,7 +31,6 @@ const pages = {
 .page {
   width: 90%;
   min-height: 300px;
-  margin-top: 20px;
   background-color: var(--page-bg);
   display: flex;
   align-items: center;
