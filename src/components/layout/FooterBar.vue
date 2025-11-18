@@ -58,7 +58,9 @@ onUnmounted(() => {
     <!-- 备案号 -->
     <div class="beian">
       <img :src="beian" alt="ICP备案图标" class="beian-icon">
-      <a href="https://beian.miit.gov.cn/" target="_blank" class="beian-link">
+      <a href="https://beian.mps.gov.cn/#/query/webSearch?code=61011302002190"
+      rel="noreferrer" target="_blank">陕公网安备61011302002190号</a>
+      <a href="https://beian.miit.gov.cn/" target="_blank">
         陕ICP备2025081193号-1
       </a>
     </div>
@@ -145,7 +147,7 @@ onUnmounted(() => {
 }
 
 /* 备案链接样式 */
-.beian-link {
+.beian a {
   font-size: 0.9rem;
 }
 
