@@ -47,7 +47,7 @@ const data: PortfolioItem[] = [
     description: '设计并实现一个7人局狼人杀游戏模拟器，通过为不同角色设置不同的AI策略，完全自动运行多轮游戏并统计不同策略组合下的各阵营胜率。该系统无需任何真人参与或输入，完全通过AI策略自主模拟游戏进程。 模拟器支持保存每单局对局的游戏进程信息，供系统主查看复盘',
     imagePath: Werewolf,
     tags: ['Java'],
-    link: 'https://github.com/XiChen1234/WerewolfSimulator'
+    link: 'https://github.com/XiChen1234/WolfGame'
   },
   {
     id: 'project4',
