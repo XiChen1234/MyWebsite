@@ -33,6 +33,9 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
-          sync: true
-          source: ./dist/
-          target: /var/www/MyWebsite
+          script: |
+            # 最简单直接的部署
+            sudo rm -rf /var/www/mywebsite/*
+            sudo cp -r ./dist/* /var/www/mywebsite/
+            sudo chown -R git:git /var/www/mywebsite
+            echo "完成"
