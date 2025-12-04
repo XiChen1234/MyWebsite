@@ -107,7 +107,7 @@ const tagData: TagGroup[] = [
     <div class="contact">
       <a href="#contact" class="button">
         <i class="iconfont icon-send"></i>
-        <span>Contact Me</span>
+        <strong>Contact Me</strong>
       </a>
     </div>
   </div>
