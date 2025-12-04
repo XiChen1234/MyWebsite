@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '20'
 
-      - name: 安装项目依赖并构建
+      - name: 安装项目依赖并构建，更新密钥
         run: |
           npm install
           npm run build
