@@ -15,7 +15,7 @@ jobs:
       - name: 设置Node.js环境
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: 安装项目依赖并构建
         run: |
