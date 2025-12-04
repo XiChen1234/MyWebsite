@@ -35,7 +35,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             # 最简单直接的部署
-            sudo rm -rf /var/www/mywebsite/*
-            sudo cp -r ./dist/* /var/www/mywebsite/
-            sudo chown -R git:git /var/www/mywebsite
+            rm -rf /var/www/mywebsite/*
+            cp -r ./dist/* /var/www/mywebsite/
+            chown -R git:git /var/www/mywebsite
             echo "完成"
