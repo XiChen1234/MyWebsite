@@ -1,0 +1,268 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #faf8ef;
+    color: #776e65;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    max-width: 500px;
+    width: 100%;
+}
+
+/* 头部样式 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: #776e65;
+}
+
+.score-container {
+    display: flex;
+    gap: 10px;
+}
+
+.score-box {
+    background-color: #bbada0;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 80px;
+}
+
+.score-label {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+#score, #best-score {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 游戏控制按钮 */
+.game-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.control-btn {
+    background-color: #8f7a66;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.control-btn:hover {
+    background-color: #9f8b77;
+}
+
+.control-btn:disabled {
+    background-color: #bbada0;
+    cursor: not-allowed;
+}
+
+/* 撤回次数信息 */
+.undo-info {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #776e65;
+}
+
+#undo-count {
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+/* 游戏棋盘容器 */
+.game-board-container {
+    background-color: #bbada0;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 15px;
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+/* 游戏格子和方块 */
+.cell {
+    background-color: #cdc1b4;
+    border-radius: 5px;
+    position: relative;
+}
+
+.tile {
+    position: absolute;
+    top: 7.5px;
+    left: 7.5px;
+    width: calc(100% - 15px);
+    height: calc(100% - 15px);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    transition: all 0.25s ease;
+    animation: appear 0.2s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes merge {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.tile.merged {
+    animation: merge 0.3s ease;
+}
+
+/* 不同数字方块的颜色 */
+.tile-2 { background-color: #eee4da; color: #776e65; }
+.tile-4 { background-color: #ede0c8; color: #776e65; }
+.tile-8 { background-color: #f2b179; color: white; }
+.tile-16 { background-color: #f59563; color: white; }
+.tile-32 { background-color: #f67c5f; color: white; }
+.tile-64 { background-color: #f65e3b; color: white; }
+.tile-128 { background-color: #edcf72; color: white; box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286); }
+.tile-256 { background-color: #edcc61; color: white; box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048); }
+.tile-512 { background-color: #edc850; color: white; box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381); }
+.tile-1024 { background-color: #edc53f; color: white; box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571); font-size: 24px; }
+.tile-2048 { background-color: #edc22e; color: white; box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333); font-size: 24px; }
+.tile-super { background-color: #3c3a32; color: white; font-size: 20px; }
+
+/* 选中状态的方格样式 */
+.tile-selected {
+    box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.8) !important;
+    animation: pulse 0.5s infinite alternate;
+}
+
+/* 开发者模式状态提示样式 */
+.game-status.dev-mode {
+    color: #00bfff;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 191, 255, 0.5);
+}
+
+/* 游戏状态提示 */
+.game-status {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    min-height: 30px;
+}
+
+.game-status.won {
+    color: #776e65;
+    animation: pulse 1s infinite;
+}
+
+.game-status.lost {
+    color: #776e65;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* 游戏信息 */
+.game-info {
+    text-align: center;
+    font-size: 14px;
+    color: #776e65;
+}
+
+/* 响应式设计 */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 40px;
+    }
+    
+    .tile {
+        font-size: 24px;
+    }
+    
+    .tile-1024, .tile-2048 {
+        font-size: 18px;
+    }
+    
+    .tile-super {
+        font-size: 16px;
+    }
+    
+    .game-board {
+        gap: 10px;
+    }
+    
+    .game-board-container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 350px) {
+    .tile {
+        font-size: 20px;
+    }
+    
+    .tile-1024, .tile-2048 {
+        font-size: 16px;
+    }
+    
+    .tile-super {
+        font-size: 14px;
+    }
+}
