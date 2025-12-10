@@ -1,12 +1,22 @@
-<!-- 返回顶端按钮 -->
+<!-- 侧边栏组件：包含返回顶端按钮和游戏中心入口 -->
 <script setup lang="ts">
 </script>
 
 <template>
   <div class="sidebar">
-    <a href="#">
-      <i class="iconfont icon-right"></i>
-    </a>
+    <!-- 游戏中心入口 -->
+    <div class="sidebar-item game-center-entry">
+      <router-link to="/games" target="_blank" rel="noopener noreferrer">
+        <span>🎮</span>
+      </router-link>
+    </div>
+
+    <!-- 返回顶端按钮 -->
+    <div class="sidebar-item back-to-top">
+      <a href="#">
+        <i class="iconfont icon-right"></i>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -15,6 +25,13 @@
   position: fixed;
   bottom: 10%;
   right: 7%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+}
+
+.sidebar-item {
   width: 50px;
   height: 50px;
   background-color: var(--page-bg);
@@ -22,13 +39,52 @@
   cursor: pointer;
   opacity: 50%;
   border: 3px solid var(--border);
-  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
-.sidebar:hover {
+
+.sidebar-item:hover {
+  opacity: 1;
   box-shadow: 0 0 10px 2px var(--transparent-black);
   border: 3px solid var(--border-color-focus);
 }
-.sidebar a {
+
+/* 游戏中心入口样式 */
+.game-center-entry {
+  position: relative;
+  background-color: transparent;
+}
+
+.game-center-entry:hover {
+  border: 3px solid var(--button-bg-orange);
+}
+
+.game-center-entry a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+.game-center-entry span {
+  font-size: 30px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.game-center-entry:hover span {
+  color: var(--button-bg-orange);
+  transform: rotate(15deg);
+}
+
+/* 返回顶端按钮样式 */
+.back-to-top a {
   width: 100%;
   height: 100%;
   transform: rotate(-90deg);
@@ -36,23 +92,42 @@
   align-items: center;
   justify-content: center;
 }
-.sidebar a .iconfont {
+
+.back-to-top a .iconfont {
   font-size: 28px;
   color: var(--text-main);
+  transition: all 0.3s ease;
 }
-.sidebar:hover a .iconfont {
+
+.back-to-top:hover a .iconfont {
   color: var(--text-main-focus);
 }
 
-
-/* 小屏手机 */
-@media (max-width: 480px) {
+/* 响应式设计 */
+@media (max-width: 1023px) {
   .sidebar {
-    transform: scale(0.8);
+    right: 5%;
   }
 }
-/* 平板 */
-@media (min-width: 481px) and (max-width: 1023px) {
-}
 
+@media (max-width: 480px) {
+  .sidebar {
+    right: 4%;
+    transform: scale(0.8);
+  }
+
+  .sidebar-item {
+    width: 45px;
+    height: 45px;
+    border-width: 2px;
+  }
+
+  .game-center-entry span {
+    font-size: 26px;
+  }
+
+  .back-to-top a .iconfont {
+    font-size: 24px;
+  }
+}
 </style>

@@ -20,14 +20,6 @@ const games: Game[] = [
     bgColor: '#f7b32d'
   },
   {
-    id: 'tetris',
-    name: '俄罗斯方块',
-    description: '经典的方块堆叠游戏，考验你的空间想象力！',
-    icon: '🧱',
-    path: '/game/tetris/',
-    bgColor: '#4a90e2'
-  },
-  {
     id: 'snake',
     name: '贪吃蛇',
     description: '控制蛇头吃食物，越长越有挑战性！',
@@ -42,22 +34,6 @@ const games: Game[] = [
     icon: '💣',
     path: '/game/minesweeper/',
     bgColor: '#9013fe'
-  },
-  {
-    id: 'sudoku',
-    name: '数独',
-    description: '九宫格数字填充游戏，锻炼你的逻辑思维！',
-    icon: '🔢',
-    path: '/game/sudoku/',
-    bgColor: '#f5a623'
-  },
-  {
-    id: 'breakout',
-    name: '打砖块',
-    description: '控制挡板反弹球，击碎所有砖块！',
-    icon: '🏓',
-    path: '/game/breakout/',
-    bgColor: '#e95793'
   }
 ];
 </script>
@@ -83,15 +59,13 @@ const games: Game[] = [
         <div class="game-icon">{{ game.icon }}</div>
         <h2 class="game-name">{{ game.name }}</h2>
         <p class="game-description">{{ game.description }}</p>
-        <a
-          :href="game.path"
-          target="_blank"
-          rel="noopener noreferrer"
+        <router-link
+          :to="`/games/${game.id}`"
           class="play-button"
         >
           <i class="iconfont icon-right"></i>
           <strong>Play Now</strong>
-        </a>
+        </router-link>
       </div>
     </div>
 

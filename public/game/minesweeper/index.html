@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扫雷 - Minesweeper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>扫雷</h1>
+            <div class="game-info">
+                <div class="counter">
+                    <span class="label">地雷:</span>
+                    <span id="mineCount">0</span>
+                </div>
+                <button id="resetBtn" class="reset-btn">😊</button>
+                <div class="counter">
+                    <span class="label">时间:</span>
+                    <span id="timer">0</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="game-settings">
+            <label for="difficulty">难度:</label>
+            <select id="difficulty">
+                <option value="easy">简单 (9×9, 10雷)</option>
+                <option value="medium" selected>中等 (16×16, 40雷)</option>
+                <option value="hard">困难 (16×30, 99雷)</option>
+            </select>
+        </div>
+        
+        <main class="game-main">
+            <div id="gameBoard" class="game-board"></div>
+        </main>
+        
+        <div class="game-controls">
+            <div class="control-info">
+                <p><strong>操作说明:</strong></p>
+                <ul>
+                    <li>左键点击：翻开格子</li>
+                    <li>右键点击：标记/取消标记地雷</li>
+                    <li>双指点击：同时翻开周围8个格子</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="gameOverModal" class="modal hidden">
+            <div class="modal-content">
+                <h2 id="modalTitle">游戏结束</h2>
+                <p id="modalMessage"></p>
+                <button id="playAgainBtn" class="play-again-btn">再玩一次</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
