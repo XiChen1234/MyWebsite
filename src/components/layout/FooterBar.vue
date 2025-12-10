@@ -4,7 +4,7 @@ import { ref, onMounted, onUnmounted } from 'vue';
 import beian from '@/assets/img/beian.png';
 
 // 最后更新时间
-const lastUpdate = ref('2025年11月'); // 示例更新时间
+const lastUpdate = ref('2025年12月');
 
 // 网站开始运行时间常量
 const SITE_START_TIME = new Date('2025-10-22T15:30:00'); // 示例起始时间
