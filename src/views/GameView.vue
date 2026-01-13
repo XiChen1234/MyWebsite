@@ -47,7 +47,7 @@ const games: Game[] = [
     id: 'cattle_pay',
     name: '牛马时薪计算器',
     description: '计算你的牛马时薪，考虑到工作时间、休息时间、奖励等因素。',
-    icon: '🖼️',
+    icon: '🐮',
     path: '/game/cattle_pay/',
     bgColor: '#8B0000'
   }
