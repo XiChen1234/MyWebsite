@@ -17,7 +17,7 @@ import orange from '@/assets/img/orange.svg';
 // 定义经历数据接口
 interface ExperienceItem {
   id: string; // 唯一标识符
-  type: 'Education' | 'Work';
+  type: 'Education' | 'Work' | 'Project';
   title: string;
   organization: string;
   start: Date;
@@ -226,10 +226,45 @@ const experienceData: ExperienceItem[] = [
     skills: ['Python', 'YOLO'],
     imagePath: orange
   },
+  {
+    id: 'project-1',
+    type: 'Project',
+    title: '牛马时薪计算器',
+    organization: '黑客松',
+    start: new Date('2025-12-27'),
+    end: new Date('2025-12-27'),
+    details: [
+      '参加黑客松竞赛，开发一款打工人时薪计算工具',
+      '使用原生JavaScript和CSS构建响应式Web应用',
+      '支持多种薪酬类型（时薪/日薪/月薪/年薪）和工作制度计算',
+      '实现休息时间、摸鱼时间、通勤时间、生活成本等多维度参数',
+      '设计成就系统和趣味对比功能，提升用户体验',
+      '采用模块化开发，包含计算器、渲染器等独立模块'
+    ],
+    skills: ['JavaScript', 'CSS3', 'HTML5', '模块化开发'],
+    imagePath: orange
+  },
+  {
+    id: 'project-2',
+    type: 'Project',
+    title: 'Paws Up! - 节奏音游',
+    organization: 'That Game Jam',
+    start: new Date('2025-12-20'),
+    end: new Date('2026-01-05'),
+    details: [
+      '使用Godot引擎独立开发单音轨节奏音游',
+      '实现猫猫拳和猫猫哈气两种打击方式，支持Space和Enter键操作',
+      '设计五位性格迥异的NPC对应五首特别音乐，包含快速连打音符等特殊机制',
+      '成功导出WebGL版本，支持浏览器直接游玩',
+      '参加That Game Jam游戏开发竞赛'
+    ],
+    skills: ['Godot Engine', 'GDScript', 'WebGL', '游戏设计'],
+    imagePath: orange
+  },
 ];
 
 // 当前激活的tab
-const activeTab = ref<'Education' | 'Work' | 'All'>('All');
+const activeTab = ref<'Education' | 'Work' | 'Project' | 'All'>('All');
 
 // 根据当前tab过滤数据并按时间排序（升序）
 const filteredExperienceData = computed(() => {
@@ -247,9 +282,9 @@ const filteredExperienceData = computed(() => {
 
 /**
  * 切换tab的函数
- * @param tab 要切换的tab类型 'education' 或 'work' 或 'all'
+ * @param tab 要切换的tab类型 'education' 或 'work' 或 'project' 或 'all'
  */
-function switchTab(tab: 'Education' | 'Work' | 'All') {
+function switchTab(tab: 'Education' | 'Work' | 'Project' | 'All') {
   activeTab.value = tab;
 }
 </script>
@@ -258,7 +293,7 @@ function switchTab(tab: 'Education' | 'Work' | 'All') {
   <div class="career-page" id="career">
     <!-- 页面标题 -->
     <h1 class="title">Career</h1>
-    <p class="sub-title">Education && Work</p>
+    <p class="sub-title">Education && Work && Project</p>
     <div class="container">
       <!-- Tab切换栏 -->
       <div class="tab-container">
@@ -270,6 +305,9 @@ function switchTab(tab: 'Education' | 'Work' | 'All') {
         </div>
         <div :class="['tab-button button', { active: activeTab === 'Work' }]" @click="switchTab('Work')">
           💼Work
+        </div>
+        <div :class="['tab-button button', { active: activeTab === 'Project' }]" @click="switchTab('Project')">
+          🚀Project
         </div>
       </div>
 

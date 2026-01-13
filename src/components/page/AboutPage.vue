@@ -29,8 +29,12 @@ import bodyImg from '@/assets/img/body.jpg';
             <div class="span">段实习经历</div>
           </div>
           <div class="card button">
-            <div class="num">03+</div>
+            <div class="num">05+</div>
             <div class="span">个项目推进</div>
+          </div>
+          <div class="card button">
+            <div class="num">02+</div>
+            <div class="span">个游戏开发</div>
           </div>
         </div>
         <a class="download button" href="/resume.pdf" download>

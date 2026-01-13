@@ -12,6 +12,7 @@ const skillSections = [
       { name: 'Python', level: 4, description: '可用于脚本编写、自动化任务及Flask轻量级Web应用开发' },
       { name: 'JavaScript', level: 4, description: '掌握ES6+特性，能够实现前端交互及Vue.js项目开发' },
       { name: 'Go', level: 3, description: '熟练使用Go语言进行后端开发，了解其并发特性' },
+      { name: 'GDScript', level: 3, description: '熟练使用GD Script进行Godot游戏开发' },
       { name: 'C', level: 2, description: '包含C/C++/C#，具备语言基础，了解其特性和适用场景，具备快速上手的能力' }
     ]
   }, {
@@ -47,6 +48,7 @@ const skillSections = [
     list: [
       { name: 'Git', level: 4, description: '熟练掌握Git工作流，用于日常的代码版本控制和团队协作' },
       { name: 'Postman', level: 3, description: '了解其作为API测试工具的基本使用' },
+      { name: 'Godot', level: 3, description: '熟悉Godot引擎并能够开发2D游戏' },
       { name: 'Pandas', level: 1, description: '了解其用于数据处理和分析的基本操作' }
     ]
   }
