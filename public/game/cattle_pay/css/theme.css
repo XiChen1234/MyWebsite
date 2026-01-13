@@ -1,0 +1,351 @@
+/**
+ * 时薪计算器 - 动态主题样式文件
+ * 根据计算结果动态应用不同的主题风格
+ */
+
+/* 主题变量定义 - 付费上班级 (< 0元) */
+.achievement-card.theme-negative {
+    background: linear-gradient(135deg, #8B0000 0%, #DC143C 50%, #FF0000 100%);
+    box-shadow: 0 8px 32px rgba(220, 20, 60, 0.4);
+}
+
+.achievement-card.theme-negative .achievement-emoji {
+    animation: shake 0.5s ease infinite;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* 主题变量定义 - 黑暗级 (0-20元) */
+.achievement-card.theme-dark {
+    background: linear-gradient(135deg, #4a0000 0%, #8B0000 50%, #DC143C 100%);
+    box-shadow: 0 8px 32px rgba(139, 0, 0, 0.4);
+}
+
+/* 主题变量定义 - 困难级 (20-40元) */
+.achievement-card.theme-difficult {
+    background: linear-gradient(135deg, #FF4500 0%, #FF6B6B 50%, #FF8C69 100%);
+    box-shadow: 0 8px 32px rgba(255, 107, 107, 0.4);
+}
+
+/* 主题变量定义 - 普通级 (40-60元) */
+.achievement-card.theme-normal {
+    background: linear-gradient(135deg, #FF8C00 0%, #FFD60A 50%, #FFA500 100%);
+    box-shadow: 0 8px 32px rgba(255, 214, 10, 0.4);
+}
+
+.achievement-card.theme-normal .hourly-wage-container {
+    color: #1a1a2e;
+}
+
+.achievement-card.theme-normal .achievement-badge {
+    color: #1a1a2e;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* 主题变量定义 - 良好级 (60-80元) */
+.achievement-card.theme-good {
+    background: linear-gradient(135deg, #228B22 0%, #34C759 50%, #90EE90 100%);
+    box-shadow: 0 8px 32px rgba(52, 199, 89, 0.4);
+}
+
+/* 主题变量定义 - 优秀级 (80-120元) */
+.achievement-card.theme-excellent {
+    background: linear-gradient(135deg, #4169E1 0%, #007AFF 50%, #87CEEB 100%);
+    box-shadow: 0 8px 32px rgba(0, 122, 255, 0.4);
+}
+
+/* 主题变量定义 - 卓越级 (120-200元) */
+.achievement-card.theme-outstanding {
+    background: linear-gradient(135deg, #4B0082 0%, #AF52DE 50%, #DA70D6 100%);
+    box-shadow: 0 8px 32px rgba(175, 82, 222, 0.4);
+}
+
+/* 主题变量定义 - 传说级 (> 200元) */
+.achievement-card.theme-legendary {
+    background: linear-gradient(135deg, #FF4500 0%, #FFD700 30%, #FF8C00 70%, #FFA500 100%);
+    box-shadow: 0 8px 40px rgba(255, 215, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-card.theme-legendary::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.achievement-card.theme-legendary .achievement-emoji {
+    font-size: 56px;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+    }
+    to {
+        filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.9));
+    }
+}
+
+/* 特殊成就卡片样式 */
+.achievement-card.special-achievement {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.achievement-card.special-achievement .hourly-wage {
+    font-size: 72px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.achievement-card.special-achievement .achievement-description {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* 成就弹跳动画 */
+@keyframes achievementBounce {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.achievement-card {
+    animation: achievementBounce 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* 数字滚动动画效果 */
+@keyframes numberRoll {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hourly-wage {
+    animation: numberRoll 0.5s ease forwards;
+    display: inline-block;
+}
+
+/* 成就解锁动画 */
+@keyframes unlockPopup {
+    0% {
+        transform: scale(0) rotate(-10deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2) rotate(5deg);
+    }
+    100% {
+        transform: scale(1) rotate(0);
+        opacity: 1;
+    }
+}
+
+.unlocked-item {
+    animation: unlockPopup 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation-delay: calc(var(--item-index, 0) * 0.15s);
+    opacity: 0;
+}
+
+/* 进度条动画 */
+@keyframes progressFill {
+    from {
+        width: 0;
+    }
+}
+
+.process-progress {
+    animation: progressFill 1s ease forwards;
+}
+
+/* 背景脉冲动画 - 传说级 */
+@keyframes legendaryPulse {
+    0%, 100% {
+        box-shadow: 0 8px 40px rgba(255, 215, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 8px 60px rgba(255, 215, 0, 0.8);
+    }
+}
+
+.achievement-card.theme-legendary {
+    animation: legendaryPulse 2s ease-in-out infinite;
+}
+
+/* 响应式主题调整 */
+@media (max-width: 480px) {
+    .achievement-card.theme-legendary .achievement-emoji {
+        font-size: 40px;
+    }
+
+    .achievement-card.special-achievement .hourly-wage {
+        font-size: 56px;
+    }
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+    .achievement-card {
+        border: 3px solid currentColor;
+    }
+
+    .achievement-card.theme-normal {
+        background: #FFD60A;
+        color: #000000;
+    }
+}
+
+/* 减少动画模式支持 */
+@media (prefers-reduced-motion: reduce) {
+    .achievement-card,
+    .achievement-card.theme-legendary,
+    .achievement-card.theme-negative .achievement-emoji,
+    .unlocked-item,
+    .achievement-card.theme-legendary::before,
+    .achievement-card.theme-legendary .achievement-emoji {
+        animation: none;
+    }
+
+    .achievement-card {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+    .calculator-form {
+        background: #1e1e2e;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-group input,
+    .form-group select {
+        background: #2a2a3e;
+        border-color: #3a3a4e;
+        color: #ffffff;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+        background: #2a2a3e;
+    }
+
+    .form-group input::placeholder {
+        color: #6a6a7e;
+    }
+
+    .section-title {
+        border-bottom-color: #3a3a4e;
+    }
+
+    .slider-item {
+        background: #2a2a3e;
+        padding: 12px;
+        border-radius: var(--radius-md);
+    }
+
+    .slider-header label {
+        color: #e0e0e0;
+    }
+
+    input[type="range"] {
+        background: #3a3a4e;
+    }
+
+    .rating-item {
+        background: #2a2a3e;
+    }
+
+    .rating-item label {
+        color: #e0e0e0;
+    }
+
+    .comparison-item {
+        background: #2a2a3e;
+    }
+
+    .comparison-item .value {
+        color: #ffffff;
+    }
+
+    .process-summary {
+        background: #2a2a3e;
+        color: #e0e0e0;
+    }
+
+    .process-summary:hover {
+        background: #3a3a4e;
+    }
+
+    .process-content {
+        background: #1e1e2e;
+        border-top-color: #3a3a4e;
+    }
+
+    .process-step {
+        border-bottom-color: #3a3a4e;
+    }
+
+    .calculation-process {
+        background: #1e1e2e;
+    }
+
+    .fun-comparison,
+    .achievements-unlocked {
+        background: #1e1e2e;
+    }
+
+    .comparison-title,
+    .unlocked-title {
+        color: #e0e0e0;
+    }
+
+    .unlocked-name {
+        color: #ffffff;
+    }
+}

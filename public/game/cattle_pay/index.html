@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="时薪计算器 - 准确计算您的实际时薪收入">
+    <title>时薪计算器 - 你实际赚了多少？</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css" id="themeStylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- <button id="diagnoseButton">诊断项目输入</button> -->
+        <header class="app-header">
+            <h1 class="app-title">时薪计算器</h1>
+            <p class="app-subtitle">你实际赚了多少？</p>
+        </header>
+
+        <main class="calculator-main">
+            <form id="calculatorForm" class="calculator-form">
+                <section class="form-section">
+                    <h2 class="section-title">
+                        <span class="section-icon">💰</span>
+                        薪酬信息
+                    </h2>
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="salaryType">薪酬类型</label>
+                            <select id="salaryType" name="salaryType" required>
+                                <option value="hourly">时薪</option>
+                                <option value="daily">日薪</option>
+                                <option value="monthly" selected>月薪</option>
+                                <option value="yearly">年薪</option>
+                            </select>
+                        </div>
+                        <div class="form-group half">
+                            <label for="salaryAmount">
+                                薪酬金额
+                                <span class="unit" id="salaryUnit">元/月</span>
+                            </label>
+                            <input type="number" id="salaryAmount" name="salaryAmount"
+                                   placeholder="请输入金额" min="0" step="any" required>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h2 class="section-title">
+                        <span class="section-icon">📅</span>
+                        工作制度
+                    </h2>
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="workDaysType">工作制度</label>
+                            <select id="workDaysType" name="workDaysType" required>
+                                <option value="fourThree">上四休三 (17.25天)</option>
+                                <option value="doubleRest" selected>双休 (21.75天)</option>
+                                <option value="alternating">大小周 (23.50天)</option>
+                                <option value="singleRest">单休 (26.00天)</option>
+                                <option value="noRest">无休 (30.50天)</option>
+                                <option value="custom">自定义</option>
+                            </select>
+                        </div>
+                        <div class="form-group half hidden" id="customDaysGroup">
+                            <label for="customWorkDays">
+                                自定义天数
+                                <span class="unit">天</span>
+                            </label>
+                            <input type="number" id="customWorkDays" name="customWorkDays"
+                                   placeholder="0-31天" min="0" max="31" step="1">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h2 class="section-title">
+                        <span class="section-icon">⏰</span>
+                        工作时间
+                    </h2>
+                    <div class="form-row time-row">
+                        <div class="form-group half">
+                            <label for="startTime">开始时间</label>
+                            <input type="time" id="startTime" name="startTime" value="09:00" required>
+                        </div>
+                        <div class="form-group half">
+                            <label for="endTime">结束时间</label>
+                            <input type="time" id="endTime" name="endTime" value="18:00" required>
+                        </div>
+                    </div>
+                    <div class="slider-group">
+                        <div class="slider-item">
+                            <div class="slider-header">
+                                <label for="breakTime">每日休息时间</label>
+                                <span class="slider-value" id="breakTimeValue">60 分钟</span>
+                            </div>
+                            <input type="range" id="breakTime" name="breakTime" min="0" max="720" value="60" step="5">
+                        </div>
+                        <div class="slider-item">
+                            <div class="slider-header">
+                                <label for="slackOffTime">每日摸鱼时间</label>
+                                <span class="slider-value" id="slackOffTimeValue">30 分钟</span>
+                            </div>
+                            <input type="range" id="slackOffTime" name="slackOffTime" min="0" max="720" value="30" step="5">
+                        </div>
+                        <div class="slider-item">
+                            <div class="slider-header">
+                                <label for="commuteTime">每日通勤时间</label>
+                                <span class="slider-value" id="commuteTimeValue">60 分钟</span>
+                            </div>
+                            <input type="range" id="commuteTime" name="commuteTime" min="0" max="300" value="60" step="5">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h2 class="section-title">
+                        <span class="section-icon">🏠</span>
+                        生活成本
+                    </h2>
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="monthlyRent">
+                                月均房租
+                                <span class="unit">元/月</span>
+                            </label>
+                            <input type="number" id="monthlyRent" name="monthlyRent"
+                                   placeholder="0-50000" min="0" max="50000" step="any" value="0">
+                        </div>
+                        <div class="form-group half">
+                            <label for="dailyMealCost">
+                                日均餐费
+                                <span class="unit">元/天</span>
+                            </label>
+                            <input type="number" id="dailyMealCost" name="dailyMealCost"
+                                   placeholder="0-500" min="0" max="500" step="any" value="50">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h2 class="section-title">
+                        <span class="section-icon">📊</span>
+                        工作评估
+                    </h2>
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="kpiLevel">KPI等级</label>
+                            <select id="kpiLevel" name="kpiLevel" required>
+                                <option value="S">S级 - 极高压力</option>
+                                <option value="A">A级 - 高压力</option>
+                                <option value="B" selected>B级 - 中高压力</option>
+                                <option value="C">C级 - 中压力</option>
+                                <option value="D">D级 - 低压力</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="rating-group">
+                        <div class="rating-item">
+                            <label>工作氛围</label>
+                            <div class="star-rating" data-field="atmosphereRating">
+                                <span class="star" data-value="1">★</span>
+                                <span class="star" data-value="2">★</span>
+                                <span class="star" data-value="3">★</span>
+                                <span class="star" data-value="4">★</span>
+                                <span class="star" data-value="5">★</span>
+                            </div>
+                            <span class="rating-label" id="atmosphereLabel">一般般</span>
+                        </div>
+                        <div class="rating-item">
+                            <label>同事关系</label>
+                            <div class="star-rating" data-field="colleagueRating">
+                                <span class="star" data-value="1">★</span>
+                                <span class="star" data-value="2">★</span>
+                                <span class="star" data-value="3">★</span>
+                                <span class="star" data-value="4">★</span>
+                                <span class="star" data-value="5">★</span>
+                            </div>
+                            <span class="rating-label" id="colleagueLabel">正常</span>
+                        </div>
+                        <div class="rating-item">
+                            <label>工位环境</label>
+                            <div class="star-rating" data-field="workspaceRating">
+                                <span class="star" data-value="1">★</span>
+                                <span class="star" data-value="2">★</span>
+                                <span class="star" data-value="3">★</span>
+                                <span class="star" data-value="4">★</span>
+                                <span class="star" data-value="5">★</span>
+                            </div>
+                            <span class="rating-label" id="workspaceLabel">一般</span>
+                        </div>
+                    </div>
+                </section>
+
+                <button type="submit" class="calculate-btn" id="calculateBtn">
+                    计算时薪
+                </button>
+            </form>
+
+            <div class="result-container" id="resultContainer" style="display: none;">
+                <div class="achievement-card" id="achievementCard">
+                    <div class="achievement-emoji" id="achievementEmoji">🟡</div>
+                    <div class="achievement-title" id="achievementTitle">普通打工人</div>
+                    <div class="hourly-wage-container">
+                        <span class="hourly-wage" id="hourlyWage">0.00</span>
+                        <span class="hourly-unit">元/小时</span>
+                    </div>
+                    <div class="achievement-badge" id="achievementBadge">
+                        <span class="badge-text">温饱线挣扎</span>
+                    </div>
+                </div>
+
+                <div class="fun-comparison" id="funComparison" style="display: none;">
+                    <h3 class="comparison-title">你的时薪可以购买</h3>
+                    <div class="comparison-items" id="comparisonItems"></div>
+                </div>
+
+                <div class="achievements-unlocked" id="achievementsUnlocked" style="display: none;">
+                    <h3 class="unlocked-title">🏆 成就解锁</h3>
+                    <div class="unlocked-list" id="unlockedList"></div>
+                </div>
+
+                <details class="calculation-process">
+                    <summary class="process-summary">
+                        <span>📐 计算过程</span>
+                        <span class="expand-icon">▼</span>
+                    </summary>
+                    <div class="process-content" id="calculationProcess">
+                        <div class="process-steps" id="processSteps"></div>
+                    </div>
+                </details>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>数据仅保存在内存中，刷新页面后丢失</p>
+            
+            <div class="disclaimer-section">
+                <h3 class="disclaimer-title">项目声明与免责条款</h3>
+                
+                <div class="disclaimer-item">
+                    <h4 class="disclaimer-subtitle">1. 项目性质声明</h4>
+                    <p class="disclaimer-text">本项目仅供娱乐，请勿上纲上线。所有计算结果均为模拟数据，仅供参考，不构成任何职业建议或决策依据。</p>
+                </div>
+                
+                <div class="disclaimer-item">
+                    <h4 class="disclaimer-subtitle">2. 开源协议说明</h4>
+                    <p class="disclaimer-text">项目代码采用MIT开源协议授权，允许自由使用、修改和分发，但需保留原作者版权声明。</p>
+                </div>
+                
+                <div class="disclaimer-item">
+                    <h4 class="disclaimer-subtitle">3. 问题反馈指引</h4>
+                    <p class="disclaimer-text">如遇bug或其他问题，请前往Github仓库提交issue，我们将尽快处理。</p>
+                </div>
+                
+                <div class="disclaimer-item">
+                    <h4 class="disclaimer-subtitle">4. 标准免责声明</h4>
+                    <p class="disclaimer-text">本项目开发者不保证计算结果的准确性、完整性或可靠性，不对任何因使用本项目而产生的直接或间接损失承担责任。使用本项目即表示您同意自行承担所有风险，开发者不承担任何法律责任。本项目不收集或存储任何用户数据，所有计算均在本地完成。</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="diagnose.js"></script>
+</body>
+</html>
