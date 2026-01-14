@@ -230,11 +230,11 @@ const experienceData: ExperienceItem[] = [
     id: 'project-1',
     type: 'Project',
     title: '牛马时薪计算器',
-    organization: '黑客松',
+    organization: 'Trae黑客松活动产出',
     start: new Date('2025-12-27'),
     end: new Date('2025-12-27'),
     details: [
-      '参加黑客松竞赛，开发一款打工人时薪计算工具',
+      '参加Trae黑客松竞赛，开发的一款牛马时薪计算工具',
       '使用原生JavaScript和CSS构建响应式Web应用',
       '支持多种薪酬类型（时薪/日薪/月薪/年薪）和工作制度计算',
       '实现休息时间、摸鱼时间、通勤时间、生活成本等多维度参数',
