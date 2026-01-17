@@ -17,7 +17,7 @@ import orange from '@/assets/img/orange.svg';
 // 定义经历数据接口
 interface ExperienceItem {
   id: string; // 唯一标识符
-  type: 'Education' | 'Work' | 'Project';
+  type: 'Education' | 'Work' | 'Activity';
   title: string;
   organization: string;
   start: Date;
@@ -227,8 +227,8 @@ const experienceData: ExperienceItem[] = [
     imagePath: orange
   },
   {
-    id: 'project-1',
-    type: 'Project',
+    id: 'activity-1',
+    type: 'Activity',
     title: '牛马时薪计算器',
     organization: 'Trae黑客松活动产出',
     start: new Date('2025-12-27'),
@@ -245,8 +245,8 @@ const experienceData: ExperienceItem[] = [
     imagePath: orange
   },
   {
-    id: 'project-2',
-    type: 'Project',
+    id: 'activity-2',
+    type: 'Activity',
     title: 'Paws Up! - 节奏音游',
     organization: 'That Game Jam',
     start: new Date('2025-12-20'),
@@ -264,7 +264,7 @@ const experienceData: ExperienceItem[] = [
 ];
 
 // 当前激活的tab
-const activeTab = ref<'Education' | 'Work' | 'Project' | 'All'>('All');
+const activeTab = ref<'Education' | 'Work' | 'Activity' | 'All'>('All');
 
 // 根据当前tab过滤数据并按时间排序（升序）
 const filteredExperienceData = computed(() => {
@@ -284,7 +284,7 @@ const filteredExperienceData = computed(() => {
  * 切换tab的函数
  * @param tab 要切换的tab类型 'education' 或 'work' 或 'project' 或 'all'
  */
-function switchTab(tab: 'Education' | 'Work' | 'Project' | 'All') {
+function switchTab(tab: 'Education' | 'Work' | 'Activity' | 'All') {
   activeTab.value = tab;
 }
 </script>
@@ -293,7 +293,7 @@ function switchTab(tab: 'Education' | 'Work' | 'Project' | 'All') {
   <div class="career-page" id="career">
     <!-- 页面标题 -->
     <h1 class="title">Career</h1>
-    <p class="sub-title">Education && Work && Project</p>
+    <p class="sub-title">Education && Work && Activity</p>
     <div class="container">
       <!-- Tab切换栏 -->
       <div class="tab-container">
@@ -306,8 +306,8 @@ function switchTab(tab: 'Education' | 'Work' | 'Project' | 'All') {
         <div :class="['tab-button button', { active: activeTab === 'Work' }]" @click="switchTab('Work')">
           💼Work
         </div>
-        <div :class="['tab-button button', { active: activeTab === 'Project' }]" @click="switchTab('Project')">
-          🚀Project
+        <div :class="['tab-button button', { active: activeTab === 'Activity' }]" @click="switchTab('Activity')">
+          🎮Activity
         </div>
       </div>
 
