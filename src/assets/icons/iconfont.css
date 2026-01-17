@@ -1,47 +1,153 @@
 @font-face {
-  font-family: "iconfont"; /* Project id 5006037 */
-  src: url('iconfont.woff2?t=1759653228243') format('woff2'),
-       url('iconfont.woff?t=1759653228243') format('woff'),
-       url('iconfont.ttf?t=1759653228243') format('truetype');
+  font-family: "iconcolor"; /* Project id 5030404 */
+  /* Color fonts */
+  src: 
+       url('iconfont.woff2?t=1768616490182') format('woff2'),
+       url('iconfont.woff?t=1768616490182') format('woff'),
+       url('iconfont.ttf?t=1768616490182') format('truetype');
 }
 
-.iconfont {
-  font-family: "iconfont" !important;
+.iconcolor {
+  font-family: "iconcolor" !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-download:before {
+.icon-Unity:before {
+  content: "\ecf6";
+}
+
+.icon-Godot:before {
+  content: "\e67d";
+}
+
+.icon-newcoder:before {
+  content: "\e735";
+}
+
+.icon-csdn:before {
+  content: "\e613";
+}
+
+.icon-qq-mail:before {
+  content: "\e6ed";
+}
+
+.icon-github:before {
+  content: "\e85a";
+}
+
+.icon-qq:before {
+  content: "\e667";
+}
+
+.icon-local:before {
   content: "\e607";
 }
 
-.icon-send:before {
-  content: "\e643";
+.icon-gmail:before {
+  content: "\e60d";
 }
 
-.icon-mouse:before {
-  content: "\e635";
+.icon-juejin:before {
+  content: "\e612";
 }
 
-.icon-list:before {
-  content: "\e7f4";
+.icon-Go:before {
+  content: "\e7bc";
 }
 
-.icon-moon:before {
-  content: "\e6c3";
+.icon-Postman:before {
+  content: "\e60c";
 }
 
-.icon-sun:before {
-  content: "\e6da";
+.icon-Shell:before {
+  content: "\e684";
 }
 
-.icon-translate:before {
-  content: "\e888";
+.icon-Nginx:before {
+  content: "\e60b";
 }
 
-.icon-right:before {
-  content: "\e63c";
+.icon-TypeScript:before {
+  content: "\ed33";
+}
+
+.icon-RabbitMQ:before {
+  content: "\e605";
+}
+
+.icon-C:before {
+  content: "\e6cc";
+}
+
+.icon-React:before {
+  content: "\e799";
+}
+
+.icon-Python:before {
+  content: "\e891";
+}
+
+.icon-Pandas:before {
+  content: "\e7db";
+}
+
+.icon-Spring:before {
+  content: "\e600";
+}
+
+.icon-Flask:before {
+  content: "\e601";
+}
+
+.icon-MongoDB:before {
+  content: "\e602";
+}
+
+.icon-Docker:before {
+  content: "\e603";
+}
+
+.icon-Linux:before {
+  content: "\e604";
+}
+
+.icon-MySQL:before {
+  content: "\e606";
+}
+
+.icon-Java:before {
+  content: "\e608";
+}
+
+.icon-Vue:before {
+  content: "\e609";
+}
+
+.icon-Redis:before {
+  content: "\e60a";
+}
+
+.icon-Git:before {
+  content: "\e60e";
+}
+
+.icon-HTML5:before {
+  content: "\e60f";
+}
+
+.icon-JavaScript:before {
+  content: "\e610";
+}
+
+.icon-CSS3:before {
+  content: "\e611";
+}
+
+.icon-Ansible:before {
+  content: "\e614";
 }
 
