@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "15378915",
+      "name": "Unity",
+      "font_class": "Unity",
+      "unicode": "ecf6",
+      "unicode_decimal": 60662
+    },
+    {
+      "icon_id": "25411878",
+      "name": "Godot",
+      "font_class": "Godot",
+      "unicode": "e67d",
+      "unicode_decimal": 59005
+    },
+    {
       "icon_id": "30674021",
       "name": "newcoder",
       "font_class": "newcoder",
