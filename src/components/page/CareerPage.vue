@@ -12,6 +12,8 @@ import meiTuan from '@/assets/img/美团实习.jpg';
 import tencent from '@/assets/img/腾讯实习.png';
 import miHoYo from '@/assets/img/米哈游实习.jpg';
 import orange from '@/assets/img/orange.svg';
+import pawsUp from '@/assets/img/paws_up.png';
+import cattlePay from '@/assets/img/cattle_pay.png';
 
 
 // 定义经历数据接口
@@ -242,7 +244,7 @@ const experienceData: ExperienceItem[] = [
       '采用模块化开发，包含计算器、渲染器等独立模块'
     ],
     skills: ['JavaScript', 'CSS3', 'HTML5', '模块化开发'],
-    imagePath: orange
+    imagePath: cattlePay
   },
   {
     id: 'activity-2',
@@ -259,7 +261,7 @@ const experienceData: ExperienceItem[] = [
       '参加That Game Jam游戏开发竞赛'
     ],
     skills: ['Godot Engine', 'GDScript', 'WebGL', '游戏设计'],
-    imagePath: orange
+    imagePath: pawsUp
   },
 ];
 
