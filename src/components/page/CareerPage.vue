@@ -109,7 +109,7 @@ const experienceData: ExperienceItem[] = [
     title: '中南大学第十六届交通运输科技大赛 二等奖',
     organization: '中南大学',
     start: new Date('2023-06-30'),
-    end: new Date('2023-01-20'),
+    end: new Date('2024-01-20'),
     details: [
       '基于多技术融合开发车辆-社群交互系统，引入高德地图SDK，使用Android Studio开发安卓APP，',
       '配合Spring + WebSocket搭建后端系统，实现多车主导航与社群实时聊天功能。',
