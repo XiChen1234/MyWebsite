@@ -302,11 +302,11 @@ function switchTab(tab: 'Education' | 'Work' | 'Activity' | 'All') {
         <div :class="['tab-button button', { active: activeTab === 'All' }]" @click="switchTab('All')">
           📋All
         </div>
-        <div :class="['tab-button button', { active: activeTab === 'Education' }]" @click="switchTab('Education')">
-          🎓Education
-        </div>
         <div :class="['tab-button button', { active: activeTab === 'Work' }]" @click="switchTab('Work')">
           💼Work
+        </div>
+        <div :class="['tab-button button', { active: activeTab === 'Education' }]" @click="switchTab('Education')">
+          🎓Education
         </div>
         <div :class="['tab-button button', { active: activeTab === 'Activity' }]" @click="switchTab('Activity')">
           🎮Activity
