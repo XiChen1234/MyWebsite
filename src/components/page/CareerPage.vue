@@ -332,7 +332,37 @@ function switchTab(tab: 'Education' | 'Work' | 'Activity' | 'All') {
     <div class="container">
       <!-- 主内容区和侧边栏容器 -->
       <div class="main-content-wrapper">
-        <!-- 左侧主内容 -->
+        <!-- 左侧侧边栏 -->
+        <div class="career-sidebar">
+          <!-- 时间排序切换 -->
+          <button
+            @click="toggleSortOrder"
+            class="sidebar-btn"
+            :class="{ active: isReverseSort }"
+            title="切换时间排序"
+          >
+            {{ isReverseSort ? '⇈ 倒序' : '⇊ 正序' }}
+          </button>
+
+          <!-- 回到顶部 -->
+          <button
+            @click="scrollToTop"
+            class="sidebar-btn"
+            title="回到顶部"
+          >
+            ↑ 顶部
+          </button>
+
+          <!-- 跳转到下一页 -->
+          <button
+            @click="scrollToNextPage"
+            class="sidebar-btn"
+            title="跳转到下一页"
+          >
+            ↓ 下页
+          </button>
+        </div>
+        <!-- 右侧主内容 -->
         <div class="main-content">
           <!-- Tab切换栏 -->
           <div class="tab-container">
@@ -382,37 +412,6 @@ function switchTab(tab: 'Education' | 'Work' | 'Activity' | 'All') {
             </div>
           </div>
         </div>
-
-        <!-- 右侧侧边栏 -->
-        <div class="career-sidebar">
-          <!-- 时间排序切换 -->
-          <button
-            @click="toggleSortOrder"
-            class="sidebar-btn"
-            :class="{ active: isReverseSort }"
-            title="切换时间排序"
-          >
-            {{ isReverseSort ? '⇈ 倒序' : '⇊ 正序' }}
-          </button>
-
-          <!-- 回到顶部 -->
-          <button
-            @click="scrollToTop"
-            class="sidebar-btn"
-            title="回到顶部"
-          >
-            ↑ 顶部
-          </button>
-
-          <!-- 跳转到下一页 -->
-          <button
-            @click="scrollToNextPage"
-            class="sidebar-btn"
-            title="跳转到下一页"
-          >
-            ↓ 下页
-          </button>
-        </div>
       </div>
     </div>
   </div>
@@ -445,7 +444,7 @@ function switchTab(tab: 'Education' | 'Work' | 'Activity' | 'All') {
   top: 100px;
   align-self: flex-start;
   margin-top: 20px;
-  z-index: 1000;
+  z-index: 99;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -454,7 +453,6 @@ function switchTab(tab: 'Education' | 'Work' | 'Activity' | 'All') {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8px);
-  min-width: 90px;
 }
 
 /* Tab容器 */

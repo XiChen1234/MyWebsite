@@ -91,7 +91,7 @@ onMounted(() => {
   padding: 0 20px;
   background-color: var(--page-bg);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: 100;
 }
 
 .logo {
@@ -160,7 +160,7 @@ onMounted(() => {
   left: 0;
   width: 100%;
   background-color: var(--page-bg);
-  z-index: 999;
+  z-index: 99;
   transition: top 0.3s ease-in-out;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -219,7 +219,7 @@ onMounted(() => {
   height: 100%;
   background-color: var(--transparent);
   backdrop-filter: blur(4px);
-  z-index: 998;
+  z-index: 98;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;

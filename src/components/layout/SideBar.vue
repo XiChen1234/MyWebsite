@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  z-index: 999;
+  z-index: 99;
 }
 
 .sidebar-item {
