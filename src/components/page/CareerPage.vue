@@ -268,7 +268,10 @@ const experienceData: ExperienceItem[] = [
 // 当前激活的tab
 const activeTab = ref<'Education' | 'Work' | 'Activity' | 'All'>('All');
 
-// 根据当前tab过滤数据并按时间排序（升序）
+// 排序方式：false为升序（从早到晚），true为降序（从晚到早）
+const isReverseSort = ref(true);
+
+// 根据当前tab过滤数据并按时间排序
 const filteredExperienceData = computed(() => {
   let filtered = [...experienceData]; // 创建副本以避免修改原数组
 
@@ -277,10 +280,40 @@ const filteredExperienceData = computed(() => {
     filtered = filtered.filter(item => item.type === activeTab.value);
   }
 
-  // 按start时间升序排序（最早的排在前面）
-  // 使用Date对象直接比较，更高效且精确
-  return filtered.sort((a, b) => a.start.getTime() - b.start.getTime());
+  // 根据排序方式排序
+  // 升序：从早到晚，降序：从晚到早
+  return filtered.sort((a, b) => {
+    const timeDiff = a.start.getTime() - b.start.getTime();
+    return isReverseSort.value ? -timeDiff : timeDiff;
+  });
 });
+
+/**
+ * 切换排序方式
+ */
+function toggleSortOrder() {
+  isReverseSort.value = !isReverseSort.value;
+}
+
+/**
+ * 滚动到Career页面顶部
+ */
+function scrollToTop() {
+  const careerSection = document.getElementById('career');
+  if (careerSection) {
+    careerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+/**
+ * 跳转到下一页（Portfolio页面）
+ */
+function scrollToNextPage() {
+  const portfolioSection = document.getElementById('portfolio');
+  if (portfolioSection) {
+    portfolioSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
 
 /**
  * 切换tab的函数
@@ -297,51 +330,88 @@ function switchTab(tab: 'Education' | 'Work' | 'Activity' | 'All') {
     <h1 class="title">Career</h1>
     <p class="sub-title">Education && Work && Activity</p>
     <div class="container">
-      <!-- Tab切换栏 -->
-      <div class="tab-container">
-        <div :class="['tab-button button', { active: activeTab === 'All' }]" @click="switchTab('All')">
-          📋All
-        </div>
-        <div :class="['tab-button button', { active: activeTab === 'Work' }]" @click="switchTab('Work')">
-          💼Work
-        </div>
-        <div :class="['tab-button button', { active: activeTab === 'Education' }]" @click="switchTab('Education')">
-          🎓Education
-        </div>
-        <div :class="['tab-button button', { active: activeTab === 'Activity' }]" @click="switchTab('Activity')">
-          🎮Activity
-        </div>
-      </div>
-
-      <!-- 内容区域 -->
-      <div class="content-area">
-        <!-- 时间线容器 - 添加key属性确保切换时重新渲染 -->
-        <div class="timeline-container" :key="activeTab">
-          <div v-for="item in filteredExperienceData" :key="item.id" class="timeline-item">
-
-            <!-- 内容左侧部分 -->
-            <div class="timeline-base">
-              <h3 class="timeline-title">{{ item.title }}</h3>
-              <p class="timeline-organization">{{ item.organization }}</p>
-              <span class="timeline-period">{{ formatPeriod(item.start, item.end) }}</span>
-              <!-- 图片区域 -->
-              <div class="timeline-image-container" v-if="item.imagePath">
-                <img :src="item.imagePath" :alt="item.title" class="timeline-image" />
-              </div>
+      <!-- 主内容区和侧边栏容器 -->
+      <div class="main-content-wrapper">
+        <!-- 左侧主内容 -->
+        <div class="main-content">
+          <!-- Tab切换栏 -->
+          <div class="tab-container">
+            <div :class="['tab-button button', { active: activeTab === 'All' }]" @click="switchTab('All')">
+              📋All
             </div>
-            <!-- 内容右侧部分 -->
-            <div class="timeline-desc">
-              <!-- 详情列表 -->
-              <ul class="timeline-details" v-if="item.details && item.details.length > 0">
-                <li v-for="(detail, i) in item.details" :key="i">{{ detail }}</li>
-              </ul>
+            <div :class="['tab-button button', { active: activeTab === 'Work' }]" @click="switchTab('Work')">
+              💼Work
+            </div>
+            <div :class="['tab-button button', { active: activeTab === 'Education' }]" @click="switchTab('Education')">
+              🎓Education
+            </div>
+            <div :class="['tab-button button', { active: activeTab === 'Activity' }]" @click="switchTab('Activity')">
+              🎮Activity
+            </div>
+          </div>
 
-              <!-- 技能标签 -->
-              <div class="skills-container" v-if="item.skills && item.skills.length > 0">
-                <span v-for="(skill, i) in item.skills" :key="i" class="skill-badge">{{ skill }}</span>
+          <!-- 内容区域 -->
+          <div class="content-area">
+            <!-- 时间线容器 - 添加key属性确保切换时重新渲染 -->
+            <div class="timeline-container" :key="activeTab">
+              <div v-for="item in filteredExperienceData" :key="item.id" class="timeline-item">
+
+                <!-- 内容左侧部分 -->
+                <div class="timeline-base">
+                  <h3 class="timeline-title">{{ item.title }}</h3>
+                  <p class="timeline-organization">{{ item.organization }}</p>
+                  <span class="timeline-period">{{ formatPeriod(item.start, item.end) }}</span>
+                  <!-- 图片区域 -->
+                  <div class="timeline-image-container" v-if="item.imagePath">
+                    <img :src="item.imagePath" :alt="item.title" class="timeline-image" />
+                  </div>
+                </div>
+                <!-- 内容右侧部分 -->
+                <div class="timeline-desc">
+                  <!-- 详情列表 -->
+                  <ul class="timeline-details" v-if="item.details && item.details.length > 0">
+                    <li v-for="(detail, i) in item.details" :key="i">{{ detail }}</li>
+                  </ul>
+
+                  <!-- 技能标签 -->
+                  <div class="skills-container" v-if="item.skills && item.skills.length > 0">
+                    <span v-for="(skill, i) in item.skills" :key="i" class="skill-badge">{{ skill }}</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- 右侧侧边栏 -->
+        <div class="career-sidebar">
+          <!-- 时间排序切换 -->
+          <button
+            @click="toggleSortOrder"
+            class="sidebar-btn"
+            :class="{ active: isReverseSort }"
+            title="切换时间排序"
+          >
+            {{ isReverseSort ? '⇈ 倒序' : '⇊ 正序' }}
+          </button>
+
+          <!-- 回到顶部 -->
+          <button
+            @click="scrollToTop"
+            class="sidebar-btn"
+            title="回到顶部"
+          >
+            ↑ 顶部
+          </button>
+
+          <!-- 跳转到下一页 -->
+          <button
+            @click="scrollToNextPage"
+            class="sidebar-btn"
+            title="跳转到下一页"
+          >
+            ↓ 下页
+          </button>
         </div>
       </div>
     </div>
@@ -353,6 +423,38 @@ function switchTab(tab: 'Education' | 'Work' | 'Activity' | 'All') {
   width: 90%;
   padding: 40px 20px;
   flex-direction: column;
+}
+
+/* 主内容区和侧边栏容器 */
+.main-content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+/* 左侧主内容 */
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* 右侧侧边栏 */
+.career-sidebar {
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+  margin-top: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  min-width: 90px;
 }
 
 /* Tab容器 */
@@ -580,6 +682,38 @@ function switchTab(tab: 'Education' | 'Work' | 'Activity' | 'All') {
   position: relative;
 }
 
+/* 侧边栏按钮样式 */
+.sidebar-btn {
+  width: 80px;
+  padding: 12px 8px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--bg-tag);
+  color: var(--text-main);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+/* 侧边栏按钮悬停效果 */
+.sidebar-btn:hover {
+  background-color: var(--button-bg-orange);
+  color: var(--button-text-white);
+  transform: translateX(-4px);
+  box-shadow: 0 4px 8px rgba(255, 138, 0, 0.3);
+}
+
+/* 激活状态样式（用于排序按钮） */
+.sidebar-btn.active {
+  background-color: var(--button-bg-orange);
+  color: var(--button-text-white);
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
   .tab-container {
@@ -631,6 +765,32 @@ function switchTab(tab: 'Education' | 'Work' | 'Activity' | 'All') {
   .timeline-item .timeline-desc .timeline-details li::before {
     left: 0 !important;
     right: auto !important;
+  }
+
+  /* 响应式：主内容区和侧边栏布局调整 */
+  .main-content-wrapper {
+    flex-direction: column;
+  }
+
+  /* 响应式：侧边栏调整 */
+  .career-sidebar {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0 0 0;
+    padding: 8px;
+    gap: 8px;
+    min-width: auto;
+  }
+
+  .sidebar-btn {
+    width: 70px;
+    padding: 8px 4px;
+    font-size: 12px;
+  }
+
+  .sidebar-btn:hover {
+    transform: none;
   }
 }
 </style>
