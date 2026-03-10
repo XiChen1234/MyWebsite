@@ -269,7 +269,7 @@ const experienceData: ExperienceItem[] = [
 const activeTab = ref<'Education' | 'Work' | 'Activity' | 'All'>('All');
 
 // 排序方式：false为升序（从早到晚），true为降序（从晚到早）
-const isReverseSort = ref(true);
+const isReverseSort = ref(false);
 
 // 根据当前tab过滤数据并按时间排序
 const filteredExperienceData = computed(() => {
@@ -341,7 +341,7 @@ function switchTab(tab: 'Education' | 'Work' | 'Activity' | 'All') {
             :class="{ active: isReverseSort }"
             title="切换时间排序"
           >
-            {{ isReverseSort ? '⇈ 倒序' : '⇊ 正序' }}
+            {{ isReverseSort ? '倒序' : '正序' }}
           </button>
 
           <!-- 回到顶部 -->
