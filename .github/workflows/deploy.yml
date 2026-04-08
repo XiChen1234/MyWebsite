@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest # 工作流在最新的Ubuntu系统环境中运行
+    runs-on: ubuntu-latest # 工作流在最新的Ubuntu系统环境中运行d
 
     steps:
       - name: 拉取项目代码
