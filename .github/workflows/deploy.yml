@@ -39,4 +39,4 @@ jobs:
           ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
 
           # 执行 rsync 同步
-          rsync -avz --delete -e "ssh -i ~/.ssh/id_rsa" ./dist/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/var/www/mywebsite/
+          rsync -avz --delete -e "ssh -i ~/.ssh/id_rsa" ./dist/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/home/deploy/mywebsite/
