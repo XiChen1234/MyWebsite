@@ -2,41 +2,65 @@ name: 部署项目到服务器
 
 on:
   push:
-    branches: [ master ] # 指定触发分支，当代码推送到 main 分支时触发工作流
+    branches: [ master ]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest # 工作流在最新的Ubuntu系统环境中运行d
+    runs-on: ubuntu-latest
     environment: 阿里云服务器
 
     steps:
       - name: 拉取项目代码
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: 设置Node.js环境
-        uses: actions/setup-node@v3
+      - name: 设置 Node.js 环境
+        uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
+          cache: 'npm'
 
-      - name: 安装项目依赖并构建
+      - name: 安装依赖并构建
         run: |
-          npm install
+          npm ci
           npm run build
-        
-      - name: 添加服务器主机密钥到known_hosts
-        run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
 
-      - name: 部署到服务器
+      - name: 配置 SSH 密钥
         env:
           SSH_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          SERVER_HOST: ${{ secrets.SERVER_HOST }}
         run: |
-          # 设置SSH
           mkdir -p ~/.ssh
-          echo "$SSH_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "$SERVER_HOST" >> ~/.ssh/known_hosts
 
-          # 执行 rsync 同步
-          rsync -avz --delete -e "ssh -i ~/.ssh/id_rsa" ./dist/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/home/deploy/mywebsite/
+      - name: 上传构建产物到服务器暂存目录
+        env:
+          SERVER_HOST: ${{ secrets.SERVER_HOST }}
+          SERVER_USER: ${{ secrets.SERVER_USER }}
+          SERVER_PORT: ${{ secrets.SERVER_PORT }}
+        run: |
+          PORT="${SERVER_PORT:-22}"
+          rsync -az --delete -e "ssh -i ~/.ssh/deploy_key -p $PORT" ./dist/ "$SERVER_USER@$SERVER_HOST:/var/www/staging/"
+
+      - name: 原子发布并 reload nginx
+        env:
+          SERVER_HOST: ${{ secrets.SERVER_HOST }}
+          SERVER_USER: ${{ secrets.SERVER_USER }}
+          SERVER_PORT: ${{ secrets.SERVER_PORT }}
+        run: |
+          PORT="${SERVER_PORT:-22}"
+          ssh -i ~/.ssh/deploy_key -p "$PORT" "$SERVER_USER@$SERVER_HOST" 'sudo -n /usr/local/sbin/xichen-deploy-release'
+
+      - name: 冒烟检查
+        env:
+          SERVER_HOST: ${{ secrets.SERVER_HOST }}
+        run: |
+          code=$(curl -s -o /dev/null -w '%{http_code}' --retry 3 --retry-delay 2 "http://$SERVER_HOST/")
+          echo "HTTP $code"
+          [ "$code" = "200" ]
