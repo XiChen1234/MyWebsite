@@ -2,7 +2,7 @@
 
 这是一个使用 Vue 3、Vite 和 TypeScript 构建的个人网站项目，用于展示个人信息、技能、经历和项目等内容。
 
-体验地址：[晨光随笔 - 简历页](https://www.xichen8.top)
+体验地址：[晨光随笔 - 简历页](https://www.xichen8.icu)
 
 ## 项目概述
 
