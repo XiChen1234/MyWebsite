@@ -61,7 +61,7 @@ onUnmounted(() => {
       <a href="https://beian.mps.gov.cn/#/query/webSearch?code=61011302002190"
       rel="noreferrer" target="_blank">陕公网安备61011302002190号</a>
       <a href="https://beian.miit.gov.cn/" target="_blank">
-        陕ICP备2025081193号-1
+        陕ICP备2025081193号-2
       </a>
     </div>
 
